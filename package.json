@@ -1,0 +1,24 @@
+{
+  "name": "puzzle-shell",
+  "version": "1.0.0",
+  "description": "The standard design for Puzzle tools",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puzzle/puzzle-shell.git"
+  },
+  "keywords": [
+    "design",
+    "theme",
+    "look"
+  ],
+  "author": "Mathis Hofer <hofer@puzzle.ch>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/puzzle/puzzle-shell/issues"
+  },
+  "homepage": "https://github.com/puzzle/puzzle-shell#readme"
+}
