@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "gh-pages -d storybook-static"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,7 @@
   "bugs": {
     "url": "https://github.com/puzzle/puzzle-shell/issues"
   },
-  "homepage": "https://github.com/puzzle/puzzle-shell#readme",
+  "homepage": "http://puzzle.github.com/puzzle-shell",
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@storybook/addon-actions": "^6.1.21",
@@ -30,7 +31,8 @@
     "@storybook/addon-links": "^6.1.21",
     "@storybook/html": "^6.1.21",
     "@whitespace/storybook-addon-html": "^4.2.0",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "gh-pages": "^3.1.0"
   },
   "dependencies": {}
 }
