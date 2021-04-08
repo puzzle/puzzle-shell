@@ -1,37 +1,29 @@
 export default {
-  title: "Puzzle Shell/TopBar",
-  argTypes: {},
+  title: "Puzzle Shell/Components/TopBar",
 };
 
-export const Default = ({ label, ...args }) => {
+export const Default = () => {
   return `
     <div style="background: darkblue; color: white">
       TopBar plain
     </div>
   `;
 };
-Default.args = {
-  label: "Default",
-};
 
-export const WithActions = ({ label, ...args }) => {
+export const WithActions = () => {
   return `
     <div style="background: darkblue; color: white">
       TopBar with icons
     </div>
   `;
 };
-WithActions.args = {
-  label: "With actions",
-};
+WithActions.storyName = "With actions";
 
-export const WithSearch = ({ label, ...args }) => {
+export const WithSearch = () => {
   return `
     <div style="background: darkblue; color: white">
       TopBar with search
     </div>
   `;
 };
-WithSearch.args = {
-  label: "With search",
-};
+WithSearch.storyName = "With search";

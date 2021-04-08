@@ -1,9 +1,8 @@
 export default {
-  title: "Puzzle Shell/Footer",
-  argTypes: {},
+  title: "Puzzle Shell/Components/Footer",
 };
 
-export const Default = ({ label, ...args }) => {
+export const Default = () => {
   return `
     <div>
       Footer

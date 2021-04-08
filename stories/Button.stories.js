@@ -1,43 +1,40 @@
-import { createButton } from './Button';
+import "./Button";
 
 export default {
-  title: 'Example/Button',
-  argTypes: {
-    label: { control: 'text' },
-    primary: { control: 'boolean' },
-    backgroundColor: { control: 'color' },
-    size: {
-      control: { type: 'select', options: ['small', 'medium', 'large'] },
-    },
-    onClick: { action: 'onClick' },
-  },
+  title: "Example/Button",
+  // argTypes: {
+  //   //   backgroundColor: { control: 'color' },
+  //   onClick: { action: "onClick" },
+  // },
 };
 
-const Template = ({ label, ...args }) => {
-  // You can either use a function to create DOM elements or use a plain html string!
-  // return `<div>${label}</div>`;
-  return createButton({ label, ...args });
-};
+const Template = ({ ...args }) =>
+  `<psh-button
+     label="${args.label}"
+     size="${args.size || ""}"
+     ${args.primary ? 'primary="true"' : ""}
+   ></psh-button>`;
 
 export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
-  label: 'Button',
+  label: "Button",
 };
+Primary.storyName = "Schubidu blablabla";
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
+  label: "Button",
 };
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'large',
-  label: 'Button',
+  size: "large",
+  label: "Button",
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 'small',
-  label: 'Button',
+  size: "small",
+  label: "Button",
 };
