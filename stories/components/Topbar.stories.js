@@ -3,6 +3,9 @@ import "./Topbar";
 
 export default {
   title: "Puzzle Shell/Components/Topbar",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export const Default = () => {
@@ -28,7 +31,7 @@ export const Default = () => {
   `;
 };
 
-export const WithActions = () => {
+export const With_Actions = () => {
   return html`
     <pzsh-topbar>
       <svg
@@ -55,4 +58,3 @@ export const WithActions = () => {
     </pzsh-topbar>
   `;
 };
-WithActions.storyName = "With actions";

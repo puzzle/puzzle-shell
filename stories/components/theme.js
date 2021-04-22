@@ -20,8 +20,9 @@ export const theme = css`
     /* Spacings */
     --pzsh-spacer: 8px;
 
-    /* Topbar */
-    --pzsh-topbar-height: 65px;
+    /* Sizes */
+    --pzsh-topbar-height: calc(8 * var(--pzsh-spacer));
+    --pzsh-banner-height: calc(8 * var(--pzsh-spacer));
   }
 
   /* Reset */
