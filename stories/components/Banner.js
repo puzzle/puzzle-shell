@@ -8,12 +8,12 @@ export class Banner extends LitElement {
     css`
       .banner {
         height: var(--pzsh-banner-height);
-        background: var(#64a9d9);
+        background: var(--pzsh-banner-bg-left);
         background: linear-gradient(
           90deg,
-          #3572b2 0%,
-          #64a9d9 100%
-        ); /* TODO: use correct colors from theme once defined */
+          var(--pzsh-banner-bg-left) 0%,
+          var(--pzsh-banner-bg-right) 100%
+        );
       }
     `,
   ];

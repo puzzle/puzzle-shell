@@ -17,6 +17,14 @@ export const theme = css`
     --pzsh-color-brand-7: #69b978;
     --pzsh-color-brand-8: #61b44b;
 
+    /* Component colors */
+    --pzsh-topbar-bg-bottom: var(--pzsh-color-gray-2);
+    --pzsh-topbar-bg-top: var(--pzsh-color-gray-1);
+    --pzsh-topbar-border: var(--pzsh-color-gray-3);
+    --pzsh-banner-bg-left: #3572b2; /* TODO: define as brand variant color*/
+    --pzsh-banner-bg-right: #64a9d9; /* TODO: define as brand variant color */
+    --pzsh-footer-bg: var(--pzsh-color-gray-3);
+
     /* Spacings */
     --pzsh-spacer: 8px;
 

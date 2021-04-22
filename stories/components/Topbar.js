@@ -9,14 +9,14 @@ export class Topbar extends LitElement {
       .topbar {
         height: var(--pzsh-topbar-height);
         padding: calc(2 * var(--pzsh-spacer)) calc(4 * var(--pzsh-spacer));
-        border-bottom: 1px solid var(--pzsh-color-gray-3);
+        border-bottom: 1px solid var(--pzsh-topbar-border);
         display: flex;
         align-items: center;
-        background: var(--pzsh-color-gray-2);
+        background: var(--pzsh-topbar-bg-bottom);
         background: linear-gradient(
           0deg,
-          var(--pzsh-color-gray-2) 0%,
-          var(--pzsh-color-gray-1) 33%
+          var(--pzsh-topbar-bg-bottom) 0%,
+          var(--pzsh-topbar-bg-top) 33%
         );
       }
 

@@ -1,13 +1,15 @@
+import { html } from "lit-element";
+import "./Footer";
+
 export default {
   title: "Puzzle Shell/Components/Footer",
+  parameters: {
+    layout: "fullscreen",
+  },
 };
 
 export const Default = () => {
-  return `
-    <div>
-      Footer
-    </div>
-  `;
+  return html`<pzsh-footer></pzsh-footer>`;
 };
 Default.args = {
   label: "Default",
