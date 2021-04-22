@@ -1,6 +1,10 @@
 import { LitElement, html, css, customElement } from "lit-element";
 import { theme } from "./theme";
 
+/**
+ * Full height container component that expects to be "slotted" with
+ * header, content and footer.
+ */
 @customElement("pzsh-container")
 export class Container extends LitElement {
   static styles = [
