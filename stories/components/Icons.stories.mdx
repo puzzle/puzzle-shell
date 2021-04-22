@@ -1,0 +1,20 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Puzzle Shell/Components/Icons" />
+
+# Icons
+
+The Puzzle Shell uses the [Unicons](https://iconscout.com/unicons) icon set, which is Apache 2.0 licensed.
+
+You can grab additional icons from the [full list icons](https://iconscout.com/unicons/explore/line).
+
+## Optimization
+
+When downloading icon SVGs, make sure to process them as follows:
+
+- Optimize them with [SVGOMG](https://jakearchibald.github.io/svgomg/):
+  - Copy the SVGs markup
+  - Goto [SVGOMG](https://jakearchibald.github.io/svgomg/) and use "Paste markup"
+  - Copy the reduced SVG (copy icon on the bottom right)
+- Replace all `fill="..."` and `stroke="..."` color values with `currentText` for the icon to use the actual color of the HTML parent
+- Use the icon 🚀
