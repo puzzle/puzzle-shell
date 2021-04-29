@@ -1,10 +1,10 @@
-import { html } from 'lit-element';
-import '../../src/components/Footer.js';
+import { html } from "lit-element";
+import "../../src/components/Footer.js";
 
 export default {
-  title: 'Puzzle Shell/Components/Footer',
+  title: "Puzzle Shell/Components/Footer",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 

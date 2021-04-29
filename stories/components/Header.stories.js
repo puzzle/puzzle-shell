@@ -1,10 +1,10 @@
-import { html } from 'lit-element';
-import '../../src/components/Header.js';
+import { html } from "lit-element";
+import "../../src/components/Header.js";
 
 export default {
-  title: 'Puzzle Shell/Components/Header',
+  title: "Puzzle Shell/Components/Header",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 

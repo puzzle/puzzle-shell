@@ -1,10 +1,10 @@
-import { html } from 'lit-element';
-import '../../index.js';
+import { html } from "lit-element";
+import "../../index.js";
 
 export default {
-  title: 'Puzzle Shell/Examples/Content app with search',
+  title: "Puzzle Shell/Examples/Content app with search",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 
@@ -32,4 +32,4 @@ export const Default = () => html`
     <pzsh-footer></pzsh-footer>
   </pzsh-container>
 `;
-Default.storyName = 'Content app with search';
+Default.storyName = "Content app with search";

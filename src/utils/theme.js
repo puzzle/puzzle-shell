@@ -1,4 +1,4 @@
-import { css } from 'lit-element';
+import { css } from "lit-element";
 
 const customProperties = css`
   /* Base colors */
@@ -26,8 +26,8 @@ const customProperties = css`
   --pzsh-footer-bg: var(--pzsh-color-gray-3);
 
   /* Fonts */
-  --pzsh-font-family: 'Roboto', sans-serif;
-  --pzsh-monospace-font-family: 'Roboto Mono', monospace;
+  --pzsh-font-family: "Roboto", sans-serif;
+  --pzsh-monospace-font-family: "Roboto Mono", monospace;
 
   /* Spacings */
   --pzsh-spacer: 8px;
@@ -42,7 +42,7 @@ const customProperties = css`
  * Roboto Mono: Regular 400, Medium 500
  */
 const fontFaces = css`
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:wght@400;500&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:wght@400;500&display=swap");
 `;
 
 /**
@@ -73,9 +73,9 @@ export const theme = css`
  * Register CSS in light DOM, e.g. to style slot children
  */
 export function registerLightDomStyles(styles) {
-  const lightStyle = document.createElement('style');
+  const lightStyle = document.createElement("style");
   lightStyle.innerText = styles;
-  document.querySelector('body').appendChild(lightStyle);
+  document.querySelector("body").appendChild(lightStyle);
 }
 
 // Make custom properties & font faces available globally in light DOM so any

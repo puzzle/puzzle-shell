@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
 
 // Icons from https://iconscout.com/unicons/explore/line (colors set
 // to currentColor and SVG optimized)
@@ -44,4 +44,4 @@ export class Icon extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-icon', Icon);
+window.customElements.define("pzsh-icon", Icon);

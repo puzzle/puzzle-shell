@@ -1,10 +1,10 @@
-import { html } from 'lit-element';
-import '../../index.js';
+import { html } from "lit-element";
+import "../../index.js";
 
 export default {
-  title: 'Puzzle Shell/Examples/Web app with navigation',
+  title: "Puzzle Shell/Examples/Web app with navigation",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 
@@ -32,4 +32,4 @@ export const Default = () => html`
     <pzsh-footer></pzsh-footer>
   </pzsh-container>
 `;
-Default.storyName = 'Web app with navigation';
+Default.storyName = "Web app with navigation";

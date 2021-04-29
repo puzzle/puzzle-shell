@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
 
 /**
  * Top application bar that contains logo and optional
@@ -27,7 +27,7 @@ export class Topbar extends LitElement {
           );
         }
 
-        ::slotted([slot='actions']) {
+        ::slotted([slot="actions"]) {
           flex: auto;
           display: flex;
           justify-content: flex-end;
@@ -44,4 +44,4 @@ export class Topbar extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-topbar', Topbar);
+window.customElements.define("pzsh-topbar", Topbar);

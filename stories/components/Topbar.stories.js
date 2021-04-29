@@ -1,14 +1,14 @@
-import { html } from 'lit-element';
-import '../../src/components/Topbar.js';
-import '../../src/components/TopbarLink.js';
-import '../../src/components/Icon.js';
+import { html } from "lit-element";
+import "../../src/components/Topbar.js";
+import "../../src/components/TopbarLink.js";
+import "../../src/components/Icon.js";
 
 /* eslint-disable camelcase */
 
 export default {
-  title: 'Puzzle Shell/Components/Topbar',
+  title: "Puzzle Shell/Components/Topbar",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 

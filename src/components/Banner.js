@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
 
 /**
  * Component that might contain the search or the navigation, part of
@@ -28,4 +28,4 @@ export class Banner extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-banner', Banner);
+window.customElements.define("pzsh-banner", Banner);

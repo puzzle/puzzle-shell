@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
 
 /**
  * Full height container component that expects to be "slotted" with
@@ -36,4 +36,4 @@ export class Container extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-container', Container);
+window.customElements.define("pzsh-container", Container);

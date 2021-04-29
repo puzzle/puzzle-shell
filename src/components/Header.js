@@ -1,7 +1,7 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
-import './Topbar.js';
-import './Banner.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
+import "./Topbar.js";
+import "./Banner.js";
 
 /**
  * Component for the application's header, contains the topbar and the
@@ -34,4 +34,4 @@ export class Header extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-header', Header);
+window.customElements.define("pzsh-header", Header);

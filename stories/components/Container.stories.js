@@ -1,11 +1,11 @@
-import { html } from 'lit-element';
-import '../../src/components/Container.js';
+import { html } from "lit-element";
+import "../../src/components/Container.js";
 
 export default {
-  title: 'Puzzle Shell/Components/Container',
-  component: 'pzsh-container',
+  title: "Puzzle Shell/Components/Container",
+  component: "pzsh-container",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 

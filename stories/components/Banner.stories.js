@@ -1,12 +1,12 @@
-import { html } from 'lit-element';
-import '../../src/components/Banner.js';
+import { html } from "lit-element";
+import "../../src/components/Banner.js";
 
 /* eslint-disable camelcase */
 
 export default {
-  title: 'Puzzle Shell/Components/Banner',
+  title: "Puzzle Shell/Components/Banner",
   parameters: {
-    layout: 'fullscreen',
+    layout: "fullscreen",
   },
 };
 

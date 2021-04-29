@@ -1,5 +1,5 @@
-import { LitElement, html, css } from 'lit-element';
-import { theme } from '../utils/theme.js';
+import { LitElement, html, css } from "lit-element";
+import { theme } from "../utils/theme.js";
 
 /**
  * Top bar action link with icon and text.
@@ -40,7 +40,7 @@ export class TopbarLink extends LitElement {
 
   constructor() {
     super();
-    this.href = '#';
+    this.href = "#";
   }
 
   dispatchClick(event) {
@@ -54,4 +54,4 @@ export class TopbarLink extends LitElement {
   }
 }
 
-window.customElements.define('pzsh-topbar-link', TopbarLink);
+window.customElements.define("pzsh-topbar-link", TopbarLink);
