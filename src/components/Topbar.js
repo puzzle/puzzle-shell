@@ -31,7 +31,6 @@ export class Topbar extends LitElement {
           flex: auto;
           display: flex;
           justify-content: flex-end;
-          gap: var(--pzsh-spacer); /* TODO: does not work in Safari */
         }
       `,
     ];

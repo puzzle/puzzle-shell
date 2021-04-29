@@ -1,5 +1,7 @@
 import { html } from 'lit-element';
 import '../../src/components/Topbar.js';
+import '../../src/components/TopbarLink.js';
+import '../../src/components/Icon.js';
 
 /* eslint-disable camelcase */
 
@@ -50,9 +52,18 @@ export const With_Actions = () => html`
       />
     </svg>
     <div slot="actions">
-      <button>A</button>
-      <button>B</button>
-      <button>C</button>
+      <pzsh-topbar-link href="#">
+        <pzsh-icon name="users-alt"></pzsh-icon>
+        Administration
+      </pzsh-topbar-link>
+      <pzsh-topbar-link href="#">
+        <pzsh-icon name="question-circle"></pzsh-icon>
+        Help
+      </pzsh-topbar-link>
+      <pzsh-topbar-link href="#">
+        <pzsh-icon name="user-circle"></pzsh-icon>
+        Max Mustermann
+      </pzsh-topbar-link>
     </div>
   </pzsh-topbar>
 `;
