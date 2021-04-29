@@ -1,13 +1,12 @@
-import { html } from "lit-element";
-import "./Container";
+import { html } from 'lit-element';
+import '../../src/Container.js';
 
 export default {
-  title: "Puzzle Shell/Components/Container",
+  title: 'Puzzle Shell/Components/Container',
+  component: 'pzsh-container',
   parameters: {
-    layout: "fullscreen",
+    layout: 'fullscreen',
   },
 };
 
-export const Default = () => {
-  return html`<pzsh-container>TODO</pzsh-container>`;
-};
+export const Default = () => html`<pzsh-container>TODO</pzsh-container>`;

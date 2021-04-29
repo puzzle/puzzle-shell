@@ -1,13 +1,17 @@
 {
-  "name": "puzzle-shell",
+  "name": "@puzzleitc/puzzle-shell",
   "version": "1.0.0",
   "description": "The standard design for Puzzle tools",
   "main": "index.js",
+  "module": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "deploy": "gh-pages -d storybook-static"
+    "start": "web-dev-server",
+    "lint": "eslint --ext .js,.html . --ignore-path .gitignore && prettier \"**/*.js\" --check --ignore-path .gitignore",
+    "format": "eslint --ext .js,.html . --fix --ignore-path .gitignore && prettier \"**/*.js\" --write --ignore-path .gitignore",
+    "test": "web-test-runner --coverage",
+    "test:watch": "web-test-runner --watch",
+    "storybook": "web-dev-server -c .storybook/server.mjs",
+    "storybook:build": "build-storybook"
   },
   "repository": {
     "type": "git",
@@ -24,15 +28,41 @@
     "url": "https://github.com/puzzle/puzzle-shell/issues"
   },
   "homepage": "http://puzzle.github.com/puzzle-shell",
-  "devDependencies": {
-    "@babel/core": "^7.13.14",
-    "@storybook/addon-actions": "^6.2.5",
-    "@storybook/addon-essentials": "^6.2.5",
-    "@storybook/addon-links": "^6.2.5",
-    "@storybook/web-components": "^6.2.5",
-    "babel-loader": "^8.2.2",
-    "gh-pages": "^3.1.0",
+  "dependencies": {
+    "lit-html": "^1.4.0",
     "lit-element": "^2.4.0"
   },
-  "dependencies": {}
+  "devDependencies": {
+    "@web/dev-server": "^0.1.16",
+    "eslint": "^7.25.0",
+    "@open-wc/eslint-config": "^4.3.0",
+    "prettier": "^2.2.1",
+    "eslint-config-prettier": "^7.2.0",
+    "husky": "^4.3.8",
+    "lint-staged": "^10.5.4",
+    "@web/test-runner": "^0.12.20",
+    "@open-wc/testing": "^2.5.33",
+    "@web/dev-server-storybook": "^0.3.5"
+  },
+  "eslintConfig": {
+    "extends": [
+      "@open-wc/eslint-config",
+      "eslint-config-prettier"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "arrowParens": "avoid"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
+  }
 }
