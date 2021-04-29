@@ -1,6 +1,10 @@
 import { LitElement, html, css } from 'lit-element';
-import { theme } from './theme.js';
+import { theme } from '../utils/theme.js';
 
+/**
+ * Component that might contain the search or the navigation, part of
+ * the header below the topbar.
+ */
 export class Banner extends LitElement {
   static get styles() {
     return [

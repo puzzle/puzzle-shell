@@ -1,6 +1,9 @@
 import { LitElement, html, css } from 'lit-element';
-import { theme } from './theme.js';
+import { theme } from '../utils/theme.js';
 
+/**
+ * Component for the application's footer.
+ */
 export class Footer extends LitElement {
   static get styles() {
     return [

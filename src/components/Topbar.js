@@ -1,6 +1,13 @@
 import { LitElement, html, css } from 'lit-element';
-import { theme } from './theme.js';
+import { theme } from '../utils/theme.js';
 
+/**
+ * Top application bar that contains logo and optional
+ * application-wide actions like help, logout etc.
+ *
+ * @slot logo - Slot for the logo SVG graphic
+ * @slot actions - Slot for topbar buttons/dropdowns
+ */
 export class Topbar extends LitElement {
   static get styles() {
     return [

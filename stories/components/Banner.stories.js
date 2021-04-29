@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../src/Banner.js';
+import '../../src/components/Banner.js';
 
 /* eslint-disable camelcase */
 

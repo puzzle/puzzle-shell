@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../src/Header.js';
+import '../../src/components/Header.js';
 
 export default {
   title: 'Puzzle Shell/Components/Header',

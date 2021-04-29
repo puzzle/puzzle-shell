@@ -1,9 +1,11 @@
 import { LitElement, html, css } from 'lit-element';
-import { theme } from './theme.js';
+import { theme } from '../utils/theme.js';
 
 /**
  * Full height container component that expects to be "slotted" with
  * header, content and footer.
+ *
+ * @slot - Add header, content and footer in this slot.
  */
 export class Container extends LitElement {
   static get styles() {

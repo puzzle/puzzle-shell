@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../src/Container.js';
+import '../../src/components/Container.js';
 
 export default {
   title: 'Puzzle Shell/Components/Container',

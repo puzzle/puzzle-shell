@@ -60,6 +60,12 @@ npm run format:eslint
 npm run format:prettier
 ```
 
+To automatically generate the `custom-elements.json` manifest using the [web-component-analyzer](https://github.com/runem/web-component-analyzer), run
+
+```bash
+npm run manifest
+```
+
 ## Testing with Web Test Runner
 
 To run the suite of Web Test Runner tests, run

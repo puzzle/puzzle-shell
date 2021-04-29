@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../src/Footer.js';
+import '../../src/components/Footer.js';
 
 export default {
   title: 'Puzzle Shell/Components/Footer',

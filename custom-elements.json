@@ -1,30 +1,54 @@
 {
-  "version": 2,
+  "version": "experimental",
   "tags": [
     {
-      "name": "puzzle-shell",
-      "description": "A component with a title and an action counter",
-      "properties": [
+      "name": "pzsh-banner",
+      "path": "./src/components/Banner.js",
+      "description": "Component that might contain the search or the navigation, part of\nthe header below the topbar."
+    },
+    {
+      "name": "pzsh-container",
+      "path": "./src/components/Container.js",
+      "description": "Full height container component that expects to be \"slotted\" with\nheader, content and footer.",
+      "slots": [
         {
-          "name": "title",
-          "type": "String",
-          "description": "The title of your component",
-          "default": "Hey there"
+          "name": "",
+          "description": "Add header, content and footer in this slot."
+        }
+      ]
+    },
+    {
+      "name": "pzsh-footer",
+      "path": "./src/components/Footer.js",
+      "description": "Component for the application's footer."
+    },
+    {
+      "name": "pzsh-header",
+      "path": "./src/components/Header.js",
+      "description": "Component for the application's header, contains the topbar and the\nbanner.",
+      "slots": [
+        {
+          "name": "logo",
+          "description": "Slot for the topbar logo SVG graphic"
         },
         {
-          "name": "counter",
-          "type": "Number",
-          "description": "An action counter",
-          "default": 0
+          "name": "actions",
+          "description": "Slot for topbar buttons/dropdowns"
         }
-      ],
-      "events": [],
-      "slots": [],
-      "cssProperties": [
+      ]
+    },
+    {
+      "name": "pzsh-topbar",
+      "path": "./src/components/Topbar.js",
+      "description": "Top application bar that contains logo and optional\napplication-wide actions like help, logout etc.",
+      "slots": [
         {
-          "name": "--puzzle-shell-text-color",
-          "description": "Main Text Color",
-          "type": "Color"
+          "name": "logo",
+          "description": "Slot for the logo SVG graphic"
+        },
+        {
+          "name": "actions",
+          "description": "Slot for topbar buttons/dropdowns"
         }
       ]
     }

@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../src/Topbar.js';
+import '../../src/components/Topbar.js';
 
 /* eslint-disable camelcase */
 

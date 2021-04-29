@@ -1,8 +1,15 @@
 import { LitElement, html, css } from 'lit-element';
-import { theme } from './theme.js';
-import '../pzsh-topbar.js';
-import '../pzsh-banner.js';
+import { theme } from '../utils/theme.js';
+import './Topbar.js';
+import './Banner.js';
 
+/**
+ * Component for the application's header, contains the topbar and the
+ * banner.
+ *
+ * @slot logo - Slot for the topbar logo SVG graphic
+ * @slot actions - Slot for topbar buttons/dropdowns
+ */
 export class Header extends LitElement {
   static get styles() {
     return [
