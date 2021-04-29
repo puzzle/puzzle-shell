@@ -23,3 +23,5 @@ export class Banner extends LitElement {
     return html`<div class="banner"></div>`;
   }
 }
+
+window.customElements.define('pzsh-banner', Banner);

@@ -37,3 +37,5 @@ export class Topbar extends LitElement {
     </div>`;
   }
 }
+
+window.customElements.define('pzsh-topbar', Topbar);

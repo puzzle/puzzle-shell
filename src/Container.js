@@ -33,3 +33,5 @@ export class Container extends LitElement {
     </div>`;
   }
 }
+
+window.customElements.define('pzsh-container', Container);

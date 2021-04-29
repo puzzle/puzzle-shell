@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import '../../puzzle-shell.js';
+import '../../index.js';
 
 export default {
   title: 'Puzzle Shell/Examples/Web app with navigation',

@@ -26,3 +26,5 @@ export class Header extends LitElement {
     </div>`;
   }
 }
+
+window.customElements.define('pzsh-header', Header);

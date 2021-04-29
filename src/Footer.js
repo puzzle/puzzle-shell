@@ -18,3 +18,5 @@ export class Footer extends LitElement {
     return html`<div class="footer"></div>`;
   }
 }
+
+window.customElements.define('pzsh-footer', Footer);
