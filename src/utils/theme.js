@@ -21,6 +21,8 @@ const customProperties = css`
   --pzsh-topbar-bg-bottom: var(--pzsh-color-gray-2);
   --pzsh-topbar-bg-top: var(--pzsh-color-gray-1);
   --pzsh-topbar-border: var(--pzsh-color-gray-3);
+  --pzsh-topbar-menu-bg: #f4f4f4; /* TODO: add color to theme once decided */
+  --pzsh-topbar-menu-fg: #ffffff;
   --pzsh-banner-bg-left: #64a9d9; /* TODO: define as brand variant color? */
   --pzsh-banner-bg-right: #ffffff; /* TODO: define as brand variant color? */
   --pzsh-footer-bg: var(--pzsh-color-gray-3);

@@ -28,6 +28,19 @@ export class TopbarLink extends LitElement {
         ::slotted(svg) {
           margin-right: calc(var(--pzsh-spacer) / 2);
         }
+
+        @media (max-width: 800px) {
+          a {
+            margin-left: 0;
+            padding: calc(2 * var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer));
+            color: var(--pzsh-topbar-menu-fg);
+          }
+          a:hover,
+          a:active {
+            background-color: var(--pzsh-color-brand-2);
+            text-decoration: none;
+          }
+        }
       `,
     ];
   }
