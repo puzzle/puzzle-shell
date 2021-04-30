@@ -85,21 +85,64 @@ export class Topbar extends LitElement {
 
   static get properties() {
     return {
+      hasMenuItems: { attribute: false },
       menuOpen: { attribute: false },
     };
   }
 
   constructor() {
     super();
+    this.hasMenuItems = false;
     this.menuOpen = false;
+
+    this.menuItemsObserver = new MutationObserver(mutations =>
+      mutations.forEach(this.__updateHasMenuItems.bind(this))
+    );
+
+    // Handle slot node assignments (slotted <div> that contains menu
+    // items)
+    this.shadowRoot.addEventListener(
+      "slotchange",
+      this.__handleActionsSlotAssignment.bind(this)
+    );
+  }
+
+  firstUpdated() {
+    this.__updateHasMenuItems();
+  }
+
+  __handleActionsSlotAssignment(e) {
+    const slot = e.target;
+    if (slot.getAttribute("name") === "actions") {
+      slot.assignedNodes().forEach(node =>
+        // Observe adding/removing of slot node children (actual menu items)
+        this.menuItemsObserver.observe(node, { childList: true })
+      );
+    }
+  }
+
+  __updateHasMenuItems() {
+    const slot = this.shadowRoot.querySelector('slot[name="actions"]');
+    this.hasMenuItems = slot
+      .assignedNodes()
+      .some(node => node.children.length > 0);
   }
 
   __toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
 
+  __renderMenuButton() {
+    if (this.hasMenuItems) {
+      const icon = this.menuOpen ? "multiply" : "bars";
+      return html`<button class="menu-button" @click=${this.__toggleMenu}>
+        <pzsh-icon name=${icon}></pzsh-icon>
+      </button>`;
+    }
+    return null;
+  }
+
   render() {
-    const menuButtonIcon = this.menuOpen ? "multiply" : "bars";
     const menuClasses = {
       menu: true,
       open: this.menuOpen,
@@ -109,9 +152,7 @@ export class Topbar extends LitElement {
       <div class=${classMap(menuClasses)}>
         <slot name="actions"></slot>
       </div>
-      <button class="menu-button" @click=${this.__toggleMenu}>
-        <pzsh-icon name=${menuButtonIcon}></pzsh-icon>
-      </button>
+      ${this.__renderMenuButton()}
     </div>`;
   }
 }
