@@ -81,9 +81,16 @@
         console.warn('unable to connect to top frame for connecting dev tools');
       }
     </script>
-    
+    <!-- Remove padding (unfortunately the layout 'fullscreen' option is not availabe in the @web storybook version) -->
+<style type="text/css">
+  body {
+    margin: 0;
+    padding: 0;
+  }
+</style>
+
   
-<link rel="preload" href="./b439f38c.js" as="script">
+<link rel="preload" href="./c5dd89f5.js" as="script">
 </head>
 
   <body>
@@ -154,7 +161,7 @@
     }
 
     function loadFiles() {
-      System.import('./b439f38c.js');
+      System.import('./c5dd89f5.js');
     }
 
     if (polyfills.length) {
