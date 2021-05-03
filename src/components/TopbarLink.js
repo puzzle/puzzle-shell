@@ -17,7 +17,7 @@ export class TopbarLink extends LitElement {
           align-items: center;
           margin-left: calc(3 * var(--pzsh-spacer));
           font-family: var(--pzsh-font-family);
-          color: var(--pzsh-color-gray-4);
+          color: var(--pzsh-topbar-fg);
           text-decoration: none;
         }
         a:hover,
@@ -37,7 +37,7 @@ export class TopbarLink extends LitElement {
           }
           a:hover,
           a:active {
-            background-color: var(--pzsh-color-brand-2);
+            background-color: var(--pzsh-topbar-menu-bg-alt);
             text-decoration: none;
           }
         }

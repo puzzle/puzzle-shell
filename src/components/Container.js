@@ -17,13 +17,14 @@ export class Container extends LitElement {
           flex-direction: column;
           min-height: 100vh;
         }
-        ::slotted(pzsh-header),
-        ::slotted(pzsh-footer) {
-          flex: none;
-        }
-        ::slotted(:nth-child(2)) {
+        ::slotted(*) {
           /* Let the content eat the rest */
           flex: auto;
+        }
+        ::slotted(pzsh-header),
+        ::slotted(pzsh-hero),
+        ::slotted(pzsh-footer) {
+          flex: none;
         }
       `,
     ];

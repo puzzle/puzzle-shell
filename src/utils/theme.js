@@ -2,6 +2,7 @@ import { css } from "lit-element";
 
 const customProperties = css`
   /* Base colors */
+  --pzsh-color-white: #ffffff;
   --pzsh-color-gray-1: #fafafa;
   --pzsh-color-gray-2: #f2f2f2;
   --pzsh-color-gray-3: #d8d8d8;
@@ -17,14 +18,21 @@ const customProperties = css`
   --pzsh-color-brand-7: #69b978;
   --pzsh-color-brand-8: #61b44b;
 
+  --pzsh-color-brand-alt-1: #dcedf9;
+  --pzsh-color-brand-alt-2: #1c2948;
+  --pzsh-color-brand-alt-3: #3fa8e0; /* Logo color */
+  --pzsh-color-brand-alt-4: #69b978; /* Logo color */
+
   /* Component colors */
-  --pzsh-topbar-bg-bottom: var(--pzsh-color-gray-2);
-  --pzsh-topbar-bg-top: var(--pzsh-color-gray-1);
-  --pzsh-topbar-border: var(--pzsh-color-gray-3);
-  --pzsh-topbar-menu-bg: #f4f4f4; /* TODO: add color to theme once decided */
-  --pzsh-topbar-menu-fg: #ffffff;
-  --pzsh-banner-bg-left: #64a9d9; /* TODO: define as brand variant color? */
-  --pzsh-banner-bg-right: #ffffff; /* TODO: define as brand variant color? */
+  --pzsh-topbar-bg: var(--pzsh-color-brand-1);
+  --pzsh-topbar-bg-alt: var(--pzsh-color-brand-2);
+  --pzsh-topbar-fg: var(--pzsh-color-white);
+  --pzsh-topbar-menu-bg: var(--pzsh-color-brand-3);
+  --pzsh-topbar-menu-bg-alt: var(--pzsh-color-brand-4);
+  --pzsh-topbar-menu-fg: var(--pzsh-color-white);
+  --pzsh-banner-bg: var(--pzsh-color-brand-alt-1);
+  --pzsh-hero-bg-start: var(--pzsh-banner-bg);
+  --pzsh-hero-bg-end: var(--pzsh-color-white);
   --pzsh-footer-bg: var(--pzsh-color-gray-3);
 
   /* Fonts */
@@ -35,8 +43,11 @@ const customProperties = css`
   --pzsh-spacer: 8px;
 
   /* Sizes */
-  --pzsh-topbar-height: calc(8 * var(--pzsh-spacer));
-  --pzsh-banner-height: calc(8 * var(--pzsh-spacer));
+  --logo-height: 32px;
+  --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--logo-height));
+  --pzsh-banner-small-height: calc(8 * var(--pzsh-spacer));
+  --pzsh-banner-large-height: calc(12 * var(--pzsh-spacer));
+  --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
 `;
 
 /**

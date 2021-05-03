@@ -2,6 +2,8 @@ import { LitElement, html, css } from "lit-element";
 import { classMap } from "lit-html/directives/class-map.js";
 import { theme } from "../utils/theme.js";
 
+// TODO: href property for logo home link
+
 /**
  * Top application bar that contains logo and optional
  * application-wide actions like help, logout etc.
@@ -16,16 +18,10 @@ export class Topbar extends LitElement {
       css`
         .topbar {
           height: var(--pzsh-topbar-height);
-          padding: calc(2 * var(--pzsh-spacer)) calc(4 * var(--pzsh-spacer));
-          border-bottom: 1px solid var(--pzsh-topbar-border);
+          padding: calc(var(--pzsh-spacer)) calc(6 * var(--pzsh-spacer));
           display: flex;
           align-items: center;
-          background: var(--pzsh-topbar-bg-bottom);
-          background: linear-gradient(
-            0deg,
-            var(--pzsh-topbar-bg-bottom) 0%,
-            var(--pzsh-topbar-bg-top) 33%
-          );
+          background: var(--pzsh-topbar-bg);
         }
 
         .menu {
@@ -37,12 +33,12 @@ export class Topbar extends LitElement {
           padding: var(--pzsh-spacer);
           border: 0;
           border-radius: 3px;
-          color: var(--pzsh-color-gray-4);
-          background-color: var(--pzsh-topbar-menu-bg);
+          background-color: transparent;
+          color: var(--pzsh-topbar-fg);
           cursor: pointer;
         }
         .menu-button:hover {
-          background-color: var(--pzsh-color-gray-3);
+          background-color: var(--pzsh-topbar-bg-alt);
         }
         .menu-button pzsh-icon {
           display: block;
@@ -72,7 +68,7 @@ export class Topbar extends LitElement {
             top: var(--pzsh-topbar-height);
             left: 0;
             right: 0;
-            background-color: var(--pzsh-color-brand-1);
+            background-color: var(--pzsh-topbar-menu-bg);
           }
 
           ::slotted([slot="actions"]) {
