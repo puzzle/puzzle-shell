@@ -14,6 +14,7 @@
     "storybook:build": "build-storybook",
     "prepare": "husky install",
     "manifest": "wca analyze \"src/components/*.js\" --format json --outFiles ./custom-elements.json",
+    "bundle": "rm -rf dist/ && esbuild index.js --bundle --minify --sourcemap --outfile=dist/bundle.js",
     "publish": "npm publish --access public"
   },
   "repository": {
@@ -49,6 +50,7 @@
     "@web/dev-server": "^0.1.17",
     "@web/dev-server-storybook": "^0.3.5",
     "@web/test-runner": "^0.13.4",
+    "esbuild": "^0.12.1",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",

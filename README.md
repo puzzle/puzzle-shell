@@ -18,12 +18,34 @@ npm i @puzzleitc/puzzle-shell
 
 ## Usage
 
+You can either use native JavaScript modules:
+
 ```html
 <script type="module">
-  import '@puzzleitc/puzzle-shell/puzzle-shell.js';
+  import "@puzzleitc/puzzle-shell/index.js";
 </script>
 
-<puzzle-shell></puzzle-shell>
+<body>
+  <pzsh-container>
+    <pzsh-topbar></pzsh-topbar>
+    <main></main>
+    <pzsh-footer></pzsh-footer>
+  </pzsh-container>
+</body>
+```
+
+Or you can use a bundled/minified version:
+
+```html
+<script src="/path/to/@puzzleitc/puzzle-shell/dist/bundle.js">
+
+<body>
+  <pzsh-container>
+    <pzsh-topbar></pzsh-topbar>
+    <main></main>
+    <pzsh-footer></pzsh-footer>
+  </pzsh-container>
+</body>
 ```
 
 ## Linting with ESLint, Prettier, and Types
@@ -107,3 +129,11 @@ npm start
 ```
 
 To run a local development server that serves the basic demo located in `demo/index.html`
+
+## Publish New Package Version
+
+- Execute `npm run manifest` to make sure the `custom-elements.json` manifest is up-to-date
+- Update the `CHANGELOG.md`
+- Bump the version with [npm version](https://docs.npmjs.com/cli/v7/commands/npm-version) (updates `package.json` and creates Git tag)
+- Execute `npm run bundle` to create the bundle
+- Execute `npm run publish` to upload the new package version
