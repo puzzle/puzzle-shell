@@ -83,7 +83,7 @@ export class Topbar extends LitElement {
     return {
       hasMenuItems: { attribute: false },
       menuOpen: { attribute: false },
-      homeUrl: { type: String },
+      href: { type: String },
     };
   }
 
@@ -91,7 +91,6 @@ export class Topbar extends LitElement {
     super();
     this.hasMenuItems = false;
     this.menuOpen = false;
-    this.homeUrl = "/";
 
     this.menuItemsObserver = new MutationObserver(mutations =>
       mutations.forEach(this.__updateHasMenuItems.bind(this))
@@ -145,8 +144,11 @@ export class Topbar extends LitElement {
       menu: true,
       open: this.menuOpen,
     };
+    const logo = this.href
+      ? html`<a href=${this.href}><slot name="logo"></slot></a>`
+      : html`<slot name="logo"></slot>`;
     return html`<div class="topbar">
-      <a href=${this.homeUrl}><slot name="logo"></slot></a>
+      ${logo}
       <div class=${classMap(menuClasses)}>
         <slot name="actions"></slot>
       </div>
