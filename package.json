@@ -29,6 +29,13 @@
     "url": "https://github.com/puzzle/puzzle-shell/issues"
   },
   "homepage": "http://puzzle.github.com/puzzle-shell",
+  "files": [
+    "index.js",
+    "*.md",
+    "LICENSE",
+    "custom-elements.json",
+    "src"
+  ],
   "dependencies": {
     "lit-html": "^1.4.0",
     "lit-element": "^2.4.0"
