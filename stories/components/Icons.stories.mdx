@@ -1,4 +1,5 @@
 import { Meta } from "@web/storybook-prebuilt/addon-docs/blocks.js";
+import { icons } from "../../src/components/Icon.js";
 
 <Meta title="Puzzle Shell/Components/Icons" />
 
@@ -6,7 +7,17 @@ import { Meta } from "@web/storybook-prebuilt/addon-docs/blocks.js";
 
 The Puzzle Shell uses the [Unicons](https://iconscout.com/unicons) icon set, which is Apache 2.0 licensed.
 
-You can grab additional icons from the [full list icons](https://iconscout.com/unicons/explore/line).
+It provides the following basic set of icons via the `pzsh-icon` component:
+
+<div>
+  {Object.keys(icons).map(icon =>
+    <div style={{display: "flex", alignItems: "center",}}>
+      <pzsh-icon name={icon} style={{marginRight: "0.7rem"}} />
+      <code>{`<pzsh-icon name=\"${icon}\" />`}</code>
+    </div>)}
+</div>
+
+You can grab additional icons from the [full list of icons](https://iconscout.com/unicons/explore/line) and use them as SVGs in your project.
 
 ## Optimization
 
@@ -16,5 +27,5 @@ When downloading icon SVGs, make sure to process them as follows:
   - Copy the SVGs markup
   - Goto [SVGOMG](https://jakearchibald.github.io/svgomg/) and use "Paste markup"
   - Copy the reduced SVG (copy icon on the bottom right)
-- Replace all `fill="..."` and `stroke="..."` color values with `currentColor` for the icon to use the actual color of the HTML parent
+- Replace all `fill="..."` and `stroke="..."` color values with `currentColor` for the icon to use the actual CSS color
 - Use the icon 🚀

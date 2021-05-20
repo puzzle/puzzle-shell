@@ -3,7 +3,7 @@ import { theme } from "../utils/theme.js";
 
 // Icons from https://iconscout.com/unicons/explore/line (colors set
 // to currentColor and SVG optimized)
-const icons = {
+export const icons = {
   // prettier-ignore
   bars: html`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M3 8h18a1 1 0 000-2H3a1 1 0 000 2zm18 8H3a1 1 0 000 2h18a1 1 0 000-2zm0-5H3a1 1 0 000 2h18a1 1 0 000-2z"/></svg>`,
   // prettier-ignore
