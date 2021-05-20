@@ -12,7 +12,8 @@
     "test:watch": "web-test-runner --watch",
     "storybook": "web-dev-server -c .storybook/server.mjs",
     "storybook:build": "build-storybook",
-    "manifest": "wca analyze \"src/components/*.js\" --format json --outFiles ./custom-elements.json"
+    "manifest": "wca analyze \"src/components/*.js\" --format json --outFiles ./custom-elements.json",
+    "publish": "npm publish --access public"
   },
   "repository": {
     "type": "git",
