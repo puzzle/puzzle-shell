@@ -34,7 +34,8 @@ const customProperties = css`
   --pzsh-banner-bg: var(--pzsh-color-brand-alt-1);
   --pzsh-hero-bg-start: var(--pzsh-banner-bg);
   --pzsh-hero-bg-end: var(--pzsh-color-white);
-  --pzsh-footer-bg: var(--pzsh-color-gray-3);
+  --pzsh-footer-bg: var(--pzsh-color-gray-2);
+  --pzsh-footer-border: var(--pzsh-color-gray-3);
 
   /* Fonts */
   --pzsh-font-family: "Roboto", sans-serif;
