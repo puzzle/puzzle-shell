@@ -24,6 +24,10 @@ export class Topbar extends LitElement {
           background: var(--pzsh-topbar-bg);
         }
 
+        a.logo-link {
+          display: flex; /* Fix vertical centering */
+        }
+
         .menu {
           flex: auto;
         }
@@ -139,16 +143,21 @@ export class Topbar extends LitElement {
     return null;
   }
 
+  __renderLogo() {
+    return this.href
+      ? html`<a class="logo-link" href=${this.href}>
+          <slot name="logo"></slot>
+        </a>`
+      : html`<slot name="logo"></slot>`;
+  }
+
   render() {
     const menuClasses = {
       menu: true,
       open: this.menuOpen,
     };
-    const logo = this.href
-      ? html`<a href=${this.href}><slot name="logo"></slot></a>`
-      : html`<slot name="logo"></slot>`;
     return html`<div class="topbar">
-      ${logo}
+      ${this.__renderLogo()}
       <div class=${classMap(menuClasses)}>
         <slot name="actions"></slot>
       </div>
