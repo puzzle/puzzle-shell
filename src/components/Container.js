@@ -21,7 +21,8 @@ export class Container extends LitElement {
           /* Let the content eat the rest */
           flex: auto;
         }
-        ::slotted(pzsh-header),
+        ::slotted(pzsh-topbar),
+        ::slotted(pzsh-banner),
         ::slotted(pzsh-hero),
         ::slotted(pzsh-footer) {
           flex: none;
