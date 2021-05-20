@@ -27,9 +27,10 @@ const customProperties = css`
   --pzsh-topbar-bg: var(--pzsh-color-brand-1);
   --pzsh-topbar-bg-alt: var(--pzsh-color-brand-2);
   --pzsh-topbar-fg: var(--pzsh-color-white);
-  --pzsh-topbar-menu-bg: var(--pzsh-color-brand-3);
-  --pzsh-topbar-menu-bg-alt: var(--pzsh-color-brand-4);
-  --pzsh-topbar-menu-fg: var(--pzsh-color-white);
+  --pzsh-menu-bg: var(--pzsh-color-brand-3);
+  --pzsh-menu-bg-alt: var(--pzsh-color-brand-4);
+  --pzsh-menu-fg: var(--pzsh-color-white);
+  --pzsh-menu-divider: rgba(255, 255, 255, 0.1);
   --pzsh-banner-bg: var(--pzsh-color-brand-alt-1);
   --pzsh-hero-bg-start: var(--pzsh-banner-bg);
   --pzsh-hero-bg-end: var(--pzsh-color-white);
@@ -48,6 +49,8 @@ const customProperties = css`
   --pzsh-banner-small-height: calc(8 * var(--pzsh-spacer));
   --pzsh-banner-large-height: calc(12 * var(--pzsh-spacer));
   --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
+  --pzsh-menu-item-padding-horizontal: calc(3 * var(--pzsh-spacer));
+  --pzsh-menu-item-padding-vertical: calc(2 * var(--pzsh-spacer));
 `;
 
 /**
@@ -69,7 +72,7 @@ export const theme = css`
   ${fontFaces}
 
   /* Reset */
-  * {
+  *, :host {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -80,8 +83,6 @@ export const theme = css`
   }
 `;
 
-// TODO: is it necessary to expose the custom properties to light DOM?
-
 /**
  * Register CSS in light DOM, e.g. to style slot children
  */
@@ -91,8 +92,8 @@ export function registerLightDomStyles(styles) {
   document.querySelector("body").appendChild(lightStyle);
 }
 
-// Make custom properties & font faces available globally in light DOM so any
-// styles registered with `registerLightDomStyles` may use them
+// Make custom properties & font faces available globally in light DOM
+// so any styles registered with `registerLightDomStyles` may use them
 registerLightDomStyles(css`
   :root {
     ${customProperties}

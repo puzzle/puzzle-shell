@@ -2,43 +2,45 @@ import { LitElement, html, css } from "lit-element";
 import { theme } from "../utils/theme.js";
 
 /**
- * Top bar action link with icon and text.
+ * Menu action with icon and text, will be render in the menu on
+ * mobile or in the topbar otherwise.
  *
  * @slot - Slot for the icon and the text
  * @fires click
  */
-export class TopbarLink extends LitElement {
+export class MenuAction extends LitElement {
   static get styles() {
     return [
       theme,
       css`
         a {
           display: flex;
-          align-items: center;
-          margin-left: calc(3 * var(--pzsh-spacer));
           font-family: var(--pzsh-font-family);
-          color: var(--pzsh-topbar-fg);
+          padding: var(--pzsh-menu-item-padding-vertical)
+            var(--pzsh-menu-item-padding-horizontal);
+          color: var(--pzsh-menu-fg);
           text-decoration: none;
         }
         a:hover,
         a:active {
-          text-decoration: underline;
+          background-color: var(--pzsh-menu-bg-alt);
+          text-decoration: none;
         }
         ::slotted(pzsh-icon),
         ::slotted(svg) {
           margin-right: calc(var(--pzsh-spacer) / 2);
         }
 
-        @media (max-width: 800px) {
+        @media (min-width: 800px) {
           a {
-            margin-left: 0;
-            padding: calc(2 * var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer));
-            color: var(--pzsh-topbar-menu-fg);
+            align-items: center;
+            padding: 0;
+            color: var(--pzsh-topbar-fg);
           }
           a:hover,
           a:active {
-            background-color: var(--pzsh-topbar-menu-bg-alt);
-            text-decoration: none;
+            background-color: transparent;
+            text-decoration: underline;
           }
         }
       `,
@@ -67,4 +69,4 @@ export class TopbarLink extends LitElement {
   }
 }
 
-window.customElements.define("pzsh-topbar-link", TopbarLink);
+window.customElements.define("pzsh-menu-action", MenuAction);
