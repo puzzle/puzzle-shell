@@ -83,6 +83,7 @@ export class Topbar extends LitElement {
     return {
       hasMenuItems: { attribute: false },
       menuOpen: { attribute: false },
+      href: { type: String },
     };
   }
 
@@ -143,8 +144,11 @@ export class Topbar extends LitElement {
       menu: true,
       open: this.menuOpen,
     };
+    const logo = this.href
+      ? html`<a href=${this.href}><slot name="logo"></slot></a>`
+      : html`<slot name="logo"></slot>`;
     return html`<div class="topbar">
-      <slot name="logo"></slot>
+      ${logo}
       <div class=${classMap(menuClasses)}>
         <slot name="actions"></slot>
       </div>
