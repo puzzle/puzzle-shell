@@ -20,7 +20,7 @@ npm i @puzzleitc/puzzle-shell
 
 ```html
 <script type="module">
-  import '@puzzleitc/puzzle-shell/puzzle-shell.js';
+  import "@puzzleitc/puzzle-shell/puzzle-shell.js";
 </script>
 
 <puzzle-shell></puzzle-shell>
@@ -107,3 +107,11 @@ npm start
 ```
 
 To run a local development server that serves the basic demo located in `demo/index.html`
+
+## Publish New Package Version
+
+- Execute `npm run manifest` to make sure the `custom-elements.json` manifest is up-to-date
+- Update the `CHANGELOG.md`
+- Bump the version with [npm version](https://docs.npmjs.com/cli/v7/commands/npm-version) (updates `package.json` and creates Git tag)
+- Execute `npm run build` to create the bundle
+- Execute `npm run publish` to upload the new package version
