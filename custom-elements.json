@@ -23,32 +23,169 @@
       "description": "Component for the application's footer."
     },
     {
-      "name": "pzsh-header",
-      "path": "./src/components/Header.js",
-      "description": "Component for the application's header, contains the topbar and the\nbanner.",
+      "name": "pzsh-footer-link",
+      "path": "./src/components/FooterLink.js",
+      "description": "Footer action link.",
+      "attributes": [
+        {
+          "name": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ],
       "slots": [
         {
-          "name": "logo",
-          "description": "Slot for the topbar logo SVG graphic"
-        },
-        {
-          "name": "actions",
-          "description": "Slot for topbar buttons/dropdowns"
+          "name": "",
+          "description": "Slot for the icon and the text"
         }
       ]
     },
     {
-      "name": "pzsh-topbar",
-      "path": "./src/components/Topbar.js",
-      "description": "Top application bar that contains logo and optional\napplication-wide actions like help, logout etc.",
+      "name": "pzsh-hero",
+      "path": "./src/components/Hero.js",
+      "description": "Component that contains the application title, slogan and logo, below the header/banner."
+    },
+    {
+      "name": "pzsh-icon",
+      "path": "./src/components/Icon.js",
+      "description": "Icon",
+      "attributes": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "name",
+          "attribute": "name",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-menu",
+      "path": "./src/components/Menu.js",
+      "description": "Responsive menu component that is coupled with the topbar component\nvia events (for mobile menu toggling and actions display on\ndesktop).",
+      "properties": [
+        {
+          "name": "menuOpen",
+          "default": "false"
+        },
+        {
+          "name": "hasMenu",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "handleMenuToggle"
+        },
+        {
+          "name": "actionsObserver"
+        }
+      ],
+      "events": [
+        {
+          "name": "pzsh-menu-availability"
+        }
+      ],
       "slots": [
         {
-          "name": "logo",
-          "description": "Slot for the logo SVG graphic"
+          "name": "items",
+          "description": "Slot for menu content that is visible on the page on\ndesktop (typically on the left of the content) and moves into the\nhamburger menu on mobile"
         },
         {
           "name": "actions",
-          "description": "Slot for topbar buttons/dropdowns"
+          "description": "Slot for application-wide menu actions (like help,\nlogout etc.) that are visible in the topbar on desktop and move\ninto the hamburger menu on mobile"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-menu-action",
+      "path": "./src/components/MenuAction.js",
+      "description": "Menu action with icon and text, will be render in the menu on\nmobile or in the topbar otherwise.",
+      "attributes": [
+        {
+          "name": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "events": [
+        {
+          "name": "click"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Slot for the icon and the text"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-menu-divider",
+      "path": "./src/components/MenuDivider.js",
+      "description": "Divider to be used in the pzsh-menu component to separate menu\nactions (currently only effects mobile menu)."
+    },
+    {
+      "name": "pzsh-topbar",
+      "path": "./src/components/Topbar.js",
+      "description": "Top application bar that contains the logo and optional\napplication-wide actions that are rendered via the menu\ncomponent. The topbar is coupled with the menu component via\nevents.",
+      "attributes": [
+        {
+          "name": "href",
+          "type": "string"
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string"
+        },
+        {
+          "name": "hasMenu",
+          "default": "false"
+        },
+        {
+          "name": "menuOpen",
+          "default": "false"
+        },
+        {
+          "name": "updateHasMenu"
+        }
+      ],
+      "events": [
+        {
+          "name": "pzsh-menu-toggle"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Slot for the logo SVG graphic"
         }
       ]
     }
