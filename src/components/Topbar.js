@@ -103,7 +103,12 @@ export class Topbar extends LitElement {
   renderMenuButton() {
     if (this.hasMenu) {
       const icon = this.menuOpen ? "multiply" : "bars";
-      return html`<button class="menu-button" @click=${this.toggleMenu}>
+      return html`<button
+        type="button"
+        class="menu-button"
+        @click=${this.toggleMenu}
+        aria-expanded=${this.menuOpen}
+      >
         <pzsh-icon name=${icon}></pzsh-icon>
       </button>`;
     }
