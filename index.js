@@ -8,3 +8,4 @@ export { MenuAction } from "./src/components/MenuAction.js";
 export { MenuDivider } from "./src/components/MenuDivider.js";
 export { PuzzleShell } from "./src/components/PuzzleShell.js";
 export { Topbar } from "./src/components/Topbar.js";
+export { FooterLink } from "./src/components/FooterLink.js";

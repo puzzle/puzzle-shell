@@ -97,7 +97,12 @@ export const Default = () => html`
       </pzsh-menu>
       <main>Content app with search</main>
     </div>
-    <pzsh-footer></pzsh-footer>
+    <pzsh-footer
+      ><div slot="start" style="display: block">
+        Diese Seite wurde mit Antora generiert. Das Theme basiert auf dem Antora
+        default UI (MPL-2.0).
+      </div>
+    </pzsh-footer>
   </pzsh-container>
 `;
 Default.storyName = "Content app with search";
