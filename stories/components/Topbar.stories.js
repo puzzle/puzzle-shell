@@ -1,6 +1,5 @@
 import { html } from "lit-element";
-import "../../src/components/Topbar.js";
-import "../../src/components/Icon.js";
+import "../../index.js";
 
 export default {
   title: "Puzzle Shell/Components/Topbar",
@@ -38,10 +37,22 @@ export const WithMenuActions = () => html`
         <pzsh-icon name="question-circle"></pzsh-icon>
         Help
       </pzsh-menu-action>
-      <pzsh-menu-action href="#">
-        <pzsh-icon name="user"></pzsh-icon>
-        Max Mustermann
-      </pzsh-menu-action>
+      <pzsh-menu-dropdown href="#">
+        <div slot="toggle">
+          <pzsh-icon name="user"></pzsh-icon>
+          Max Mustermann
+        </div>
+        <div slot="items">
+          <pzsh-menu-dropdown-item href="#">
+            <pzsh-icon name="setting"></pzsh-icon>
+            Account Settings
+          </pzsh-menu-dropdown-item>
+          <pzsh-menu-dropdown-item href="#">
+            <pzsh-icon name="sign-out-alt"></pzsh-icon>
+            Logout
+          </pzsh-menu-dropdown-item>
+        </div>
+      </pzsh-menu-dropdown>
     </div>
   </pzsh-menu>
 `;

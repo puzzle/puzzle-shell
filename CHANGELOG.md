@@ -1,5 +1,12 @@
 # Puzzle Shell Changelog
 
+## 1.0.0-alpha.5
+
+- Add responsive `pzsh-menu-dropdown` component
+- Make menu & dropdown menu keyboard navigatable
+- Allow to close menus with ESC or click outside
+- Add icon: `setting`
+
 ## 1.0.0-alpha.4
 
 - Add icons: `gitlab`, `plus-circle`, `sliders-v-alt` and `user`
@@ -8,7 +15,7 @@
 ## 1.0.0-alpha.3
 
 - Implement `pzsh-footer` component with styling & slots
-- Add response `pzsh-menu` component
+- Add responsive `pzsh-menu` component
 
 ## 1.0.0-alpha.2
 

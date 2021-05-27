@@ -6,6 +6,8 @@ export { Icon } from "./src/components/Icon.js";
 export { Menu } from "./src/components/Menu.js";
 export { MenuAction } from "./src/components/MenuAction.js";
 export { MenuDivider } from "./src/components/MenuDivider.js";
+export { MenuDropdown } from "./src/components/MenuDropdown.js";
+export { MenuDropdownItem } from "./src/components/MenuDropdownItem.js";
 export { PuzzleShell } from "./src/components/PuzzleShell.js";
 export { Topbar } from "./src/components/Topbar.js";
 export { FooterLink } from "./src/components/FooterLink.js";

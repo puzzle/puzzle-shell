@@ -31,6 +31,9 @@ const customProperties = css`
   --pzsh-menu-bg-alt: var(--pzsh-color-brand-4);
   --pzsh-menu-fg: var(--pzsh-color-white);
   --pzsh-menu-divider: rgba(255, 255, 255, 0.1);
+  --pzsh-menu-dropdown-item-bg: var(--pzsh-color-white);
+  --pzsh-menu-dropdown-item-bg-alt: var(--pzsh-color-gray-2);
+  --pzsh-menu-dropdown-item-fg: var(--pzsh-color-gray-4);
   --pzsh-banner-bg: var(--pzsh-color-brand-alt-1);
   --pzsh-hero-bg-start: var(--pzsh-banner-bg);
   --pzsh-hero-bg-end: var(--pzsh-color-white);
@@ -45,8 +48,8 @@ const customProperties = css`
   --pzsh-spacer: 8px;
 
   /* Sizes */
-  --logo-height: 32px;
-  --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--logo-height));
+  --pzsh-logo-height: 32px;
+  --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--pzsh-logo-height));
   --pzsh-banner-small-height: calc(8 * var(--pzsh-spacer));
   --pzsh-banner-large-height: calc(12 * var(--pzsh-spacer));
   --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
@@ -55,6 +58,7 @@ const customProperties = css`
 
   /* Layering */
   --pzsh-menu-z-index: 1000;
+  --pzsh-menu-dropdown-z-index: 1000;
 `;
 
 /**
