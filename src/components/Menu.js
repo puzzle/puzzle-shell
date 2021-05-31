@@ -29,6 +29,7 @@ export class Menu extends LitElement {
         }
         nav.open {
           display: block;
+          z-index: var(--pzsh-menu-z-index);
         }
 
         ::slotted([slot="actions"]) {

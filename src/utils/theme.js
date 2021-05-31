@@ -52,6 +52,9 @@ const customProperties = css`
   --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-horizontal: calc(3 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-vertical: calc(2 * var(--pzsh-spacer));
+
+  /* Layering */
+  --pzsh-menu-z-index: 1000;
 `;
 
 /**
