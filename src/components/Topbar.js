@@ -58,7 +58,7 @@ export class Topbar extends LitElement {
 
   static get properties() {
     return {
-      hasMenu: { attribute: false },
+      menuAvailable: { attribute: false },
       menuOpen: { attribute: false },
       href: { type: String },
     };
@@ -66,42 +66,39 @@ export class Topbar extends LitElement {
 
   constructor() {
     super();
-    this.hasMenu = false;
+    this.menuAvailable = false;
     this.menuOpen = false;
 
-    this.updateHasMenu = this.updateHasMenu.bind(this);
+    this.handleMenuChange = this.handleMenuChange.bind(this);
   }
 
   connectedCallback() {
     super.connectedCallback();
-    document.addEventListener(
-      "pzsh-menu-availability",
-      this.updateHasMenu,
-      true
-    );
+    document.addEventListener("pzsh-menu-change", this.handleMenuChange, true);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     document.removeEventListener(
-      "pzsh-menu-availability",
-      this.updateHasMenu,
+      "pzsh-menu-change",
+      this.handleMenuChange,
       true
     );
   }
 
-  updateHasMenu(e) {
+  handleMenuChange(e) {
     e.stopPropagation();
-    this.hasMenu = e.detail;
+    const { available, open } = e.detail;
+    this.menuAvailable = available;
+    this.menuOpen = open;
   }
 
   toggleMenu() {
     this.dispatchEvent(new CustomEvent("pzsh-menu-toggle"));
-    this.menuOpen = !this.menuOpen;
   }
 
   renderMenuButton() {
-    if (this.hasMenu) {
+    if (this.menuAvailable) {
       const icon = this.menuOpen ? "multiply" : "bars";
       return html`<button
         type="button"
