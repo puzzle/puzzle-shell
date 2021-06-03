@@ -1,8 +1,6 @@
 import { html } from "lit-element";
 import "../../src/components/Hero.js";
 
-/* eslint-disable camelcase */
-
 export default {
   title: "Puzzle Shell/Components/Hero",
   parameters: {
@@ -27,7 +25,7 @@ export const Default = () => html`<pzsh-hero>
 </svg>
 </pzsh-hero>`;
 
-export const Long_Slogan = () => html`<pzsh-hero>
+export const LongSlogan = () => html`<pzsh-hero>
   <h1 slot="title">Puzzle Cryptopus</h1>
   <h2 slot="slogan">
     Annoyingly long slogan wrapping into multiple lines for whatever reasons
