@@ -1,5 +1,7 @@
 import { LitElement, html, css } from "lit-element";
 import { classMap } from "lit-html/directives/class-map.js";
+import { isNodeOrChild } from "../utils/dom.js";
+import { navigateMenuWithKeyboard } from "../utils/menu.js";
 
 /**
  * Responsive menu component that is coupled with the topbar component
@@ -26,10 +28,10 @@ export class Menu extends LitElement {
           overflow: hidden;
           padding: var(--pzsh-spacer) 0;
           background-color: var(--pzsh-menu-bg);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
         }
         nav.open {
           display: block;
-          z-index: var(--pzsh-menu-z-index);
         }
 
         ::slotted([slot="actions"]) {
@@ -43,6 +45,7 @@ export class Menu extends LitElement {
             position: static;
             padding: 0;
             background-color: transparent;
+            box-shadow: none;
           }
 
           /* Display the menu actions on desktop in the topbar using absolute positioning */
@@ -50,6 +53,7 @@ export class Menu extends LitElement {
             position: absolute;
             top: 0;
             right: calc(6 * var(--pzsh-spacer));
+            z-index: var(--pzsh-menu-z-index);
             height: var(--pzsh-topbar-height);
             flex-direction: row;
             align-items: center;
@@ -62,16 +66,17 @@ export class Menu extends LitElement {
 
   static get properties() {
     return {
-      menuOpen: { attribute: false },
+      open: { attribute: false },
     };
   }
 
   constructor() {
     super();
-    this.menuOpen = false;
-    this.hasMenu = false;
+    this.available = false;
+    this.open = false;
 
-    this.handleMenuToggle = this.handleMenuToggle.bind(this);
+    this.toggleMenu = this.toggleMenu.bind(this);
+    this.handleEvent = this.handleEvent.bind(this);
 
     this.actionsObserver = new MutationObserver(mutations =>
       mutations.forEach(this.handleActionsChange.bind(this))
@@ -82,26 +87,67 @@ export class Menu extends LitElement {
     super.connectedCallback();
 
     // Subscribe to menu toggle events from pzsh-topbar component
-    document.addEventListener("pzsh-menu-toggle", this.handleMenuToggle, true);
+    document.addEventListener("pzsh-menu-toggle", this.toggleMenu, true);
+
+    document.addEventListener("click", this.handleEvent, true);
+    document.addEventListener("keydown", this.handleEvent, true);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
-    document.removeEventListener(
-      "pzsh-menu-toggle",
-      this.handleMenuToggle,
-      true
+    document.removeEventListener("pzsh-menu-toggle", this.toggleMenu, true);
+    document.removeEventListener("click", this.handleEvent, true);
+    document.removeEventListener("keydown", this.handleEvent, true);
+  }
+
+  toggleMenu(e) {
+    e?.stopPropagation();
+    this.open = !this.open;
+    this.triggerMenuChange(this.available, this.open);
+  }
+
+  handleEvent(e) {
+    this.handleMenuClose(e);
+    this.handleMenuNavigation(e);
+  }
+
+  handleMenuClose(e) {
+    if (
+      this.open &&
+      ((e.type === "click" && !isNodeOrChild(e.target, "pzsh-topbar")) ||
+        (e.type === "keydown" && e.key === "Escape"))
+    ) {
+      this.toggleMenu();
+    }
+  }
+
+  handleMenuNavigation(e) {
+    if (this.open) {
+      navigateMenuWithKeyboard(this.getMenuItems.bind(this), e);
+    }
+  }
+
+  /**
+   * Flatten all menu actions & dropdown items to an array
+   */
+  getMenuItems() {
+    return [...this.querySelector("[slot='actions']").children].reduce(
+      (acc, c) => {
+        if (c.nodeName.toLowerCase() === "pzsh-menu-dropdown") {
+          return [...acc, ...c.querySelector('[slot="items"]').children].filter(
+            e => e.nodeName.toLowerCase() !== "pzsh-menu-divider"
+          );
+        }
+        acc.push(c);
+        return acc;
+      },
+      []
     );
   }
 
-  handleMenuToggle(e) {
-    e.stopPropagation();
-    this.menuOpen = !this.menuOpen;
-  }
-
   handleSlotChange(e) {
-    this.triggerMenuAvailability();
+    this.updateMenuAvailablity();
 
     const slot = e.target;
     if (slot.getAttribute("name") === "actions") {
@@ -116,33 +162,46 @@ export class Menu extends LitElement {
   }
 
   handleActionsChange() {
-    this.triggerMenuAvailability();
+    this.updateMenuAvailablity();
+  }
+
+  updateMenuAvailablity() {
+    const available = this.hasMenuItems();
+    if (available !== this.available) {
+      this.triggerMenuChange(available, this.open);
+    }
+    this.available = available;
+  }
+
+  hasMenuItems() {
+    const itemsSlot = this.shadowRoot.querySelector('slot[name="items"]');
+    const actionsSlot = this.shadowRoot.querySelector('slot[name="actions"]');
+    return (
+      itemsSlot.assignedNodes().length > 0 ||
+      actionsSlot.assignedNodes()[0]?.children?.length > 0
+    );
   }
 
   /**
    * Emit an event for the pzsh-topbar component to show/hide the
-   * hamburger menu button.
+   * hamburger menu button or update its open/closed state.
    */
-  triggerMenuAvailability() {
-    const itemsSlot = this.shadowRoot.querySelector('slot[name="items"]');
-    const actionsSlot = this.shadowRoot.querySelector('slot[name="actions"]');
-    const hasMenu =
-      itemsSlot.assignedNodes().length > 0 ||
-      actionsSlot.assignedNodes()[0]?.children?.length > 0;
-    if (hasMenu !== this.hasMenu) {
-      this.dispatchEvent(
-        new CustomEvent("pzsh-menu-availability", { detail: hasMenu })
-      );
-    }
-    this.hasMenu = hasMenu;
+  triggerMenuChange(available, open) {
+    this.dispatchEvent(
+      new CustomEvent("pzsh-menu-change", { detail: { available, open } })
+    );
   }
 
   render() {
     const menuClasses = {
-      open: this.menuOpen,
+      open: this.open,
     };
     return html`
-      <nav class=${classMap(menuClasses)} @slotchange=${this.handleSlotChange}>
+      <nav
+        class=${classMap(menuClasses)}
+        @slotchange=${this.handleSlotChange}
+        role="menu"
+      >
         <slot name="items"></slot>
         <slot name="actions"></slot>
       </nav>

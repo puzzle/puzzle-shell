@@ -20,9 +20,12 @@ export class MenuAction extends LitElement {
             var(--pzsh-menu-item-padding-horizontal);
           color: var(--pzsh-menu-fg);
           text-decoration: none;
+          white-space: nowrap;
         }
+        :host(:focus),
         a:hover,
-        a:active {
+        a:active,
+        a:focus {
           background-color: var(--pzsh-menu-bg-alt);
           text-decoration: none;
         }
@@ -37,8 +40,10 @@ export class MenuAction extends LitElement {
             padding: 0;
             color: var(--pzsh-topbar-fg);
           }
+          :host(:focus),
           a:hover,
-          a:active {
+          a:active,
+          a:focus {
             background-color: transparent;
             text-decoration: underline;
           }
@@ -56,6 +61,11 @@ export class MenuAction extends LitElement {
   constructor() {
     super();
     this.href = "#";
+
+    // Make component focusable
+    if (!this.hasAttribute("tabindex")) {
+      this.setAttribute("tabindex", 0);
+    }
   }
 
   dispatchClick(event) {
@@ -63,7 +73,11 @@ export class MenuAction extends LitElement {
   }
 
   render() {
-    return html`<a href="${this.href}" @click=${this.dispatchClick}>
+    return html`<a
+      href="${this.href}"
+      @click=${this.dispatchClick}
+      role="menuitem"
+    >
       <slot></slot>
     </a>`;
   }
