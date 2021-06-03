@@ -82,7 +82,7 @@ export const Default = () => html`
         <div slot="actions" class="pzsh-divider">
           <pzsh-menu-divider></pzsh-menu-divider>
           <pzsh-menu-action href="#">
-            <pzsh-icon name="users-alt"></pzsh-icon>
+            <pzsh-icon name="sliders-v-alt"></pzsh-icon>
             Administration
           </pzsh-menu-action>
           <pzsh-menu-action href="#">
@@ -90,7 +90,7 @@ export const Default = () => html`
             Help
           </pzsh-menu-action>
           <pzsh-menu-action href="#">
-            <pzsh-icon name="user-circle"></pzsh-icon>
+            <pzsh-icon name="user"></pzsh-icon>
             Max Mustermann
           </pzsh-menu-action>
         </div>

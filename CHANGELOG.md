@@ -1,5 +1,10 @@
 # Puzzle Shell Changelog
 
+## 1.0.0-alpha.4
+
+- Add icons: `gitlab`, `plus-circle`, `sliders-v-alt` and `user`
+- Remove icons: `user-circle`, `users-alt` -> currently not used in favor of `user`
+
 ## 1.0.0-alpha.3
 
 - Implement `pzsh-footer` component with styling & slots
