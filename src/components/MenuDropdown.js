@@ -11,7 +11,6 @@ import { navigateMenuWithKeyboard } from "../utils/menu.js";
  *
  * @slot toggle - Slot for the icon and the text of the toggle button
  * @slot items - Slot for dropdown menu items
- * @fires click
  */
 export class MenuDropdown extends LitElement {
   static get styles() {

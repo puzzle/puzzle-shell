@@ -41,11 +41,6 @@
           "default": "\"#\""
         }
       ],
-      "events": [
-        {
-          "name": "click"
-        }
-      ],
       "slots": [
         {
           "name": "",
@@ -61,7 +56,7 @@
     {
       "name": "pzsh-icon",
       "path": "./src/components/Icon.js",
-      "description": "Icon",
+      "description": "Component to display built-in icons",
       "attributes": [
         {
           "name": "name",
@@ -82,16 +77,19 @@
       "description": "Responsive menu component that is coupled with the topbar component\nvia events (for mobile menu toggling and actions display on\ndesktop).",
       "properties": [
         {
-          "name": "menuOpen",
-          "default": "false"
-        },
-        {
-          "name": "hasMenu",
+          "name": "available",
           "type": "boolean",
           "default": "false"
         },
         {
-          "name": "handleMenuToggle"
+          "name": "open",
+          "default": "false"
+        },
+        {
+          "name": "toggleMenu"
+        },
+        {
+          "name": "handleEvent"
         },
         {
           "name": "actionsObserver"
@@ -99,7 +97,7 @@
       ],
       "events": [
         {
-          "name": "pzsh-menu-availability"
+          "name": "pzsh-menu-change"
         }
       ],
       "slots": [
@@ -132,11 +130,6 @@
           "default": "\"#\""
         }
       ],
-      "events": [
-        {
-          "name": "click"
-        }
-      ],
       "slots": [
         {
           "name": "",
@@ -148,6 +141,56 @@
       "name": "pzsh-menu-divider",
       "path": "./src/components/MenuDivider.js",
       "description": "Divider to be used in the pzsh-menu component to separate menu\nactions (currently only effects mobile menu)."
+    },
+    {
+      "name": "pzsh-menu-dropdown",
+      "path": "./src/components/MenuDropdown.js",
+      "description": "Menu dropdown with icon and text, will be rendered as a dropdown\nmenu in the topbar on desktop, or with all items visible in the\nhamburger menu on mobile.",
+      "properties": [
+        {
+          "name": "open",
+          "default": "false"
+        },
+        {
+          "name": "handleEvent"
+        }
+      ],
+      "slots": [
+        {
+          "name": "toggle",
+          "description": "Slot for the icon and the text of the toggle button"
+        },
+        {
+          "name": "items",
+          "description": "Slot for dropdown menu items"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-menu-dropdown-item",
+      "path": "./src/components/MenuDropdownItem.js",
+      "description": "Dropdown menu item with icon and text.",
+      "attributes": [
+        {
+          "name": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string",
+          "default": "\"#\""
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Slot for the icon and the text"
+        }
+      ]
     },
     {
       "name": "pzsh-topbar",
@@ -166,7 +209,7 @@
           "type": "string"
         },
         {
-          "name": "hasMenu",
+          "name": "menuAvailable",
           "default": "false"
         },
         {
@@ -174,7 +217,7 @@
           "default": "false"
         },
         {
-          "name": "updateHasMenu"
+          "name": "handleMenuChange"
         }
       ],
       "events": [

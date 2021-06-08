@@ -6,8 +6,13 @@ import { scrollIntoViewIfNeeded } from "./dom.js";
 export function navigateMenuWithKeyboard(getItems, e) {
   if (e.type === "keydown" && (e.key === "ArrowUp" || e.key === "ArrowDown")) {
     const items = getItems();
-    const index = items.findIndex(item => item === document.activeElement);
-    const item = items[e.key === "ArrowDown" ? index + 1 : index - 1];
+    let index = items.findIndex(item => item === document.activeElement);
+    if (e.key === "ArrowUp") {
+      index -= 1;
+    } else if (e.key === "ArrowDown") {
+      index += 1;
+    }
+    const item = items[index];
     if (item) {
       item.focus();
 

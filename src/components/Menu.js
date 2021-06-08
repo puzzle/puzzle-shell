@@ -14,6 +14,7 @@ import { navigateMenuWithKeyboard } from "../utils/menu.js";
  * @slot actions - Slot for application-wide menu actions (like help,
  * logout etc.) that are visible in the topbar on desktop and move
  * into the hamburger menu on mobile
+ * @fires pzsh-menu-change
  */
 export class Menu extends LitElement {
   static get styles() {

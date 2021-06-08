@@ -32,7 +32,7 @@ export const icons = {
 };
 
 /**
- * Icon
+ * Component to display built-in icons
  */
 export class Icon extends LitElement {
   static get styles() {

@@ -5,7 +5,6 @@ import { theme } from "../utils/theme.js";
  * Footer action link.
  *
  * @slot - Slot for the icon and the text
- * @fires click
  */
 export class FooterLink extends LitElement {
   static get styles() {
@@ -54,12 +53,8 @@ export class FooterLink extends LitElement {
     this.href = "#";
   }
 
-  dispatchClick(event) {
-    this.dispatchEvent(event);
-  }
-
   render() {
-    return html`<a href="${this.href}" @click=${this.dispatchClick}>
+    return html`<a href="${this.href}">
       <slot></slot>
     </a>`;
   }

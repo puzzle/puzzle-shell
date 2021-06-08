@@ -6,7 +6,6 @@ import { theme } from "../utils/theme.js";
  * mobile or in the topbar otherwise.
  *
  * @slot - Slot for the icon and the text
- * @fires click
  */
 export class MenuAction extends LitElement {
   static get styles() {
@@ -68,16 +67,8 @@ export class MenuAction extends LitElement {
     }
   }
 
-  dispatchClick(event) {
-    this.dispatchEvent(event);
-  }
-
   render() {
-    return html`<a
-      href="${this.href}"
-      @click=${this.dispatchClick}
-      role="menuitem"
-    >
+    return html`<a href="${this.href}" role="menuitem">
       <slot></slot>
     </a>`;
   }

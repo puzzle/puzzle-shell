@@ -5,7 +5,6 @@ import { theme } from "../utils/theme.js";
  * Dropdown menu item with icon and text.
  *
  * @slot - Slot for the icon and the text
- * @fires click
  */
 export class MenuDropdownItem extends LitElement {
   static get styles() {
@@ -67,16 +66,8 @@ export class MenuDropdownItem extends LitElement {
     }
   }
 
-  dispatchClick(event) {
-    this.dispatchEvent(event);
-  }
-
   render() {
-    return html`<a
-      href="${this.href}"
-      @click=${this.dispatchClick}
-      role="menuitem"
-    >
+    return html`<a href="${this.href}" role="menuitem">
       <slot></slot>
     </a>`;
   }

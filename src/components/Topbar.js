@@ -8,6 +8,7 @@ import { theme } from "../utils/theme.js";
  * events.
  *
  * @slot Slot for the logo SVG graphic
+ * @fires pzsh-menu-toggle
  */
 export class Topbar extends LitElement {
   static get styles() {
