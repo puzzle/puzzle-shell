@@ -72,11 +72,12 @@ const fontFaces = css`
 export const theme = css`
   :host {
     ${customProperties}
+    ${fontFaces}
   }
-  ${fontFaces}
 
   /* Reset */
-  *, :host {
+  :host,
+  :host * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
