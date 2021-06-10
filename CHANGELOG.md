@@ -1,5 +1,14 @@
 # Puzzle Shell Changelog
 
+## 1.0.0-alpha.7
+
+- Add rudimentary `pzsh-nav`, `pzsh-subnav` and `pzsh-nav-item` components for application navigation
+- Implement responsive `pzsh-banner` component
+
+## 1.0.0-alpha.6
+
+- Fix menu action/item DOMException
+
 ## 1.0.0-alpha.5
 
 - Add responsive `pzsh-menu-dropdown` component

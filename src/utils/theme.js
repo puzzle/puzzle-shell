@@ -35,26 +35,40 @@ const customProperties = css`
   --pzsh-menu-dropdown-item-bg-alt: var(--pzsh-color-gray-2);
   --pzsh-menu-dropdown-item-fg: var(--pzsh-color-gray-4);
   --pzsh-banner-bg: var(--pzsh-color-brand-alt-1);
+  --pzsh-nav-fg: var(--pzsh-color-brand-1);
+  --pzsh-nav-active: var(--pzsh-color-brand-8);
+  --pzsh-subnav-bg: var(--pzsh-color-white);
+  --pzsh-subnav-border: var(--pzsh-color-gray-3);
+  --pzsh-subnav-fg: var(--pzsh-color-gray-4);
+  --pzsh-subnav-active: var(--pzsh-color-gray-3);
   --pzsh-hero-bg-start: var(--pzsh-banner-bg);
   --pzsh-hero-bg-end: var(--pzsh-color-white);
   --pzsh-footer-bg: var(--pzsh-color-gray-2);
   --pzsh-footer-border: var(--pzsh-color-gray-3);
 
   /* Fonts */
+  --pzsh-font-size-base: 16px;
   --pzsh-font-family: "Roboto", sans-serif;
   --pzsh-monospace-font-family: "Roboto Mono", monospace;
 
   /* Spacings */
   --pzsh-spacer: 8px;
-
-  /* Sizes */
-  --pzsh-logo-height: 32px;
-  --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--pzsh-logo-height));
-  --pzsh-banner-small-height: calc(8 * var(--pzsh-spacer));
-  --pzsh-banner-large-height: calc(12 * var(--pzsh-spacer));
-  --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-horizontal: calc(3 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-vertical: calc(2 * var(--pzsh-spacer));
+  --pzsh-nav-item-padding-horizontal-desktop: calc(2 * var(--pzsh-spacer));
+
+  /* Sizes */
+  --pzsh-breakpoint: 800px;
+  --pzsh-logo-height: 32px;
+  --pzsh-icon-size: 24px;
+  --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--pzsh-logo-height));
+  --pzsh-nav-line-height: 18px;
+  --pzsh-nav-height: calc(
+    2 * var(--pzsh-nav-item-padding-horizontal-desktop) +
+      var(--pzsh-nav-line-height)
+  );
+  --pzsh-banner-content-height: calc(15 * var(--pzsh-spacer));
+  --pzsh-hero-height: calc(20 * var(--pzsh-spacer));
 
   /* Layering */
   --pzsh-menu-z-index: 1000;
@@ -82,9 +96,9 @@ export const theme = css`
   /* Reset */
   :host,
   :host * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    font-family: var(--pzsh-font-family);
+    font-size: var(--pzsh-font-size-base);
   }
   img,
   svg {

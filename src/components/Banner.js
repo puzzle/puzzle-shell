@@ -1,47 +1,116 @@
 import { LitElement, html, css } from "lit-element";
+import { classMap } from "lit-html/directives/class-map.js";
 import { theme } from "../utils/theme.js";
 
-// TODO: slot for content (e.g. search or navigation)
-// TODO: slot for tangram graphic
-
 /**
- * Component that might contain the search or the navigation, part of
- * the header below the topbar.
+ * Component that may contain the search or the navigation (overlayed
+ * via absolute positioning in the pzsh-menu component), part of the
+ * header below the topbar.
  */
 export class Banner extends LitElement {
   static get styles() {
     return [
       theme,
       css`
-        .banner {
-          height: var(--pzsh-banner-small-height);
+        :host {
           display: flex;
-          background: var(--pzsh-banner-bg);
+          flex-direction: column;
+          background-color: var(--pzsh-banner-bg);
         }
-        /* TODO: large version for welcome pages */
-        /* height: var(--pzsh-banner-large-height); */
+        ::slotted([slot="tangram"]) {
+          display: none;
+        }
+        .content {
+          flex: auto;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative; /* Move in front of tangram */
+        }
+        ::slotted([slot="content"]) {
+          flex: auto;
+          overflow: hidden;
+          margin: var(--pzsh-spacer) calc(2 * var(--pzsh-spacer));
+        }
 
-        /* dummy content */
-        .search {
-          margin: auto;
-        }
-        .search input {
-          font-size: 16px;
-          padding: 0.5em;
-          border: 1px solid var(--pzsh-color-gray-3);
-        }
-        .search input::placeholder {
-          color: var(--pzsh-color-gray-4);
+        @media (min-width: 800px) {
+          :host {
+            position: relative;
+            overflow: hidden;
+          }
+          ::slotted([slot="tangram"]) {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+          }
+          ::slotted([slot="content"]) {
+            margin: calc(6 * var(--pzsh-spacer)) var(--pzsh-spacer);
+          }
+          .content.has-nav {
+            margin-top: var(--pzsh-nav-height);
+          }
+          .content.has-subnav {
+            margin-top: calc(2 * var(--pzsh-nav-height));
+          }
         }
       `,
     ];
   }
 
+  static get properties() {
+    return {
+      hasNav: { attribute: false },
+      hasSubnav: { attribute: false },
+    };
+  }
+
+  constructor() {
+    super();
+    this.hasNav = false;
+    this.hasSubnav = false;
+
+    this.handleMenuNavChange = this.handleMenuNavChange.bind(this);
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    document.addEventListener(
+      "pzsh-menu-nav-change",
+      this.handleMenuNavChange,
+      true
+    );
+  }
+
+  disconnectedCallback() {
+    super.disconnectedCallback();
+    document.removeEventListener(
+      "pzsh-menu-nav-change",
+      this.handleMenuNavChange,
+      true
+    );
+  }
+
+  handleMenuNavChange(e) {
+    e.stopPropagation();
+    const { hasNav, hasSubnav } = e.detail;
+    this.hasNav = hasNav;
+    this.hasSubnav = hasSubnav;
+  }
+
   render() {
-    return html`<div class="banner">
-      <!-- dummy content -->
-      <div class="search"><input placeholder="Search..." type="text" /></div>
-    </div>`;
+    return html`
+      <slot name="tangram"></slot>
+      <div
+        class=${classMap({
+          content: true,
+          "has-nav": this.hasNav,
+          "has-subnav": this.hasSubnav,
+        })}
+      >
+        <slot name="content"></slot>
+      </div>
+    `;
   }
 }
 

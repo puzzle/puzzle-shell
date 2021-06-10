@@ -43,6 +43,12 @@ export class Topbar extends LitElement {
           display: block;
         }
 
+        @media (max-width: 799px) {
+          :host {
+            margin-bottom: 0 !important;
+          }
+        }
+
         @media (min-width: 800px) {
           :host {
             padding-left: calc(6 * var(--pzsh-spacer));

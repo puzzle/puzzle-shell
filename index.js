@@ -1,6 +1,7 @@
 export { Banner } from "./src/components/Banner.js";
 export { Container } from "./src/components/Container.js";
 export { Footer } from "./src/components/Footer.js";
+export { FooterLink } from "./src/components/FooterLink.js";
 export { Hero } from "./src/components/Hero.js";
 export { Icon } from "./src/components/Icon.js";
 export { Menu } from "./src/components/Menu.js";
@@ -8,6 +9,8 @@ export { MenuAction } from "./src/components/MenuAction.js";
 export { MenuDivider } from "./src/components/MenuDivider.js";
 export { MenuDropdown } from "./src/components/MenuDropdown.js";
 export { MenuDropdownItem } from "./src/components/MenuDropdownItem.js";
+export { Nav } from "./src/components/Nav.js";
+export { NavItem } from "./src/components/NavItem.js";
 export { PuzzleShell } from "./src/components/PuzzleShell.js";
+export { Subnav } from "./src/components/Subnav.js";
 export { Topbar } from "./src/components/Topbar.js";
-export { FooterLink } from "./src/components/FooterLink.js";

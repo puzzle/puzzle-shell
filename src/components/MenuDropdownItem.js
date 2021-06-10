@@ -28,7 +28,6 @@ export class MenuDropdownItem extends LitElement {
         a:active,
         a:focus {
           background-color: var(--pzsh-menu-bg-alt);
-          text-decoration: none;
         }
         ::slotted(pzsh-icon),
         ::slotted(svg) {

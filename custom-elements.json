@@ -4,7 +4,20 @@
     {
       "name": "pzsh-banner",
       "path": "./src/components/Banner.js",
-      "description": "Component that might contain the search or the navigation, part of\nthe header below the topbar."
+      "description": "Component that may contain the search or the navigation (overlayed\nvia absolute positioning in the pzsh-menu component), part of the\nheader below the topbar.",
+      "properties": [
+        {
+          "name": "hasNav",
+          "default": "false"
+        },
+        {
+          "name": "hasSubnav",
+          "default": "false"
+        },
+        {
+          "name": "handleMenuNavChange"
+        }
+      ]
     },
     {
       "name": "pzsh-container",
@@ -74,7 +87,7 @@
     {
       "name": "pzsh-menu",
       "path": "./src/components/Menu.js",
-      "description": "Responsive menu component that is coupled with the topbar component\nvia events (for mobile menu toggling and actions display on\ndesktop).",
+      "description": "Responsive menu component that is coupled with the topbar component\n(for mobile menu toggling and actions display on desktop) and the\nbanner component (nav display on desktop) via events.",
       "properties": [
         {
           "name": "available",
@@ -83,6 +96,16 @@
         },
         {
           "name": "open",
+          "default": "false"
+        },
+        {
+          "name": "hasNav",
+          "type": "boolean",
+          "default": "false"
+        },
+        {
+          "name": "hasSubnav",
+          "type": "boolean",
           "default": "false"
         },
         {
@@ -98,9 +121,16 @@
       "events": [
         {
           "name": "pzsh-menu-change"
+        },
+        {
+          "name": "pzsh-menu-nav-change"
         }
       ],
       "slots": [
+        {
+          "name": "nav",
+          "description": "Slot for application navigation that is visible in the\nbanner on desktop and moves into the hamburger menu on mobile"
+        },
         {
           "name": "items",
           "description": "Slot for menu content that is visible on the page on\ndesktop (typically on the left of the content) and moves into the\nhamburger menu on mobile"
@@ -189,6 +219,67 @@
         {
           "name": "",
           "description": "Slot for the icon and the text"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-nav",
+      "path": "./src/components/Nav.js",
+      "description": "Main navigation of the application.",
+      "slots": [
+        {
+          "name": "",
+          "description": "May contain pzsh-nav-item and pzsh-subnav components"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-nav-item",
+      "path": "./src/components/NavItem.js",
+      "description": "Application navigation item to be used in pzsh-nav and pzsh-subnav\ncomponents.",
+      "attributes": [
+        {
+          "name": "href",
+          "type": "string",
+          "default": "\"#\""
+        },
+        {
+          "name": "active",
+          "description": "Whether the item is currently active",
+          "type": "Boolean",
+          "default": "false"
+        }
+      ],
+      "properties": [
+        {
+          "name": "href",
+          "attribute": "href",
+          "type": "string",
+          "default": "\"#\""
+        },
+        {
+          "name": "active",
+          "attribute": "active",
+          "description": "Whether the item is currently active",
+          "type": "Boolean",
+          "default": "false"
+        }
+      ],
+      "slots": [
+        {
+          "name": "",
+          "description": "Navigation item label"
+        }
+      ]
+    },
+    {
+      "name": "pzsh-subnav",
+      "path": "./src/components/Subnav.js",
+      "description": "Second level navigation to be use within pzsh-nav.",
+      "slots": [
+        {
+          "name": "",
+          "description": "May contain pzsh-nav-item components"
         }
       ]
     },
