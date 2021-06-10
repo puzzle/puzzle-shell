@@ -1,6 +1,6 @@
 {
   "name": "@puzzleitc/puzzle-shell",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "The standard design for Puzzle tools",
   "main": "index.js",
   "module": "index.js",
