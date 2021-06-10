@@ -19,7 +19,7 @@ export const Default = () => html`
     </div>
 
     <div slot="center">
-      Automatische Abmeldung in 3m 12s
+      Automatic logout in 3m 12s
     </div>
 
     <div slot="end">

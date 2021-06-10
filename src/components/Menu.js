@@ -2,12 +2,15 @@ import { LitElement, html, css } from "lit-element";
 import { classMap } from "lit-html/directives/class-map.js";
 import { isNodeOrChild } from "../utils/dom.js";
 import { navigateMenuWithKeyboard } from "../utils/menu.js";
+import { theme } from "../utils/theme.js";
 
 /**
  * Responsive menu component that is coupled with the topbar component
- * via events (for mobile menu toggling and actions display on
- * desktop).
+ * (for mobile menu toggling and actions display on desktop) and the
+ * banner component (nav display on desktop) via events.
  *
+ * @slot nav - Slot for application navigation that is visible in the
+ * banner on desktop and moves into the hamburger menu on mobile
  * @slot items - Slot for menu content that is visible on the page on
  * desktop (typically on the left of the content) and moves into the
  * hamburger menu on mobile
@@ -15,10 +18,12 @@ import { navigateMenuWithKeyboard } from "../utils/menu.js";
  * logout etc.) that are visible in the topbar on desktop and move
  * into the hamburger menu on mobile
  * @fires pzsh-menu-change
+ * @fires pzsh-menu-nav-change
  */
 export class Menu extends LitElement {
   static get styles() {
     return [
+      theme,
       css`
         nav {
           position: absolute;
@@ -49,6 +54,14 @@ export class Menu extends LitElement {
             box-shadow: none;
           }
 
+          /* Display the nav on the desktop in the banner using absolute positioning */
+          ::slotted([slot="nav"]) {
+            position: absolute;
+            top: var(--pzsh-topbar-height);
+            left: 0;
+            right: 0;
+          }
+
           /* Display the menu actions on desktop in the topbar using absolute positioning */
           ::slotted([slot="actions"]) {
             position: absolute;
@@ -75,6 +88,8 @@ export class Menu extends LitElement {
     super();
     this.available = false;
     this.open = false;
+    this.hasNav = false;
+    this.hasSubnav = false;
 
     this.toggleMenu = this.toggleMenu.bind(this);
     this.handleEvent = this.handleEvent.bind(this);
@@ -133,24 +148,28 @@ export class Menu extends LitElement {
    * Flatten all menu actions & dropdown items to an array
    */
   getMenuItems() {
-    return [...this.querySelector("[slot='actions']").children].reduce(
-      (acc, c) => {
-        if (c.nodeName.toLowerCase() === "pzsh-menu-dropdown") {
-          return [...acc, ...c.querySelector('[slot="items"]').children].filter(
-            e => e.nodeName.toLowerCase() !== "pzsh-menu-divider"
-          );
-        }
-        acc.push(c);
-        return acc;
-      },
-      []
-    );
+    const navItems = this.querySelectorAll("[slot='nav'] pzsh-nav-item");
+    const actions = this.querySelector("[slot='actions']")?.children || [];
+    return [...navItems, ...actions].reduce((acc, c) => {
+      if (c.nodeName.toLowerCase() === "pzsh-menu-dropdown") {
+        return [...acc, ...c.querySelector('[slot="items"]').children].filter(
+          e => e.nodeName.toLowerCase() !== "pzsh-menu-divider"
+        );
+      }
+      acc.push(c);
+      return acc;
+    }, []);
   }
 
   handleSlotChange(e) {
+    const slot = e.target;
     this.updateMenuAvailablity();
 
-    const slot = e.target;
+    if (slot.getAttribute("name") === "nav") {
+      this.updateNavAvailability();
+      // TODO: Observe dynamically changed nav nodes just like for actions
+    }
+
     if (slot.getAttribute("name") === "actions") {
       // Observe dynamic adding/removing of slot node children
       // (actual menu actions)
@@ -175,9 +194,11 @@ export class Menu extends LitElement {
   }
 
   hasMenuItems() {
+    const navSlot = this.shadowRoot.querySelector('slot[name="nav"]');
     const itemsSlot = this.shadowRoot.querySelector('slot[name="items"]');
     const actionsSlot = this.shadowRoot.querySelector('slot[name="actions"]');
     return (
+      navSlot.assignedNodes().length > 0 ||
       itemsSlot.assignedNodes().length > 0 ||
       actionsSlot.assignedNodes()[0]?.children?.length > 0
     );
@@ -193,6 +214,28 @@ export class Menu extends LitElement {
     );
   }
 
+  updateNavAvailability() {
+    const slot = this.shadowRoot.querySelector('slot[name="nav"]');
+    const hasNav = slot.assignedNodes().length > 0;
+    const hasSubnav =
+      slot.assignedNodes()[0]?.querySelector("pzsh-subnav") != null;
+    if (hasNav !== this.hasNav || hasSubnav !== this.hasSubnav) {
+      this.triggerNavChange(hasNav, hasSubnav);
+    }
+    this.hasNav = hasNav;
+    this.hasSubnav = hasSubnav;
+  }
+
+  /**
+   * Emit an event for the pzsh-banner component to preserve spacing
+   * for the absolute positioned nav.
+   */
+  triggerNavChange(hasNav, hasSubnav) {
+    this.dispatchEvent(
+      new CustomEvent("pzsh-menu-nav-change", { detail: { hasNav, hasSubnav } })
+    );
+  }
+
   render() {
     const menuClasses = {
       open: this.open,
@@ -203,6 +246,7 @@ export class Menu extends LitElement {
         @slotchange=${this.handleSlotChange}
         role="menu"
       >
+        <slot name="nav"></slot>
         <slot name="items"></slot>
         <slot name="actions"></slot>
       </nav>
