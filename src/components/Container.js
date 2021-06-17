@@ -12,7 +12,7 @@ export class Container extends LitElement {
     return [
       theme,
       css`
-        .container {
+        :host {
           display: flex;
           flex-direction: column;
           min-height: 100vh;
@@ -33,9 +33,7 @@ export class Container extends LitElement {
   }
 
   render() {
-    return html`<div class="container">
-      <slot></slot>
-    </div>`;
+    return html` <slot></slot> `;
   }
 }
 

@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 1.0.0-beta.3
+
+- Add responsive styling of `pzsh-hero` component
+
 # 1.0.0-beta.2
 
 - Fix bug with attribute access in constructor of `pzsh-menu-action`, `pzsh-dropdown-item` and `pzsh-nav-item`

@@ -14,17 +14,27 @@ export class Hero extends LitElement {
       css`
         :host {
           height: var(--pzsh-hero-height);
-          display: grid;
-          grid-template-columns:
-            1fr min-content calc(4 * var(--pzsh-spacer))
-            max-content 1fr;
-          grid-template-rows: 1fr max-content 1fr;
+          padding: 0 var(--pzsh-page-padding-horizontal-mobile);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: var(--pzsh-spacer);
           background: var(--pzsh-hero-bg-start);
           background: linear-gradient(
             180deg,
             var(--pzsh-hero-bg-start) 0%,
             var(--pzsh-hero-bg-end) 100%
           );
+        }
+
+        .text {
+          max-width: 350px;
+
+          /* Move a bit above mathematical center */
+          margin-bottom: calc(2 * var(--pzsh-spacer));
+        }
+        .logo {
+          max-height: var(--pzsh-hero-height);
         }
 
         ::slotted([slot="title"]),
@@ -37,22 +47,30 @@ export class Hero extends LitElement {
         ::slotted([slot="title"]) {
           margin: 0;
           font-size: 32px;
-          white-space: nowrap;
           color: var(--pzsh-color-brand-alt-2);
         }
         ::slotted([slot="slogan"]) {
           margin-top: var(--pzsh-spacer);
+          margin-bottom: 0;
           font-size: 18px;
           color: var(--pzsh-color-brand-alt-3);
         }
 
-        .text {
-          grid-column: 2/3;
-          grid-row: 2/3;
+        @media (min-width: 390px) {
+          :host {
+            gap: calc(3 * var(--pzsh-spacer));
+          }
+
+          .text {
+            /* Move a bit above mathematical center */
+            margin-bottom: calc(6 * var(--pzsh-spacer));
+          }
         }
-        ::slotted([slot="logo"]) {
-          grid-column: 4/5;
-          grid-row: 2/3;
+
+        @media (min-width: 800px) {
+          :host {
+            gap: calc(5 * var(--pzsh-spacer));
+          }
         }
       `,
     ];
@@ -64,7 +82,9 @@ export class Hero extends LitElement {
         <slot name="title"></slot>
         <slot name="slogan"></slot>
       </div>
-      <slot name="logo"></slot>
+      <div class="logo">
+        <slot name="logo"></slot>
+      </div>
     `;
   }
 }
