@@ -19,7 +19,12 @@ export const Default = () => html`
       box-sizing: border-box;
     }
     main {
-      padding: calc(4 * var(--pzsh-spacer));
+      padding: var(--pzsh-page-padding-horizontal-mobile);
+    }
+    @media (min-width: 800px) {
+      main {
+        padding: var(--pzsh-page-padding-horizontal-desktop);
+      }
     }
   </style>
   ${searchStyles}
@@ -36,7 +41,7 @@ export const Default = () => html`
           <input placeholder="Search..." type="text" />
           <button><pzsh-icon name="search" /></button>
         </div>
-        <button class="add">
+        <button class="add" aria-label="Add" title="Add">
           <pzsh-icon name="plus-circle"></pzsh-icon>
           <span>Add</span>
         </button>

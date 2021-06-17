@@ -7,6 +7,7 @@ const customProperties = css`
   --pzsh-color-gray-2: #f2f2f2;
   --pzsh-color-gray-3: #d8d8d8;
   --pzsh-color-gray-4: #62676b;
+  --pzsh-color-black: #000000;
 
   /* Puzzle brand colors */
   --pzsh-color-brand-1: #1e5a96;
@@ -53,6 +54,8 @@ const customProperties = css`
 
   /* Spacings */
   --pzsh-spacer: 8px;
+  --pzsh-page-padding-horizontal-mobile: calc(2 * var(--pzsh-spacer));
+  --pzsh-page-padding-horizontal-desktop: calc(6 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-horizontal: calc(3 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-vertical: calc(2 * var(--pzsh-spacer));
   --pzsh-nav-item-padding-horizontal-desktop: calc(2 * var(--pzsh-spacer));

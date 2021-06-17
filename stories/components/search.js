@@ -53,7 +53,7 @@ export const searchStyles = html`
     }
     @media (min-width: 800px) {
       .search {
-        padding: 0 calc(4 * var(--pzsh-spacer));
+        padding: 0 var(--pzsh-page-padding-horizontal-desktop);
       }
       .search button.add {
         margin-left: calc(2 * var(--pzsh-spacer));

@@ -19,22 +19,20 @@ export const Default = () => html`
       box-sizing: border-box;
     }
     .app {
-      display: grid;
-      grid-template-columns: 1fr 10rem minmax(0, var(--pzsh-breakpoint)) 10rem 1fr;
-      background-color: var(--pzsh-color-gray-1);
-    }
-    pzsh-menu {
-      grid-column: 2/3;
+      display: flex;
     }
     .left-nav {
-      padding: calc(4 * var(--pzsh-spacer)) var(--pzsh-spacer);
+      padding: calc(2 * var(--pzsh-spacer))
+        var(--pzsh-menu-item-padding-horizontal);
       display: flex;
       flex-direction: column;
     }
+    .left-nav,
+    .left-nav a {
+      color: var(--pzsh-menu-fg);
+    }
     main {
-      grid-column: 3/4;
-      padding: calc(4 * var(--pzsh-spacer));
-      background-color: var(--pzsh-color-white);
+      padding: var(--pzsh-page-padding-horizontal-mobile);
     }
     a {
       text-decoration: none;
@@ -45,20 +43,27 @@ export const Default = () => html`
       text-decoration: underline;
     }
 
-    @media (max-width: 799px) {
+    @media (min-width: 800px) {
       .app {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 10rem minmax(0, var(--pzsh-breakpoint)) 10rem 1fr;
+        background-color: var(--pzsh-color-gray-1);
+      }
+      pzsh-menu {
+        grid-column: 2/3;
       }
       .left-nav {
-        padding: calc(2 * var(--pzsh-spacer))
-          var(--pzsh-menu-item-padding-horizontal);
+        padding: calc(4 * var(--pzsh-spacer)) var(--pzsh-spacer);
       }
       .left-nav,
       .left-nav a {
-        color: var(--pzsh-menu-fg);
+        color: var(--pzsh-color-black);
       }
       main {
-        width: 100%;
+        grid-column: 3/4;
+        padding: calc(4 * var(--pzsh-spacer))
+          var(--pzsh-page-padding-horizontal-desktop);
+        background-color: var(--pzsh-color-white);
       }
     }
   </style>

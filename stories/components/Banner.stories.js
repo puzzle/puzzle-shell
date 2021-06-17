@@ -33,7 +33,7 @@ export const WithSearchAndAddAction = () => html`
         <input placeholder="Search..." type="text" />
         <button><pzsh-icon name="search" /></button>
       </div>
-      <button class="add">
+      <button class="add" aria-label="Add" title="Add">
         <pzsh-icon name="plus-circle"></pzsh-icon>
         <span>Add</span>
       </button>
@@ -61,30 +61,16 @@ export const WithTwoLevelNavigation = () => html`
 `;
 
 export const WithOneLevelNavigationAndSearch = () => html`
-  <style>
-    .search {
-      display: flex;
-    }
-    .search input,
-    .search button {
-      font-size: 16px;
-      padding: 0.5em;
-      border: 1px solid var(--pzsh-color-gray-3);
-    }
-    .search input {
-      border-right: 0;
-    }
-    .search input::placeholder {
-      color: var(--pzsh-color-gray-4);
-    }
-  </style>
+  ${searchStyles}
   <pzsh-topbar></pzsh-topbar>
   <pzsh-banner>
     <!-- prettier-ignore -->
     <svg slot="tangram" xmlns="http://www.w3.org/2000/svg" width="239" height="70" fill="none"><path fill="#46BCC0" fill-rule="evenodd" d="M169.034 70l-70-70h70v70z" clip-rule="evenodd"/><path fill="#69B978" fill-rule="evenodd" d="M49.49 49.49L0 0h99.034l49.489 49.49H49.489z" clip-rule="evenodd"/><path fill="#2C97A6" d="M239.034 0h-70v70h70V0z"/></svg>
     <div slot="content" class="search">
-      <input placeholder="Search..." type="text" />
-      <button>🔍</button>
+      <div class="search-field">
+        <input placeholder="Search..." type="text" />
+        <button><pzsh-icon name="search" /></button>
+      </div>
     </div>
   </pzsh-banner>
   <pzsh-menu>

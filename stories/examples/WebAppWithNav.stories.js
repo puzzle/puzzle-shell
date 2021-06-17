@@ -14,7 +14,12 @@ export const Default = () => html`
       font-family: var(--pzsh-font-family);
     }
     main {
-      padding: calc(4 * var(--pzsh-spacer));
+      padding: var(--pzsh-page-padding-horizontal-mobile);
+    }
+    @media (min-width: 800px) {
+      main {
+        padding: var(--pzsh-page-padding-horizontal-desktop);
+      }
     }
   </style>
   <pzsh-container>

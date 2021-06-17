@@ -19,7 +19,8 @@ export class Topbar extends LitElement {
           display: flex;
           align-items: center;
           height: var(--pzsh-topbar-height);
-          padding: calc(var(--pzsh-spacer)) calc(2 * var(--pzsh-spacer));
+          padding: calc(var(--pzsh-spacer))
+            var(--pzsh-page-padding-horizontal-mobile);
           background: var(--pzsh-topbar-bg);
         }
 
@@ -51,8 +52,8 @@ export class Topbar extends LitElement {
 
         @media (min-width: 800px) {
           :host {
-            padding-left: calc(6 * var(--pzsh-spacer));
-            padding-right: calc(6 * var(--pzsh-spacer));
+            padding-left: var(--pzsh-page-padding-horizontal-desktop);
+            padding-right: var(--pzsh-page-padding-horizontal-desktop);
           }
 
           .menu-button {
