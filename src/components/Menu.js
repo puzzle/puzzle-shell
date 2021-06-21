@@ -30,6 +30,7 @@ export class Menu extends LitElement {
           top: var(--pzsh-topbar-height);
           left: 0;
           right: 0;
+          z-index: var(--pzsh-menu-z-index);
           display: none;
           overflow: hidden;
           padding: var(--pzsh-spacer) 0;
@@ -67,7 +68,6 @@ export class Menu extends LitElement {
             position: absolute;
             top: 0;
             right: calc(6 * var(--pzsh-spacer));
-            z-index: var(--pzsh-menu-z-index);
             height: var(--pzsh-topbar-height);
             flex-direction: row;
             align-items: center;

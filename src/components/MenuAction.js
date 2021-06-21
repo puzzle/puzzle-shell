@@ -59,6 +59,10 @@ export class MenuAction extends LitElement {
   constructor() {
     super();
     this.href = "#";
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
 
     // Make component focusable
     if (!this.hasAttribute("tabindex")) {
