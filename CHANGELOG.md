@@ -1,6 +1,6 @@
 # Puzzle Shell Changelog
 
-# 1.0.0-alpha.8
+# 1.0.0-beta.1
 
 - Lighter, white-based styling of mobile menu and add backdrop
 - New order in hamburger menu: nav, actions, items
