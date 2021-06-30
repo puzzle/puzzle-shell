@@ -42,7 +42,7 @@ export class MenuAction extends LitElement {
             color: var(--pzsh-topbar-fg);
             background: transparent;
           }
-          :host(:focus),
+          :host(:focus) a,
           a:hover,
           a:active,
           a:focus {
