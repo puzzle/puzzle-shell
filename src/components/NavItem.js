@@ -16,17 +16,19 @@ export class NavItem extends LitElement {
       css`
         a {
           display: block;
+          margin-top: var(--pzsh-menu-item-gap);
           padding: var(--pzsh-menu-item-padding-vertical)
             var(--pzsh-menu-item-padding-horizontal);
           color: var(--pzsh-menu-fg);
+          background-color: var(--pzsh-menu-bg-alt);
           text-decoration: none;
           white-space: nowrap;
         }
-        :host(:focus),
+        :host(:focus) a,
         a:hover,
         a:active,
         a:focus {
-          background-color: var(--pzsh-menu-bg-alt);
+          color: var(--pzsh-menu-active);
         }
 
         @media (min-width: 800px) {
@@ -34,15 +36,17 @@ export class NavItem extends LitElement {
             line-height: var(--pzsh-nav-line-height);
           }
           a {
+            margin: 0;
             padding: 0 var(--pzsh-nav-item-padding-horizontal-desktop);
             color: var(--pzsh-nav-fg);
+            background-color: transparent;
           }
           a,
-          :host(:focus),
+          :host(:focus) a,
           a:hover,
           a:active,
           a:focus {
-            background-color: transparent;
+            color: var(--pzsh-nav-fg);
           }
           a > div {
             padding: var(--pzsh-nav-item-padding-horizontal-desktop) 0

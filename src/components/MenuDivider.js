@@ -12,7 +12,7 @@ export class MenuDivider extends LitElement {
       css`
         @media (max-width: 799px) {
           :host {
-            margin: var(--pzsh-spacer) 0;
+            margin: calc(3 * var(--pzsh-spacer)) 0;
             border-top: 1px solid var(--pzsh-menu-divider);
           }
         }

@@ -19,19 +19,18 @@ export class MenuDropdown extends LitElement {
       css`
         :host {
           position: relative;
-          padding-bottom: var(--pzsh-spacer);
+          margin-top: var(--pzsh-spacer);
         }
 
         .toggle {
           display: flex; /* TODO: How does this work in today's browsers? */
           align-items: center;
-          justify-content: center;
           width: 100%;
           border: 0;
-          padding: calc(2 * var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer))
-            var(--pzsh-spacer) calc(3 * var(--pzsh-spacer));
+          padding: var(--pzsh-menu-item-padding-vertical)
+            var(--pzsh-menu-item-padding-horizontal);
+          color: var(--pzsh-color-gray-4);
           background-color: transparent;
-          color: rgba(255, 255, 255, 0.6);
         }
 
         .toggle-angle {
@@ -47,14 +46,12 @@ export class MenuDropdown extends LitElement {
         }
 
         .dropdown-menu {
-          border-color: var(--pzsh-menu-divider);
-          border-style: solid;
-          border-width: 0 0 0 var(--pzsh-spacer);
+          margin-top: calc(-1 * var(--pzsh-menu-item-gap));
         }
 
         @media (min-width: 800px) {
           :host {
-            padding-bottom: 0;
+            margin: 0;
           }
 
           .toggle {

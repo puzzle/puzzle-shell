@@ -86,21 +86,7 @@ export const Default = () => html`
     </pzsh-banner>
     <div class="app">
       <pzsh-menu>
-        <div slot="items" class="left-nav">
-          <label style="margin-bottom: var(--pzsh-spacer)">
-            Categories
-            <select>
-              <option>Humans</option>
-              <option>Animals</option>
-              <option>Aliens</option>
-            </select>
-          </label>
-          <a href="#">Fruits</a>
-          <a href="#">Vegetables</a>
-          <a href="#">Crops</a>
-        </div>
         <div slot="actions" class="pzsh-divider">
-          <pzsh-menu-divider></pzsh-menu-divider>
           <pzsh-menu-action href="#">
             <pzsh-icon name="sliders-v-alt"></pzsh-icon>
             Administration
@@ -125,6 +111,20 @@ export const Default = () => html`
               </pzsh-menu-dropdown-item>
             </div>
           </pzsh-menu-dropdown>
+          <pzsh-menu-divider></pzsh-menu-divider>
+        </div>
+        <div slot="items" class="left-nav">
+          <label style="margin-bottom: var(--pzsh-spacer)">
+            Categories
+            <select>
+              <option>Humans</option>
+              <option>Animals</option>
+              <option>Aliens</option>
+            </select>
+          </label>
+          <a href="#">Fruits</a>
+          <a href="#">Vegetables</a>
+          <a href="#">Crops</a>
         </div>
       </pzsh-menu>
       <main>Content app with search</main>

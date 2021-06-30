@@ -18,16 +18,23 @@ export class MenuDropdownItem extends LitElement {
           display: flex;
           align-items: center;
           font-family: var(--pzsh-font-family);
-          padding: calc(2 * var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer));
+          margin-top: var(--pzsh-menu-item-gap);
+          padding: var(--pzsh-menu-item-padding-vertical)
+            var(--pzsh-menu-item-padding-horizontal)
+            var(--pzsh-menu-item-padding-vertical)
+            calc(
+              var(--pzsh-icon-size) + var(--pzsh-spacer) / 2 +var(--pzsh-menu-item-padding-horizontal)
+            );
           color: var(--pzsh-menu-fg);
+          background-color: var(--pzsh-menu-bg-alt);
           text-decoration: none;
           white-space: nowrap;
         }
-        :host(:focus),
+        :host(:focus) a,
         a:hover,
         a:active,
         a:focus {
-          background-color: var(--pzsh-menu-bg-alt);
+          color: var(--pzsh-menu-active);
         }
         ::slotted(pzsh-icon),
         ::slotted(svg) {
@@ -36,12 +43,17 @@ export class MenuDropdownItem extends LitElement {
 
         @media (min-width: 800px) {
           a {
+            margin: 0;
+            padding: var(--pzsh-menu-item-padding-vertical)
+              var(--pzsh-menu-item-padding-horizontal);
             color: var(--pzsh-menu-dropdown-item-fg);
+            background-color: transparent;
           }
-          :host(:focus),
+          :host(:focus) a,
           a:hover,
           a:active,
           a:focus {
+            color: var(--pzsh-menu-dropdown-item-fg);
             background-color: var(--pzsh-menu-dropdown-item-bg-alt);
           }
         }

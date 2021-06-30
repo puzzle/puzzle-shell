@@ -1,5 +1,10 @@
 # Puzzle Shell Changelog
 
+# 1.0.0-alpha.8
+
+- Lighter, white-based styling of mobile menu and add backdrop
+- New order in hamburger menu: nav, actions, items
+
 ## 1.0.0-alpha.7
 
 - Add rudimentary `pzsh-nav`, `pzsh-subnav` and `pzsh-nav-item` components for application navigation

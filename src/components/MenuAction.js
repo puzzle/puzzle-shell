@@ -15,17 +15,19 @@ export class MenuAction extends LitElement {
         a {
           display: flex;
           font-family: var(--pzsh-font-family);
+          margin-top: var(--pzsh-menu-item-gap);
           padding: var(--pzsh-menu-item-padding-vertical)
             var(--pzsh-menu-item-padding-horizontal);
+          background-color: var(--pzsh-menu-bg-alt);
           color: var(--pzsh-menu-fg);
           text-decoration: none;
           white-space: nowrap;
         }
-        :host(:focus),
+        :host(:focus) a,
         a:hover,
         a:active,
         a:focus {
-          background-color: var(--pzsh-menu-bg-alt);
+          color: var(--pzsh-menu-active);
         }
         ::slotted(pzsh-icon),
         ::slotted(svg) {
@@ -35,14 +37,16 @@ export class MenuAction extends LitElement {
         @media (min-width: 800px) {
           a {
             align-items: center;
+            margin: 0;
             padding: 0;
             color: var(--pzsh-topbar-fg);
+            background: transparent;
           }
           :host(:focus),
           a:hover,
           a:active,
           a:focus {
-            background-color: transparent;
+            color: var(--pzsh-topbar-fg);
             text-decoration: underline;
           }
         }

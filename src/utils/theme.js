@@ -28,10 +28,11 @@ const customProperties = css`
   --pzsh-topbar-bg: var(--pzsh-color-brand-1);
   --pzsh-topbar-bg-alt: var(--pzsh-color-brand-2);
   --pzsh-topbar-fg: var(--pzsh-color-white);
-  --pzsh-menu-bg: var(--pzsh-color-brand-3);
-  --pzsh-menu-bg-alt: var(--pzsh-color-brand-4);
-  --pzsh-menu-fg: var(--pzsh-color-white);
-  --pzsh-menu-divider: rgba(255, 255, 255, 0.1);
+  --pzsh-menu-bg: var(--pzsh-color-white);
+  --pzsh-menu-bg-alt: var(--pzsh-color-gray-2);
+  --pzsh-menu-fg: var(--pzsh-color-gray-4);
+  --pzsh-menu-active: var(--pzsh-color-brand-8);
+  --pzsh-menu-divider: var(--pzsh-color-gray-4);
   --pzsh-menu-dropdown-item-bg: var(--pzsh-color-white);
   --pzsh-menu-dropdown-item-bg-alt: var(--pzsh-color-gray-2);
   --pzsh-menu-dropdown-item-fg: var(--pzsh-color-gray-4);
@@ -56,6 +57,7 @@ const customProperties = css`
   --pzsh-spacer: 8px;
   --pzsh-page-padding-horizontal-mobile: calc(2 * var(--pzsh-spacer));
   --pzsh-page-padding-horizontal-desktop: calc(6 * var(--pzsh-spacer));
+  --pzsh-menu-item-gap: var(--pzsh-spacer);
   --pzsh-menu-item-padding-horizontal: calc(3 * var(--pzsh-spacer));
   --pzsh-menu-item-padding-vertical: calc(2 * var(--pzsh-spacer));
   --pzsh-nav-item-padding-horizontal-desktop: calc(2 * var(--pzsh-spacer));
@@ -75,6 +77,7 @@ const customProperties = css`
 
   /* Layering */
   --pzsh-menu-z-index: 1000;
+  --pzsh-menu-backdrop-z-index: 999;
   --pzsh-menu-dropdown-z-index: 1000;
 `;
 

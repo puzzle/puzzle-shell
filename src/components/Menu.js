@@ -32,9 +32,12 @@ export class Menu extends LitElement {
           right: 0;
           display: none;
           overflow: hidden;
-          padding: var(--pzsh-spacer) 0;
+          padding: calc(2 * var(--pzsh-spacer) - var(--pzsh-menu-item-gap))
+            calc(3 * var(--pzsh-spacer)) calc(2 * var(--pzsh-spacer))
+            calc(3 * var(--pzsh-spacer));
           background-color: var(--pzsh-menu-bg);
-          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+          z-index: var(--pzsh-menu-z-index);
         }
         nav.open {
           display: block;
@@ -120,7 +123,29 @@ export class Menu extends LitElement {
   toggleMenu(e) {
     e?.stopPropagation();
     this.open = !this.open;
+    this.toggleBackdrop(this.open);
     this.triggerMenuChange(this.available, this.open);
+  }
+
+  toggleBackdrop() {
+    let backdrop = document.getElementById("pzsh-backdrop");
+    if (backdrop) {
+      backdrop.remove();
+    }
+
+    if (this.open) {
+      backdrop = document.createElement("div");
+      backdrop.id = "pzsh-backdrop";
+      backdrop.style.position = "absolute";
+      backdrop.style.top = "var(--pzsh-topbar-height)";
+      backdrop.style.bottom = 0;
+      backdrop.style.left = 0;
+      backdrop.style.right = 0;
+      backdrop.style.backgroundColor = "rgba(135,139,142,0.4)";
+      backdrop.style.backdropFilter = "blur(4px)";
+      backdrop.style.zIndex = "var(--pzsh-menu-backdrop-z-index)";
+      document.querySelector("body").appendChild(backdrop);
+    }
   }
 
   handleEvent(e) {
@@ -195,12 +220,12 @@ export class Menu extends LitElement {
 
   hasMenuItems() {
     const navSlot = this.shadowRoot.querySelector('slot[name="nav"]');
-    const itemsSlot = this.shadowRoot.querySelector('slot[name="items"]');
     const actionsSlot = this.shadowRoot.querySelector('slot[name="actions"]');
+    const itemsSlot = this.shadowRoot.querySelector('slot[name="items"]');
     return (
       navSlot.assignedNodes().length > 0 ||
-      itemsSlot.assignedNodes().length > 0 ||
-      actionsSlot.assignedNodes()[0]?.children?.length > 0
+      actionsSlot.assignedNodes()[0]?.children?.length > 0 ||
+      itemsSlot.assignedNodes().length > 0
     );
   }
 
@@ -247,8 +272,8 @@ export class Menu extends LitElement {
         role="menu"
       >
         <slot name="nav"></slot>
-        <slot name="items"></slot>
         <slot name="actions"></slot>
+        <slot name="items"></slot>
       </nav>
     `;
   }
