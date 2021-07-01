@@ -2,7 +2,7 @@
   "name": "@puzzleitc/puzzle-shell",
   "version": "1.0.0-beta.1",
   "description": "The standard design for Puzzle tools",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "module": "index.js",
   "scripts": {
     "start": "web-dev-server",
@@ -15,7 +15,7 @@
     "prepare": "husky install",
     "manifest": "wca analyze \"src/components/*.js\" --format json --outFiles ./custom-elements.json",
     "bundle": "rm -rf dist/ && esbuild index.js --bundle --minify --sourcemap --outfile=dist/bundle.js",
-    "publish": "npm publish --access public"
+    "prepack": "npm run manifest && npm run bundle"
   },
   "repository": {
     "type": "git",
