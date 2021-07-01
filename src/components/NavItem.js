@@ -76,7 +76,10 @@ export class NavItem extends LitElement {
     super();
     this.href = "#";
     this.active = false;
+  }
 
+  connectedCallback() {
+    super.connectedCallback();
     // Make component focusable
     if (!this.hasAttribute("tabindex")) {
       this.setAttribute("tabindex", 0);

@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 1.0.0-beta.2
+
+- Fix bug with attribute access in constructor of `pzsh-menu-action`, `pzsh-dropdown-item` and `pzsh-nav-item`
+
 # 1.0.0-beta.1
 
 - Lighter, white-based styling of mobile menu and add backdrop
