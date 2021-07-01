@@ -3,6 +3,7 @@
 # 1.0.0-beta.2
 
 - Fix bug with attribute access in constructor of `pzsh-menu-action`, `pzsh-dropdown-item` and `pzsh-nav-item`
+- Build custom-elements.json manifest according 1.0.0 schema specification
 
 # 1.0.0-beta.1
 

@@ -1,325 +1,1031 @@
 {
-  "version": "experimental",
-  "tags": [
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
     {
-      "name": "pzsh-banner",
-      "path": "./src/components/Banner.js",
-      "description": "Component that may contain the search or the navigation (overlayed\nvia absolute positioning in the pzsh-menu component), part of the\nheader below the topbar.",
-      "properties": [
+      "kind": "javascript-module",
+      "path": "src/components/Banner.js",
+      "declarations": [
         {
-          "name": "hasNav",
-          "default": "false"
+          "kind": "class",
+          "description": "Component that may contain the search or the navigation (overlayed\nvia absolute positioning in the pzsh-menu component), part of the\nheader below the topbar.",
+          "name": "Banner",
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleMenuNavChange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "field",
+              "name": "hasNav",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "hasSubnav",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-banner",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Banner",
+          "declaration": {
+            "name": "Banner",
+            "module": "src/components/Banner.js"
+          }
         },
         {
-          "name": "hasSubnav",
-          "default": "false"
-        },
-        {
-          "name": "handleMenuNavChange"
+          "kind": "custom-element-definition",
+          "name": "pzsh-banner",
+          "declaration": {
+            "name": "Banner",
+            "module": "src/components/Banner.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-container",
-      "path": "./src/components/Container.js",
-      "description": "Full height container component that expects to be \"slotted\" with\nheader, content and footer.",
-      "slots": [
+      "kind": "javascript-module",
+      "path": "src/components/Container.js",
+      "declarations": [
         {
-          "name": "",
-          "description": "Add header, content and footer in this slot."
+          "kind": "class",
+          "description": "Full height container component that expects to be \"slotted\" with\nheader, content and footer.",
+          "name": "Container",
+          "slots": [
+            {
+              "description": "Add header, content and footer in this slot.",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-container",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Container",
+          "declaration": {
+            "name": "Container",
+            "module": "src/components/Container.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-container",
+          "declaration": {
+            "name": "Container",
+            "module": "src/components/Container.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-footer",
-      "path": "./src/components/Footer.js",
-      "description": "Component for the application's footer."
-    },
-    {
-      "name": "pzsh-footer-link",
-      "path": "./src/components/FooterLink.js",
-      "description": "Footer action link.",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/Footer.js",
+      "declarations": [
         {
-          "name": "href",
-          "type": "string",
-          "default": "\"#\""
+          "kind": "class",
+          "description": "Component for the application's footer.",
+          "name": "Footer",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-footer",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "href",
-          "attribute": "href",
-          "type": "string",
-          "default": "\"#\""
-        }
-      ],
-      "slots": [
+          "kind": "js",
+          "name": "Footer",
+          "declaration": {
+            "name": "Footer",
+            "module": "src/components/Footer.js"
+          }
+        },
         {
-          "name": "",
-          "description": "Slot for the icon and the text"
+          "kind": "custom-element-definition",
+          "name": "pzsh-footer",
+          "declaration": {
+            "name": "Footer",
+            "module": "src/components/Footer.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-hero",
-      "path": "./src/components/Hero.js",
-      "description": "Component that contains the application title, slogan and logo, below the header/banner."
-    },
-    {
-      "name": "pzsh-icon",
-      "path": "./src/components/Icon.js",
-      "description": "Component to display built-in icons",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/FooterLink.js",
+      "declarations": [
         {
-          "name": "name",
-          "type": "string"
+          "kind": "class",
+          "description": "Footer action link.",
+          "name": "FooterLink",
+          "slots": [
+            {
+              "description": "Slot for the icon and the text",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#\""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "fieldName": "href"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-footer-link",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "name",
-          "attribute": "name",
-          "type": "string"
+          "kind": "js",
+          "name": "FooterLink",
+          "declaration": {
+            "name": "FooterLink",
+            "module": "src/components/FooterLink.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-footer-link",
+          "declaration": {
+            "name": "FooterLink",
+            "module": "src/components/FooterLink.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-menu",
-      "path": "./src/components/Menu.js",
-      "description": "Responsive menu component that is coupled with the topbar component\n(for mobile menu toggling and actions display on desktop) and the\nbanner component (nav display on desktop) via events.",
-      "properties": [
+      "kind": "javascript-module",
+      "path": "src/components/Hero.js",
+      "declarations": [
         {
-          "name": "available",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "open",
-          "default": "false"
-        },
-        {
-          "name": "hasNav",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "hasSubnav",
-          "type": "boolean",
-          "default": "false"
-        },
-        {
-          "name": "toggleMenu"
-        },
-        {
-          "name": "handleEvent"
-        },
-        {
-          "name": "actionsObserver"
+          "kind": "class",
+          "description": "Component that contains the application title, slogan and logo, below the header/banner.",
+          "name": "Hero",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-hero",
+          "customElement": true
         }
       ],
-      "events": [
+      "exports": [
         {
-          "name": "pzsh-menu-change"
+          "kind": "js",
+          "name": "Hero",
+          "declaration": {
+            "name": "Hero",
+            "module": "src/components/Hero.js"
+          }
         },
         {
-          "name": "pzsh-menu-nav-change"
-        }
-      ],
-      "slots": [
-        {
-          "name": "nav",
-          "description": "Slot for application navigation that is visible in the\nbanner on desktop and moves into the hamburger menu on mobile"
-        },
-        {
-          "name": "items",
-          "description": "Slot for menu content that is visible on the page on\ndesktop (typically on the left of the content) and moves into the\nhamburger menu on mobile"
-        },
-        {
-          "name": "actions",
-          "description": "Slot for application-wide menu actions (like help,\nlogout etc.) that are visible in the topbar on desktop and move\ninto the hamburger menu on mobile"
+          "kind": "custom-element-definition",
+          "name": "pzsh-hero",
+          "declaration": {
+            "name": "Hero",
+            "module": "src/components/Hero.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-menu-action",
-      "path": "./src/components/MenuAction.js",
-      "description": "Menu action with icon and text, will be render in the menu on\nmobile or in the topbar otherwise.",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/Icon.js",
+      "declarations": [
         {
-          "name": "href",
-          "type": "string",
-          "default": "\"#\""
+          "kind": "variable",
+          "name": "icons",
+          "type": {
+            "text": "object"
+          }
+        },
+        {
+          "kind": "class",
+          "description": "Component to display built-in icons",
+          "name": "Icon",
+          "members": [
+            {
+              "kind": "field",
+              "name": "name",
+              "privacy": "public"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "name",
+              "fieldName": "name"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-icon",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "href",
-          "attribute": "href",
-          "type": "string",
-          "default": "\"#\""
-        }
-      ],
-      "slots": [
+          "kind": "js",
+          "name": "icons",
+          "declaration": {
+            "name": "icons",
+            "module": "src/components/Icon.js"
+          }
+        },
         {
-          "name": "",
-          "description": "Slot for the icon and the text"
+          "kind": "js",
+          "name": "Icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/components/Icon.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-icon",
+          "declaration": {
+            "name": "Icon",
+            "module": "src/components/Icon.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-menu-divider",
-      "path": "./src/components/MenuDivider.js",
-      "description": "Divider to be used in the pzsh-menu component to separate menu\nactions (currently only effects mobile menu)."
-    },
-    {
-      "name": "pzsh-menu-dropdown",
-      "path": "./src/components/MenuDropdown.js",
-      "description": "Menu dropdown with icon and text, will be rendered as a dropdown\nmenu in the topbar on desktop, or with all items visible in the\nhamburger menu on mobile.",
-      "properties": [
+      "kind": "javascript-module",
+      "path": "src/components/Menu.js",
+      "declarations": [
         {
-          "name": "open",
-          "default": "false"
-        },
-        {
-          "name": "handleEvent"
+          "kind": "class",
+          "description": "Responsive menu component that is coupled with the topbar component\n(for mobile menu toggling and actions display on desktop) and the\nbanner component (nav display on desktop) via events.",
+          "name": "Menu",
+          "slots": [
+            {
+              "description": "Slot for application navigation that is visible in the banner on desktop and moves into the hamburger menu on mobile",
+              "name": "nav"
+            },
+            {
+              "description": "Slot for menu content that is visible on the page on desktop (typically on the left of the content) and moves into the hamburger menu on mobile",
+              "name": "items"
+            },
+            {
+              "description": "Slot for application-wide menu actions (like help, logout etc.) that are visible in the topbar on desktop and move into the hamburger menu on mobile",
+              "name": "actions"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "toggleMenu",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "toggleBackdrop"
+            },
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMenuClose",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMenuNavigation",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "getMenuItems",
+              "description": "Flatten all menu actions & dropdown items to an array"
+            },
+            {
+              "kind": "method",
+              "name": "handleSlotChange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleActionsChange"
+            },
+            {
+              "kind": "method",
+              "name": "updateMenuAvailablity"
+            },
+            {
+              "kind": "method",
+              "name": "hasMenuItems"
+            },
+            {
+              "kind": "method",
+              "name": "triggerMenuChange",
+              "parameters": [
+                {
+                  "name": "available"
+                },
+                {
+                  "name": "open"
+                }
+              ],
+              "description": "Emit an event for the pzsh-topbar component to show/hide the\nhamburger menu button or update its open/closed state."
+            },
+            {
+              "kind": "method",
+              "name": "updateNavAvailability"
+            },
+            {
+              "kind": "method",
+              "name": "triggerNavChange",
+              "parameters": [
+                {
+                  "name": "hasNav"
+                },
+                {
+                  "name": "hasSubnav"
+                }
+              ],
+              "description": "Emit an event for the pzsh-banner component to preserve spacing\nfor the absolute positioned nav."
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "events": [
+            {
+              "name": "pzsh-menu-change",
+              "type": {
+                "text": "CustomEvent"
+              }
+            },
+            {
+              "name": "pzsh-menu-nav-change",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-menu",
+          "customElement": true
         }
       ],
-      "slots": [
+      "exports": [
         {
-          "name": "toggle",
-          "description": "Slot for the icon and the text of the toggle button"
+          "kind": "js",
+          "name": "Menu",
+          "declaration": {
+            "name": "Menu",
+            "module": "src/components/Menu.js"
+          }
         },
         {
-          "name": "items",
-          "description": "Slot for dropdown menu items"
+          "kind": "custom-element-definition",
+          "name": "pzsh-menu",
+          "declaration": {
+            "name": "Menu",
+            "module": "src/components/Menu.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-menu-dropdown-item",
-      "path": "./src/components/MenuDropdownItem.js",
-      "description": "Dropdown menu item with icon and text.",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/MenuAction.js",
+      "declarations": [
         {
-          "name": "href",
-          "type": "string",
-          "default": "\"#\""
+          "kind": "class",
+          "description": "Menu action with icon and text, will be render in the menu on\nmobile or in the topbar otherwise.",
+          "name": "MenuAction",
+          "slots": [
+            {
+              "description": "Slot for the icon and the text",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#\""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "fieldName": "href"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-menu-action",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "href",
-          "attribute": "href",
-          "type": "string",
-          "default": "\"#\""
-        }
-      ],
-      "slots": [
+          "kind": "js",
+          "name": "MenuAction",
+          "declaration": {
+            "name": "MenuAction",
+            "module": "src/components/MenuAction.js"
+          }
+        },
         {
-          "name": "",
-          "description": "Slot for the icon and the text"
+          "kind": "custom-element-definition",
+          "name": "pzsh-menu-action",
+          "declaration": {
+            "name": "MenuAction",
+            "module": "src/components/MenuAction.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-nav",
-      "path": "./src/components/Nav.js",
-      "description": "Main navigation of the application.",
-      "slots": [
+      "kind": "javascript-module",
+      "path": "src/components/MenuDivider.js",
+      "declarations": [
         {
-          "name": "",
-          "description": "May contain pzsh-nav-item and pzsh-subnav components"
+          "kind": "class",
+          "description": "Divider to be used in the pzsh-menu component to separate menu\nactions (currently only effects mobile menu).",
+          "name": "MenuDivider",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-menu-divider",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MenuDivider",
+          "declaration": {
+            "name": "MenuDivider",
+            "module": "src/components/MenuDivider.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-menu-divider",
+          "declaration": {
+            "name": "MenuDivider",
+            "module": "src/components/MenuDivider.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-nav-item",
-      "path": "./src/components/NavItem.js",
-      "description": "Application navigation item to be used in pzsh-nav and pzsh-subnav\ncomponents.",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/MenuDropdown.js",
+      "declarations": [
         {
-          "name": "href",
-          "type": "string",
-          "default": "\"#\""
-        },
-        {
-          "name": "active",
-          "description": "Whether the item is currently active",
-          "type": "Boolean",
-          "default": "false"
+          "kind": "class",
+          "description": "Menu dropdown with icon and text, will be rendered as a dropdown\nmenu in the topbar on desktop, or with all items visible in the\nhamburger menu on mobile.",
+          "name": "MenuDropdown",
+          "slots": [
+            {
+              "description": "Slot for the icon and the text of the toggle button",
+              "name": "toggle"
+            },
+            {
+              "description": "Slot for dropdown menu items",
+              "name": "items"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleEvent",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMenuClose",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "handleMenuNavigation",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "toggleMenu"
+            },
+            {
+              "kind": "field",
+              "name": "open",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-menu-dropdown",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "href",
-          "attribute": "href",
-          "type": "string",
-          "default": "\"#\""
+          "kind": "js",
+          "name": "MenuDropdown",
+          "declaration": {
+            "name": "MenuDropdown",
+            "module": "src/components/MenuDropdown.js"
+          }
         },
         {
-          "name": "active",
-          "attribute": "active",
-          "description": "Whether the item is currently active",
-          "type": "Boolean",
-          "default": "false"
-        }
-      ],
-      "slots": [
-        {
-          "name": "",
-          "description": "Navigation item label"
+          "kind": "custom-element-definition",
+          "name": "pzsh-menu-dropdown",
+          "declaration": {
+            "name": "MenuDropdown",
+            "module": "src/components/MenuDropdown.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-subnav",
-      "path": "./src/components/Subnav.js",
-      "description": "Second level navigation to be use within pzsh-nav.",
-      "slots": [
+      "kind": "javascript-module",
+      "path": "src/components/MenuDropdownItem.js",
+      "declarations": [
         {
-          "name": "",
-          "description": "May contain pzsh-nav-item components"
+          "kind": "class",
+          "description": "Dropdown menu item with icon and text.",
+          "name": "MenuDropdownItem",
+          "slots": [
+            {
+              "description": "Slot for the icon and the text",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#\""
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "fieldName": "href"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-menu-dropdown-item",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "MenuDropdownItem",
+          "declaration": {
+            "name": "MenuDropdownItem",
+            "module": "src/components/MenuDropdownItem.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-menu-dropdown-item",
+          "declaration": {
+            "name": "MenuDropdownItem",
+            "module": "src/components/MenuDropdownItem.js"
+          }
         }
       ]
     },
     {
-      "name": "pzsh-topbar",
-      "path": "./src/components/Topbar.js",
-      "description": "Top application bar that contains the logo and optional\napplication-wide actions that are rendered via the menu\ncomponent. The topbar is coupled with the menu component via\nevents.",
-      "attributes": [
+      "kind": "javascript-module",
+      "path": "src/components/Nav.js",
+      "declarations": [
         {
-          "name": "href",
-          "type": "string"
+          "kind": "class",
+          "description": "Main navigation of the application.",
+          "name": "Nav",
+          "slots": [
+            {
+              "description": "May contain pzsh-nav-item and pzsh-subnav components",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-nav",
+          "customElement": true
         }
       ],
-      "properties": [
+      "exports": [
         {
-          "name": "href",
-          "attribute": "href",
-          "type": "string"
+          "kind": "js",
+          "name": "Nav",
+          "declaration": {
+            "name": "Nav",
+            "module": "src/components/Nav.js"
+          }
         },
         {
-          "name": "menuAvailable",
-          "default": "false"
-        },
+          "kind": "custom-element-definition",
+          "name": "pzsh-nav",
+          "declaration": {
+            "name": "Nav",
+            "module": "src/components/Nav.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/NavItem.js",
+      "declarations": [
         {
-          "name": "menuOpen",
-          "default": "false"
-        },
-        {
-          "name": "handleMenuChange"
+          "kind": "class",
+          "description": "Application navigation item to be used in pzsh-nav and pzsh-subnav\ncomponents.",
+          "name": "NavItem",
+          "slots": [
+            {
+              "description": "Navigation item label",
+              "name": ""
+            }
+          ],
+          "members": [
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"#\""
+            },
+            {
+              "kind": "field",
+              "name": "active",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            }
+          ],
+          "attributes": [
+            {
+              "type": {
+                "text": "Boolean"
+              },
+              "description": "Whether the item is currently active",
+              "name": "active"
+            },
+            {
+              "name": "href",
+              "fieldName": "href"
+            },
+            {
+              "name": "active",
+              "fieldName": "active"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-nav-item",
+          "customElement": true
         }
       ],
-      "events": [
+      "exports": [
         {
-          "name": "pzsh-menu-toggle"
+          "kind": "js",
+          "name": "NavItem",
+          "declaration": {
+            "name": "NavItem",
+            "module": "src/components/NavItem.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-nav-item",
+          "declaration": {
+            "name": "NavItem",
+            "module": "src/components/NavItem.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/PuzzleShell.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "PuzzleShell",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "privacy": "public",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"Hey there\""
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "privacy": "public",
+              "type": {
+                "text": "number"
+              },
+              "default": "5"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "fieldName": "title"
+            },
+            {
+              "name": "counter",
+              "fieldName": "counter"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "customElement": true
         }
       ],
-      "slots": [
+      "exports": [
         {
-          "name": "",
-          "description": "Slot for the logo SVG graphic"
+          "kind": "js",
+          "name": "PuzzleShell",
+          "declaration": {
+            "name": "PuzzleShell",
+            "module": "src/components/PuzzleShell.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Subnav.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Second level navigation to be use within pzsh-nav.",
+          "name": "Subnav",
+          "slots": [
+            {
+              "description": "May contain pzsh-nav-item components",
+              "name": ""
+            }
+          ],
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-subnav",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Subnav",
+          "declaration": {
+            "name": "Subnav",
+            "module": "src/components/Subnav.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-subnav",
+          "declaration": {
+            "name": "Subnav",
+            "module": "src/components/Subnav.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/Topbar.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Top application bar that contains the logo and optional\napplication-wide actions that are rendered via the menu\ncomponent. The topbar is coupled with the menu component via\nevents.",
+          "name": "Topbar",
+          "slots": [
+            {
+              "description": "for the logo SVG graphic",
+              "name": "Slot"
+            }
+          ],
+          "members": [
+            {
+              "kind": "method",
+              "name": "handleMenuChange",
+              "parameters": [
+                {
+                  "name": "e"
+                }
+              ]
+            },
+            {
+              "kind": "method",
+              "name": "toggleMenu"
+            },
+            {
+              "kind": "method",
+              "name": "renderMenuButton"
+            },
+            {
+              "kind": "method",
+              "name": "renderLogo"
+            },
+            {
+              "kind": "field",
+              "name": "menuAvailable",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "menuOpen",
+              "privacy": "public",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false"
+            },
+            {
+              "kind": "field",
+              "name": "href",
+              "privacy": "public"
+            }
+          ],
+          "events": [
+            {
+              "name": "pzsh-menu-toggle",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "href",
+              "fieldName": "href"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-topbar",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Topbar",
+          "declaration": {
+            "name": "Topbar",
+            "module": "src/components/Topbar.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-topbar",
+          "declaration": {
+            "name": "Topbar",
+            "module": "src/components/Topbar.js"
+          }
         }
       ]
     }

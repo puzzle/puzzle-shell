@@ -13,7 +13,7 @@
     "storybook": "web-dev-server -c .storybook/server.mjs",
     "storybook:build": "build-storybook",
     "prepare": "husky install",
-    "manifest": "wca analyze \"src/components/*.js\" --format json --outFiles ./custom-elements.json",
+    "manifest": "custom-elements-manifest analyze --litelement --globs=\"src/components/*.js\"",
     "bundle": "rm -rf dist/ && esbuild index.js --bundle --minify --sourcemap --outfile=dist/bundle.js",
     "prepack": "npm run manifest && npm run bundle"
   },
@@ -45,6 +45,7 @@
     "lit-html": "^1.4.1"
   },
   "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.4.4",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^2.5.33",
     "@web/dev-server": "^0.1.17",
@@ -55,8 +56,7 @@
     "eslint-config-prettier": "^8.3.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
-    "web-component-analyzer": "^1.1.6"
+    "prettier": "^2.3.0"
   },
   "eslintConfig": {
     "extends": [
@@ -73,5 +73,6 @@
       "prettier --write"
     ]
   },
-  "customElementsManifest": "custom-elements.json"
+  "customElementsManifest": "custom-elements.json",
+  "customElements": "custom-elements.json"
 }
