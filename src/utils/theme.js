@@ -24,6 +24,9 @@ const customProperties = css`
   --pzsh-color-brand-alt-3: #3fa8e0; /* Logo color */
   --pzsh-color-brand-alt-4: #69b978; /* Logo color */
 
+  --pzsh-green: var(--pzsh-color-brand-7);
+  --pzsh-blue: var(--pzsh-color-brand-alt-3);
+
   /* Component colors */
   --pzsh-topbar-bg: var(--pzsh-color-brand-1);
   --pzsh-topbar-bg-alt: var(--pzsh-color-brand-2);

@@ -3,6 +3,7 @@
 # 1.0.0-beta.3
 
 - Add responsive styling of `pzsh-hero` component
+- Add documentation for logos and `pzsh-container` component
 
 # 1.0.0-beta.2
 
