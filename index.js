@@ -11,6 +11,5 @@ export { MenuDropdown } from "./src/components/MenuDropdown.js";
 export { MenuDropdownItem } from "./src/components/MenuDropdownItem.js";
 export { Nav } from "./src/components/Nav.js";
 export { NavItem } from "./src/components/NavItem.js";
-export { PuzzleShell } from "./src/components/PuzzleShell.js";
 export { Subnav } from "./src/components/Subnav.js";
 export { Topbar } from "./src/components/Topbar.js";

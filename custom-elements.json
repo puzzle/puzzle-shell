@@ -832,62 +832,6 @@
     },
     {
       "kind": "javascript-module",
-      "path": "src/components/PuzzleShell.js",
-      "declarations": [
-        {
-          "kind": "class",
-          "description": "",
-          "name": "PuzzleShell",
-          "members": [
-            {
-              "kind": "field",
-              "name": "title",
-              "privacy": "public",
-              "type": {
-                "text": "string"
-              },
-              "default": "\"Hey there\""
-            },
-            {
-              "kind": "field",
-              "name": "counter",
-              "privacy": "public",
-              "type": {
-                "text": "number"
-              },
-              "default": "5"
-            }
-          ],
-          "attributes": [
-            {
-              "name": "title",
-              "fieldName": "title"
-            },
-            {
-              "name": "counter",
-              "fieldName": "counter"
-            }
-          ],
-          "superclass": {
-            "name": "LitElement",
-            "package": "lit-element"
-          },
-          "customElement": true
-        }
-      ],
-      "exports": [
-        {
-          "kind": "js",
-          "name": "PuzzleShell",
-          "declaration": {
-            "name": "PuzzleShell",
-            "module": "src/components/PuzzleShell.js"
-          }
-        }
-      ]
-    },
-    {
-      "kind": "javascript-module",
       "path": "src/components/Subnav.js",
       "declarations": [
         {
