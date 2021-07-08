@@ -22,6 +22,12 @@ import "./Backdrop.js";
  * @fires pzsh-menu-nav-change
  */
 export class Menu extends LitElement {
+  static get properties() {
+    return {
+      open: { attribute: false },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -80,12 +86,6 @@ export class Menu extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      open: { attribute: false },
-    };
   }
 
   constructor() {

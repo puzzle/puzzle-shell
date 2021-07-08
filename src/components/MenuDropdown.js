@@ -13,6 +13,12 @@ import { navigateMenuWithKeyboard } from "../utils/menu.js";
  * @slot items - Slot for dropdown menu items
  */
 export class MenuDropdown extends LitElement {
+  static get properties() {
+    return {
+      open: { attribute: false },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -83,12 +89,6 @@ export class MenuDropdown extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      open: { attribute: false },
-    };
   }
 
   constructor() {

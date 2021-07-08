@@ -11,6 +11,14 @@ import { theme } from "../utils/theme.js";
  * @fires pzsh-menu-toggle
  */
 export class Topbar extends LitElement {
+  static get properties() {
+    return {
+      menuAvailable: { attribute: false },
+      menuOpen: { attribute: false },
+      href: { type: String },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -62,14 +70,6 @@ export class Topbar extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      menuAvailable: { attribute: false },
-      menuOpen: { attribute: false },
-      href: { type: String },
-    };
   }
 
   constructor() {

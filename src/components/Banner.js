@@ -8,6 +8,13 @@ import { theme } from "../utils/theme.js";
  * header below the topbar.
  */
 export class Banner extends LitElement {
+  static get properties() {
+    return {
+      hasNav: { attribute: false },
+      hasSubnav: { attribute: false },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -56,13 +63,6 @@ export class Banner extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      hasNav: { attribute: false },
-      hasSubnav: { attribute: false },
-    };
   }
 
   constructor() {

@@ -37,6 +37,12 @@ export const icons = {
  * Component to display built-in icons
  */
 export class Icon extends LitElement {
+  static get properties() {
+    return {
+      name: { type: String },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -50,12 +56,6 @@ export class Icon extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      name: { type: String },
-    };
   }
 
   render() {

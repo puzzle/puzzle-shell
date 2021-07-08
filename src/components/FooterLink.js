@@ -7,6 +7,12 @@ import { theme } from "../utils/theme.js";
  * @slot - Slot for the icon and the text
  */
 export class FooterLink extends LitElement {
+  static get properties() {
+    return {
+      href: { type: String },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -40,12 +46,6 @@ export class FooterLink extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      href: { type: String },
-    };
   }
 
   constructor() {

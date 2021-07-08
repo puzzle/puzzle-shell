@@ -10,6 +10,13 @@ import { theme } from "../utils/theme.js";
  * @attr {Boolean} active - Whether the item is currently active
  */
 export class NavItem extends LitElement {
+  static get properties() {
+    return {
+      href: { type: String },
+      active: { type: Boolean },
+    };
+  }
+
   static get styles() {
     return [
       theme,
@@ -63,13 +70,6 @@ export class NavItem extends LitElement {
         }
       `,
     ];
-  }
-
-  static get properties() {
-    return {
-      href: { type: String },
-      active: { type: Boolean },
-    };
   }
 
   constructor() {
