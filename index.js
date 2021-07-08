@@ -1,3 +1,4 @@
+export { Backdrop } from "./src/components/Backdrop.js";
 export { Banner } from "./src/components/Banner.js";
 export { Container } from "./src/components/Container.js";
 export { Footer } from "./src/components/Footer.js";

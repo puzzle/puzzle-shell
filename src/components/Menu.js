@@ -3,6 +3,7 @@ import { classMap } from "lit-html/directives/class-map.js";
 import { isNodeOrChild } from "../utils/dom.js";
 import { navigateMenuWithKeyboard } from "../utils/menu.js";
 import { theme } from "../utils/theme.js";
+import "./Backdrop.js";
 
 /**
  * Responsive menu component that is coupled with the topbar component
@@ -128,23 +129,15 @@ export class Menu extends LitElement {
   }
 
   toggleBackdrop() {
-    let backdrop = document.getElementById("pzsh-backdrop");
+    const backdrop = document.querySelector("pzsh-backdrop");
     if (backdrop) {
       backdrop.remove();
     }
 
     if (this.open) {
-      backdrop = document.createElement("div");
-      backdrop.id = "pzsh-backdrop";
-      backdrop.style.position = "absolute";
-      backdrop.style.top = "var(--pzsh-topbar-height)";
-      backdrop.style.bottom = 0;
-      backdrop.style.left = 0;
-      backdrop.style.right = 0;
-      backdrop.style.backgroundColor = "rgba(135,139,142,0.4)";
-      backdrop.style.backdropFilter = "blur(4px)";
-      backdrop.style.zIndex = "var(--pzsh-menu-backdrop-z-index)";
-      document.querySelector("body").appendChild(backdrop);
+      document
+        .querySelector("body")
+        .appendChild(document.createElement("pzsh-backdrop"));
     }
   }
 

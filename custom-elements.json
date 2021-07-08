@@ -4,6 +4,42 @@
   "modules": [
     {
       "kind": "javascript-module",
+      "path": "src/components/Backdrop.js",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "Backdrop component to be appended to body, used in `pzsh-menu`\ncomponent.",
+          "name": "Backdrop",
+          "members": [],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "tagName": "pzsh-backdrop",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "Backdrop",
+          "declaration": {
+            "name": "Backdrop",
+            "module": "src/components/Backdrop.js"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "pzsh-backdrop",
+          "declaration": {
+            "name": "Backdrop",
+            "module": "src/components/Backdrop.js"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
       "path": "src/components/Banner.js",
       "declarations": [
         {

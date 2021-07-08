@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 1.0.0
+
+- Implement `pzsh-menu`'s backdrop as separate `pzsh-backdrop` component to avoid CSP issues with inline styles.
+
 # 1.0.0-beta.3
 
 - Add responsive styling of `pzsh-hero` component
