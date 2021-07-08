@@ -20,6 +20,7 @@ export class MenuAction extends LitElement {
       css`
         a {
           display: flex;
+          align-items: center;
           font-family: var(--pzsh-font-family);
           margin-top: var(--pzsh-menu-item-gap);
           padding: var(--pzsh-menu-item-padding-vertical)
@@ -42,7 +43,6 @@ export class MenuAction extends LitElement {
 
         @media (min-width: 800px) {
           a {
-            align-items: center;
             margin: 0;
             padding: 0;
             color: var(--pzsh-topbar-fg);

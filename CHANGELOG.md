@@ -3,6 +3,7 @@
 # 1.0.0
 
 - Implement `pzsh-menu`'s backdrop as separate `pzsh-backdrop` component to avoid CSP issues with inline styles.
+- Fix vertical alignment of `pzsh-menu-action` text on mobile
 
 # 1.0.0-beta.3
 
