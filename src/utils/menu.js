@@ -13,7 +13,6 @@ export function navigateMenuWithKeyboard(getItems, e) {
       index += 1;
     }
     const item = items[index];
-    console.log(items, item);
     if (item) {
       item.focus();
 

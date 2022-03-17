@@ -1,5 +1,10 @@
 # Puzzle Shell Changelog
 
+# 1.0.1
+
+- Fix click/keydown event registering without useCapture
+- Upgrade the dependencies. Unfortunately this does not fix the Storybook/trim Vulnerability reported by NPM Audit, which will not be fixed until Storybook 7.0 (see [#14603](https://github.com/storybookjs/storybook/issues/14603)).
+
 # 1.0.0
 
 - Implement `pzsh-menu`'s backdrop as separate `pzsh-backdrop` component to avoid CSP issues with inline styles.

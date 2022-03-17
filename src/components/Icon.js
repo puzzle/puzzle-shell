@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "lit-element";
+import { LitElement, html, css } from "lit";
 import { theme } from "../utils/theme.js";
 
 // Icons from https://iconscout.com/unicons/explore/line (colors set

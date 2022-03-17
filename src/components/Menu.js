@@ -1,5 +1,5 @@
-import { LitElement, html, css } from "lit-element";
-import { classMap } from "lit-html/directives/class-map.js";
+import { LitElement, html, css } from "lit";
+import { classMap } from "lit/directives/class-map.js";
 import { isNodeOrChild } from "../utils/dom.js";
 import { navigateMenuWithKeyboard } from "../utils/menu.js";
 import { theme } from "../utils/theme.js";

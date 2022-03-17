@@ -1,4 +1,4 @@
-import { html } from "lit-element";
+import { html } from "lit";
 import "../../src/components/Banner.js";
 import { searchStyles } from "./search.js";
 

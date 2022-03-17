@@ -1,4 +1,4 @@
-import { html } from "lit-element";
+import { html } from "lit";
 import "../../index.js";
 import { searchStyles } from "../components/search.js";
 

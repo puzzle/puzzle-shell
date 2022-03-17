@@ -1,4 +1,4 @@
-import { html } from "lit-element";
+import { html } from "lit";
 import "../../src/components/Nav.js";
 import "../../src/components/NavItem.js";
 import "../../src/components/Subnav.js";
