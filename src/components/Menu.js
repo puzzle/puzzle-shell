@@ -109,16 +109,16 @@ export class Menu extends LitElement {
     // Subscribe to menu toggle events from pzsh-topbar component
     document.addEventListener("pzsh-menu-toggle", this.toggleMenu, true);
 
-    document.addEventListener("click", this.handleEvent, true);
-    document.addEventListener("keydown", this.handleEvent, true);
+    document.addEventListener("click", this.handleEvent);
+    document.addEventListener("keydown", this.handleEvent);
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
 
     document.removeEventListener("pzsh-menu-toggle", this.toggleMenu, true);
-    document.removeEventListener("click", this.handleEvent, true);
-    document.removeEventListener("keydown", this.handleEvent, true);
+    document.removeEventListener("click", this.handleEvent);
+    document.removeEventListener("keydown", this.handleEvent);
   }
 
   toggleMenu(e) {
