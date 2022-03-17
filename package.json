@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.4",
+    "@koa/cors": "^3.1.0",
     "@open-wc/eslint-config": "^4.3.0",
     "@open-wc/testing": "^2.5.33",
     "@web/dev-server": "^0.1.17",
