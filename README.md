@@ -1,6 +1,6 @@
 # Puzzle Shell
 
-The standard design for Puzzle tools. It is a set of webcomponents that follow the [open-wc](https://github.com/open-wc/open-wc) recommendation.
+The standard design for Puzzle tools as a set of [Web Components](https://en.wikipedia.org/wiki/Web_Components).
 
 The Puzzle Shell project strives for the following goals:
 
@@ -10,20 +10,21 @@ The Puzzle Shell project strives for the following goals:
 
 Part of this project is the [Puzzle Shell Storybook](https://puzzle.github.io/puzzle-shell) that lists and documents all Puzzle Shell components and contains usage examples.
 
-## Installation
+## Installation & Usage
+
+You can install this package:
 
 ```bash
 npm i @puzzleitc/puzzle-shell
 ```
 
-## Usage
-
-You can either use native JavaScript modules:
+And import it in one of your JavaScript files or reference it in your HTML file:
 
 ```html
-<script type="module">
-  import "@puzzleitc/puzzle-shell/index.js";
-</script>
+<script
+  type="module"
+  src="/path/to/@puzzleitc/puzzle-shell/dist/puzzle-shell.js"
+></script>
 
 <body>
   <pzsh-container>
@@ -34,104 +35,47 @@ You can either use native JavaScript modules:
 </body>
 ```
 
-Or you can use a bundled/minified version:
+Alternatively you can use a [NPM CDN](https://duckduckgo.com/?q=npm+cdn&ia=web) to reference the package directly from the Internet.
 
-```html
-<script src="/path/to/@puzzleitc/puzzle-shell/dist/bundle.js">
+## Linting etc.
 
-<body>
-  <pzsh-container>
-    <pzsh-topbar></pzsh-topbar>
-    <main></main>
-    <pzsh-footer></pzsh-footer>
-  </pzsh-container>
-</body>
-```
-
-## Linting with ESLint, Prettier, and Types
-
-To scan the project for linting errors, run
+To scan the project for linting or type errors, run:
 
 ```bash
 npm run lint
 ```
 
-You can lint with ESLint and Prettier individually as well
+To automatically fix many linting errors & reformat code using Prettier, run:
 
 ```bash
-npm run lint:eslint
+npm run lint:fix
 ```
 
-```bash
-npm run lint:prettier
-```
-
-To automatically fix many linting errors, run
-
-```bash
-npm run format
-```
-
-You can format using ESLint and Prettier individually as well
-
-```bash
-npm run format:eslint
-```
-
-```bash
-npm run format:prettier
-```
-
-To automatically generate the `custom-elements.json` manifest using the [web-component-analyzer](https://github.com/runem/web-component-analyzer), run
+To automatically generate the `custom-elements.json` manifest using the [web-component-analyzer](https://github.com/runem/web-component-analyzer), run:
 
 ```bash
 npm run manifest
 ```
 
-## Testing with Web Test Runner
+## Tryout Components with Storybook
 
-To run the suite of Web Test Runner tests, run
-
-```bash
-npm run test
-```
-
-To run the tests in watch mode (for &lt;abbr title=&#34;test driven development&#34;&gt;TDD&lt;/abbr&gt;, for example), run
-
-```bash
-npm run test:watch
-```
-
-## Demoing with Storybook
-
-To run a local instance of Storybook for your component, run
+To run a local instance of Storybook, run:
 
 ```bash
 npm run storybook
 ```
 
-To build a production version of Storybook, run
+To build a production version of Storybook, run:
 
 ```bash
-npm run storybook:build
+npm run build-storybook
 ```
 
-## Tooling configs
+## Publishing
 
-For most of the tools, the configuration is in the `package.json` to reduce the amount of files in your project.
+To publish a new package version, do the following:
 
-If you customize the configuration a lot, you can consider moving them to individual files.
-
-## Local Demo with `web-dev-server`
-
-```bash
-npm start
-```
-
-To run a local development server that serves the basic demo located in `demo/index.html`
-
-## Publish New Package Version
-
+- Build the library with `npm run build`
 - Execute `npm run manifest` to make sure the `custom-elements.json` manifest is up-to-date
 - Update the `CHANGELOG.md`
 - Bump the version with [npm version](https://docs.npmjs.com/cli/v7/commands/npm-version) (updates `package.json` and creates Git tag)

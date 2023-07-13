@@ -1,5 +1,11 @@
 # Puzzle Shell Changelog
 
+# 2.0.0
+
+- Migrate to Vite setup, upgrade to Storybook 7.3 and update all other dependencies. This eliminates all vulnerabilities reported by `npm audit`.
+- Migrate to TypeScript, include `.d.ts` files in package.
+- BREAKING CHANGE: The main entry file is now `dist/puzzle-shell.js`, previously it was `index.js`.
+
 # 1.0.1
 
 - Fix click/keydown event registering without useCapture
