@@ -2,7 +2,7 @@ name: Storybook Build
 
 on:
   push:
-    branches: [master]
+    branches: [main]
 
   workflow_dispatch:
 
