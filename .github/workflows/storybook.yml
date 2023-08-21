@@ -24,7 +24,7 @@ jobs:
           node-version: ${{ matrix.version }}
           cache: "npm"
 
-      - npm: Build Storybook 🔧
+      - name: Build Storybook 🔧
         run: |
           npm install
           npm run build-storybook
