@@ -1,5 +1,8 @@
 # Puzzle Shell
 
+[![Linting](https://github.com/puzzle/puzzle-shell/actions/workflows/lint.yml/badge.svg)](https://github.com/puzzle/puzzle-shell/actions/workflows/lint.yml)
+[![Storybook Build](https://github.com/puzzle/puzzle-shell/actions/workflows/storybook.yml/badge.svg?branch=master)](https://github.com/puzzle/puzzle-shell/actions/workflows/storybook.yml)
+
 The standard design for Puzzle tools as a set of [Web Components](https://en.wikipedia.org/wiki/Web_Components).
 
 The Puzzle Shell project strives for the following goals:
