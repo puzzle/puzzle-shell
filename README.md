@@ -2,6 +2,7 @@
 
 [![Linting](https://github.com/puzzle/puzzle-shell/actions/workflows/lint.yml/badge.svg)](https://github.com/puzzle/puzzle-shell/actions/workflows/lint.yml)
 [![Storybook Build](https://github.com/puzzle/puzzle-shell/actions/workflows/storybook.yml/badge.svg?branch=main)](https://github.com/puzzle/puzzle-shell/actions/workflows/storybook.yml)
+[![Software bill of materials (BOM)](https://github.com/puzzle/puzzle-shell/actions/workflows/bom.yml/badge.svg?branch=main)](https://github.com/puzzle/puzzle-shell/actions/workflows/bom.yml)
 
 The standard design for Puzzle tools as a set of [Web Components](https://en.wikipedia.org/wiki/Web_Components).
 
