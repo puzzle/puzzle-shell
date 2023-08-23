@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# ?.?.?
+
+- Add GitHub Actions Workflow to generate BOM (bill of materials) file and push it to Dependency Track.
+
 # 2.0.0
 
 - Migrate to Vite setup, upgrade to Storybook 7.3 and update all other dependencies. This eliminates all vulnerabilities reported by `npm audit`.

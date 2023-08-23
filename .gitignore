@@ -13,6 +13,7 @@ dist-ssr
 *.local
 *.tgz
 storybook-static
+bom.xml
 
 # Editor directories and files
 .vscode/*
