@@ -3,6 +3,7 @@
 # ?.?.?
 
 - Add GitHub Actions Workflow to generate BOM (bill of materials) file and push it to Dependency Track.
+- Add missing logos to logo story
 
 # 2.0.0
 
