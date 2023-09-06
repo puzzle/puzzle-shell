@@ -49,7 +49,8 @@ export class Menu extends LitElement {
         left: 0;
         right: 0;
         display: none;
-        overflow: hidden;
+        max-height: calc(100vh - var(--pzsh-topbar-height));
+        overflow: hidden auto;
         padding: calc(2 * var(--pzsh-spacer) - var(--pzsh-menu-item-gap))
           calc(3 * var(--pzsh-spacer)) calc(2 * var(--pzsh-spacer))
           calc(3 * var(--pzsh-spacer));
