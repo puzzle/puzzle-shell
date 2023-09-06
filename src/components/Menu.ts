@@ -28,6 +28,13 @@ export class Menu extends LitElement {
   @property({ attribute: false })
   open = false;
 
+  /**
+   * The selector for the scroll container which will be blocked from
+   * scrolling while menu is open.
+   */
+  @property({ type: String })
+  scrollContainerSelector = "body";
+
   available = false;
   hasNav = false;
   hasSubnav = false;
@@ -137,6 +144,16 @@ export class Menu extends LitElement {
       document
         .querySelector("body")
         ?.appendChild(document.createElement("pzsh-backdrop"));
+    }
+
+    // Prevent scroll container (<body> per default) from scrolling
+    // while backdrop is visible; can be configure with the
+    // `scrollContainerSelector` property
+    const scrollContainer = document.querySelector<HTMLElement>(
+      this.scrollContainerSelector,
+    );
+    if (scrollContainer) {
+      scrollContainer.style.overflowY = this.open ? "hidden" : "auto";
     }
   }
 
