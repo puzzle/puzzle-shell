@@ -4,6 +4,7 @@
 
 - Allow mobile/desktop breakpoint to be customized via the global `window.pzshBreakpoint` property.
 - Prevent body from scrolling while `pzsh-menu` is open on mobile. Use the `scrollContainerSelector` attribute to configure a custom scroll container.
+- Enable overflowing (scrolling) for `pzsh-menu` content larger than screen height.
 - Add GitHub Actions Workflow to generate BOM (bill of materials) file and push it to Dependency Track.
 - Add missing logos to logo story
 
