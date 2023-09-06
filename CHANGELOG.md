@@ -2,6 +2,7 @@
 
 # ?.?.?
 
+- Allow mobile/desktop breakpoint to be customized via the global `window.pzshBreakpoint` property.
 - Add GitHub Actions Workflow to generate BOM (bill of materials) file and push it to Dependency Track.
 - Add missing logos to logo story
 

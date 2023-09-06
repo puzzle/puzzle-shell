@@ -1,5 +1,6 @@
 import { html } from "lit";
 import "../../puzzle-shell";
+import { theme } from "../../utils/theme";
 
 export default {
   title: "Puzzle Shell/Examples/Web app with navigation",
@@ -16,7 +17,7 @@ export const Default = () => html`
     main {
       padding: var(--pzsh-page-padding-horizontal-mobile);
     }
-    @media (min-width: 800px) {
+@media (min-width: ${theme.breakpoint}px) {
       main {
         padding: var(--pzsh-page-padding-horizontal-desktop);
       }

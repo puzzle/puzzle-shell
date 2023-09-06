@@ -18,7 +18,7 @@ export class Nav extends LitElement {
         background-color: var(--pzsh-menu-bg);
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         nav {
           flex-direction: row;
           flex-wrap: wrap;

@@ -32,7 +32,7 @@ export class FooterLink extends LitElement {
         margin-right: calc(var(--pzsh-spacer) / 2);
       }
 
-      @media (max-width: 800px) {
+      @media (max-width: ${theme.breakpoint}px) {
         a {
           margin-left: 0;
           color: var(--pzsh-color-brand-1);

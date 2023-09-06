@@ -17,7 +17,7 @@ export class Subnav extends LitElement {
         flex-direction: column;
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           width: 100%;
           order: 1;

@@ -54,7 +54,7 @@ export class MenuDropdown extends LitElement {
         margin-top: calc(-1 * var(--pzsh-menu-item-gap));
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           margin: 0;
         }

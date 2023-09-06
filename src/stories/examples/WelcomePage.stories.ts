@@ -1,6 +1,7 @@
 import { html } from "lit";
 import "../../puzzle-shell";
 import { searchStyles } from "../components/search";
+import { theme } from "../../utils/theme";
 
 export default {
   title: "Puzzle Shell/Examples/Welcome page",
@@ -21,7 +22,7 @@ export const Default = () => html`
     main {
       padding: var(--pzsh-page-padding-horizontal-mobile);
     }
-    @media (min-width: 800px) {
+    @media (min-width: ${theme.breakpoint}px) {
       main {
         padding: var(--pzsh-page-padding-horizontal-desktop);
       }

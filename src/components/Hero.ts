@@ -68,7 +68,7 @@ export class Hero extends LitElement {
         }
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           gap: calc(5 * var(--pzsh-spacer));
         }

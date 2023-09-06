@@ -39,7 +39,7 @@ export class NavItem extends LitElement {
         color: var(--pzsh-menu-active);
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           line-height: var(--pzsh-nav-line-height);
         }

@@ -1,5 +1,15 @@
 import { css, CSSResult } from "lit";
 
+const DEFAULT_BREAKPOINT = 800;
+export function getBreakpoint(): number {
+  return (
+    ("pzshBreakpoint" in window &&
+      typeof window.pzshBreakpoint === "number" &&
+      window.pzshBreakpoint) ||
+    DEFAULT_BREAKPOINT
+  );
+}
+
 const customProperties = css`
   /* Base colors */
   --pzsh-color-white: #ffffff;
@@ -66,7 +76,7 @@ const customProperties = css`
   --pzsh-nav-item-padding-horizontal-desktop: calc(2 * var(--pzsh-spacer));
 
   /* Sizes */
-  --pzsh-breakpoint: 800px;
+  --pzsh-breakpoint: ${getBreakpoint()}px;
   --pzsh-logo-height: 32px;
   --pzsh-icon-size: 24px;
   --pzsh-topbar-height: calc(2 * var(--pzsh-spacer) + var(--pzsh-logo-height));
@@ -95,25 +105,52 @@ const fontFaces = css`
 /**
  * Styles to be used in encapulated shadow DOM context – provides
  * custom properties and does basic CSS reset.
+ *
+ * For media queries, you can use the additional `breakpoint` property
+ * on the returned object to get mobile-first desktop breakpoint
+ * (default 800px). The breakpoint can be customized by setting
+ * `window.pzshBreakpoint = 1024;`.
+ *
+ * Usage example:
+ *
+ *   static styles = [
+ *     theme,
+ *     css`
+ *       // Mobile first styles go here...
+ *
+ *       @media (min-width: ${theme.breakpoint}) {
+ *         // Desktop styles go here...
+ *       }
+ *     `
+ *   ];
  */
-export const theme = css`
-  :host {
-    ${customProperties}
-    ${fontFaces}
-  }
+export const theme: CSSResult & {
+  breakpoint: number;
+} = Object.assign(
+  css`
+    :host {
+      ${customProperties}
+      ${fontFaces}
+    }
 
-  /* Reset */
-  :host,
-  :host * {
-    box-sizing: border-box;
-    font-family: var(--pzsh-font-family);
-    font-size: var(--pzsh-font-size-base);
-  }
-  img,
-  svg {
-    display: block;
-  }
-`;
+    /* Reset */
+    :host,
+    :host * {
+      box-sizing: border-box;
+      font-family: var(--pzsh-font-family);
+      font-size: var(--pzsh-font-size-base);
+    }
+    img,
+    svg {
+      display: block;
+    }
+  `,
+  {
+    get breakpoint() {
+      return getBreakpoint();
+    },
+  },
+);
 
 /**
  * Register CSS in light DOM, e.g. to style slot children

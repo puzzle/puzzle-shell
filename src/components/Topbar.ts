@@ -55,13 +55,13 @@ export class Topbar extends LitElement {
         display: block;
       }
 
-      @media (max-width: 799px) {
+      @media (max-width: ${theme.breakpoint - 1}px) {
         :host {
           margin-bottom: 0 !important;
         }
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           padding-left: var(--pzsh-page-padding-horizontal-desktop);
           padding-right: var(--pzsh-page-padding-horizontal-desktop);
