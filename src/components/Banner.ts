@@ -41,7 +41,7 @@ export class Banner extends LitElement {
         margin: var(--pzsh-spacer) calc(2 * var(--pzsh-spacer));
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         :host {
           position: relative;
           overflow: hidden;

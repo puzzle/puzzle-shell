@@ -1,6 +1,7 @@
 import { html } from "lit";
 import "../../puzzle-shell";
 import { searchStyles } from "../components/search";
+import { theme } from "../../utils/theme";
 
 export default {
   title: "Puzzle Shell/Examples/Content app with search",
@@ -43,7 +44,7 @@ export const Default = () => html`
       text-decoration: underline;
     }
 
-    @media (min-width: 800px) {
+    @media (min-width: ${theme.breakpoint}px) {
       .app {
         display: grid;
         grid-template-columns: 1fr 10rem minmax(0, var(--pzsh-breakpoint)) 10rem 1fr;

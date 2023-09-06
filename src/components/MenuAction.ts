@@ -40,7 +40,7 @@ export class MenuAction extends LitElement {
         margin-right: calc(var(--pzsh-spacer) / 2);
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         a {
           margin: 0;
           padding: 0;

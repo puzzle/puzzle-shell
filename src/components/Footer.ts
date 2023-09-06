@@ -48,7 +48,7 @@ export class Footer extends LitElement {
         justify-content: flex-end;
       }
 
-      @media (max-width: 800px) {
+      @media (max-width: ${theme.breakpoint}px) {
         :host(pzsh-footer) {
           padding: calc(var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer));
 

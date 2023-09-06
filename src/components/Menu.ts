@@ -59,7 +59,7 @@ export class Menu extends LitElement {
         flex-direction: column;
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         nav {
           display: block; /* Always visible even when "closed" */
           position: static;

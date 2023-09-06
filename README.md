@@ -75,6 +75,22 @@ To build a production version of Storybook, run:
 npm run build-storybook
 ```
 
+## Customizing
+
+### Mobile/Desktop Breakpoint
+
+The mobile/desktop breakpoint of the Puzzle Shell is at `800px` per default. Below that screen width, the hamburger menu is displayed, paddings will change etc. To customize this breakpoint, you can set the global `window.pzshBreakpoint` property to another value before the Puzzle Shell import, e.g.:
+
+```html
+<script>
+  window.pzshBreakpoint = 1024;
+</script>
+<script
+  type="module"
+  src="/path/to/@puzzleitc/puzzle-shell/dist/puzzle-shell.js"
+></script>
+```
+
 ## Publishing
 
 To publish a new package version, do the following:

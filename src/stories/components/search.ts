@@ -1,4 +1,5 @@
 import { html } from "lit";
+import { theme } from "../../utils/theme";
 
 export const searchStyles = html`
   <style>
@@ -51,7 +52,7 @@ export const searchStyles = html`
     .search button.add > span {
       display: none;
     }
-    @media (min-width: 800px) {
+    @media (min-width: ${theme.breakpoint}px) {
       .search {
         padding: 0 var(--pzsh-page-padding-horizontal-desktop);
       }

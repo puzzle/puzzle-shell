@@ -46,7 +46,7 @@ export class MenuDropdownItem extends LitElement {
         margin-right: calc(var(--pzsh-spacer) / 2);
       }
 
-      @media (min-width: 800px) {
+      @media (min-width: ${theme.breakpoint}px) {
         a {
           margin: 0;
           padding: var(--pzsh-menu-item-padding-vertical)
