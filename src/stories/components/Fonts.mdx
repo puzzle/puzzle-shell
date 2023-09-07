@@ -1,0 +1,40 @@
+import { Meta } from '@storybook/blocks';
+import "../../puzzle-shell";
+
+export function renderFontExample(fontFamily, fontWeight, fontStyle) {
+  return <div style={{ background: "#edf1f3", padding: "1rem 1rem 0", borderRadius: "5px", marginBottom: "3rem", overflow: "hidden" }}>
+    <div style={{fontFamily: `var(${fontFamily})`, fontWeight, fontStyle, fontSize: "40px"}}>
+      The quick brown fox jumps over the lazy dog
+    </div>
+    <div style={{ margin: "0.75rem 0 0.25rem auto ", width: "max-content", fontSize: "0.8rem", opacity: 0.6}}>font-family: var({fontFamily}); font-weight: {fontWeight}; font-style: {fontStyle}</div>
+  </div>
+}
+
+<Meta title="Puzzle Shell/Components/Fonts" />
+
+# Fonts
+
+The Puzzle Shell includes the following fonts:
+
+## Roboto
+
+{renderFontExample("--pzsh-font-family", 400, 'normal')}
+{renderFontExample("--pzsh-font-family", 400, 'italic')}
+{renderFontExample("--pzsh-font-family", 500, 'normal')}
+{renderFontExample("--pzsh-font-family", 500, 'italic')}
+
+## Roboto Mono
+
+{renderFontExample("--pzsh-monospace-font-family", 400, 'normal')}
+{renderFontExample("--pzsh-monospace-font-family", 500, 'normal')}
+
+## More Variants
+
+If you need more variants, you can add them indiviually using the [fontsource.org](https://fontsource.org/) font packages.
+
+For example, if you need a light variant, install the `@fontsource/roboto` package in your project and import the variant in your CSS:
+
+```css
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/300-italic.css';
+```
