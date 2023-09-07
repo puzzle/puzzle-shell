@@ -14,32 +14,66 @@ The Puzzle Shell project strives for the following goals:
 
 Part of this project is the [Puzzle Shell Storybook](https://puzzle.github.io/puzzle-shell) that lists and documents all Puzzle Shell components and contains usage examples.
 
-## Installation & Usage
+## Usage
 
-You can install this package:
+### Without NPM & Build Step
+
+You can reference the package from a [NPM CDN](https://duckduckgo.com/?q=npm+cdn&ia=web) (or self-serve it) and use it right-away:
+
+```html
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@puzzleitc/puzzle-shell/dist/puzzle-shell.js"
+    ></script>
+  </head>
+
+  <body>
+    <pzsh-container>
+      <pzsh-topbar></pzsh-topbar>
+      <main></main>
+      <pzsh-footer></pzsh-footer>
+    </pzsh-container>
+  </body>
+</html>
+```
+
+### With NPM & Bundler
+
+You can install this package with NPM:
 
 ```bash
 npm i @puzzleitc/puzzle-shell
 ```
 
-And import it in one of your JavaScript files or reference it in your HTML file:
+Or Yarn:
 
-```html
-<script
-  type="module"
-  src="/path/to/@puzzleitc/puzzle-shell/dist/puzzle-shell.js"
-></script>
-
-<body>
-  <pzsh-container>
-    <pzsh-topbar></pzsh-topbar>
-    <main></main>
-    <pzsh-footer></pzsh-footer>
-  </pzsh-container>
-</body>
+```bash
+yarn add @puzzleitc/puzzle-shell
 ```
 
-Alternatively you can use a [NPM CDN](https://duckduckgo.com/?q=npm+cdn&ia=web) to reference the package directly from the Internet.
+Or PNPM:
+
+```bash
+pnpm add @puzzleitc/puzzle-shell
+```
+
+With a bundler like [Vite](https://vitejs.dev/) you can import the package in your main JavaScript file:
+
+```javascript
+import "@puzzleitc/puzzle-shell";
+```
+
+And and import the styles in your CSS file:
+
+```css
+@import url("@puzzleitc/puzzle-shell/style.css");
+```
 
 ## Linting etc.
 

@@ -1,5 +1,16 @@
 import { css, CSSResult } from "lit";
 
+/**
+ * Roboto: Regular 400, Regular 400 italic, Medium 500, Medium 500 italic
+ * Roboto Mono: Regular 400, Medium 500
+ */
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/400-italic.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/500-italic.css";
+import "@fontsource/roboto-mono/400.css";
+import "@fontsource/roboto-mono/500.css";
+
 const DEFAULT_BREAKPOINT = 800;
 export function getBreakpoint(): number {
   return (
@@ -95,14 +106,6 @@ const customProperties = css`
 `;
 
 /**
- * Roboto: Regular 400, Regular 400 italic, Medium 500, Medium 500 italic
- * Roboto Mono: Regular 400, Medium 500
- */
-const fontFaces = css`
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,400;1,500&family=Roboto+Mono:wght@400;500&display=swap");
-`;
-
-/**
  * Styles to be used in encapulated shadow DOM context – provides
  * custom properties and does basic CSS reset.
  *
@@ -130,7 +133,6 @@ export const theme: CSSResult & {
   css`
     :host {
       ${customProperties}
-      ${fontFaces}
     }
 
     /* Reset */
@@ -167,5 +169,4 @@ registerLightDomStyles(css`
   :root {
     ${customProperties}
   }
-  ${fontFaces}
 `);

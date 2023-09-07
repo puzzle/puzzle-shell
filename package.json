@@ -22,7 +22,8 @@
   "exports": {
     ".": {
       "import": "./dist/puzzle-shell.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   },
   "files": [
     "*.md",
@@ -44,6 +45,8 @@
     "manifest": "custom-elements-manifest analyze --litelement --globs=\"src/components/*.ts\""
   },
   "dependencies": {
+    "@fontsource/roboto": "^5.0.8",
+    "@fontsource/roboto-mono": "^5.0.8",
     "lit": "^2.8.0"
   },
   "devDependencies": {
