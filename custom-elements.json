@@ -384,6 +384,16 @@
             },
             {
               "kind": "field",
+              "name": "scrollContainerSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"body\"",
+              "description": "The selector for the scroll container which will be blocked from\nscrolling while menu is open.",
+              "attribute": "scrollContainerSelector"
+            },
+            {
+              "kind": "field",
               "name": "available",
               "type": {
                 "text": "boolean"
@@ -555,6 +565,17 @@
               "type": {
                 "text": "CustomEvent"
               }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "scrollContainerSelector",
+              "type": {
+                "text": "string"
+              },
+              "default": "\"body\"",
+              "description": "The selector for the scroll container which will be blocked from\nscrolling while menu is open.",
+              "fieldName": "scrollContainerSelector"
             }
           ],
           "superclass": {

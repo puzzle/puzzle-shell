@@ -1,6 +1,6 @@
 # Puzzle Shell Changelog
 
-# ?.?.?
+# 3.0.0
 
 - BREAKING CHANGE: Switch to self-hosting of Roboto fonts instead of fetching from Google. This improves privacy and performance but means you now have to include `dist/style.css` in your project for the fonts to be working.
 - Allow mobile/desktop breakpoint to be customized via the global `window.pzshBreakpoint` property.
