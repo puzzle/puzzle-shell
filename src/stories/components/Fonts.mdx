@@ -1,13 +1,40 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 import "../../puzzle-shell";
 
 export function renderFontExample(fontFamily, fontWeight, fontStyle) {
-  return <div style={{ background: "#edf1f3", padding: "1rem 1rem 0", borderRadius: "5px", marginBottom: "3rem", overflow: "hidden" }}>
-    <div style={{fontFamily: `var(${fontFamily})`, fontWeight, fontStyle, fontSize: "40px"}}>
-      The quick brown fox jumps over the lazy dog
+  return (
+    <div
+      style={{
+        background: "#edf1f3",
+        padding: "1rem 1rem 0",
+        borderRadius: "5px",
+        marginBottom: "3rem",
+        overflow: "hidden",
+      }}
+    >
+      <div
+        style={{
+          fontFamily: `var(${fontFamily})`,
+          fontWeight,
+          fontStyle,
+          fontSize: "40px",
+        }}
+      >
+        The quick brown fox jumps over the lazy dog
+      </div>
+      <div
+        style={{
+          margin: "0.75rem 0 0.25rem auto ",
+          width: "max-content",
+          fontSize: "0.8rem",
+          opacity: 0.6,
+        }}
+      >
+        font-family: var({fontFamily}); font-weight: {fontWeight}; font-style:{" "}
+        {fontStyle}
+      </div>
     </div>
-    <div style={{ margin: "0.75rem 0 0.25rem auto ", width: "max-content", fontSize: "0.8rem", opacity: 0.6}}>font-family: var({fontFamily}); font-weight: {fontWeight}; font-style: {fontStyle}</div>
-  </div>
+  );
 }
 
 <Meta title="Puzzle Shell/Components/Fonts" />
