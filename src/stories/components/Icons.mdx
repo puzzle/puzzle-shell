@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/blocks';
+import { Meta } from "@storybook/blocks";
 import { icons } from "../../components/Icon";
 
 <Meta title="Puzzle Shell/Components/Icons" />
@@ -10,11 +10,12 @@ The Puzzle Shell uses the [Unicons](https://iconscout.com/unicons) icon set, whi
 It provides the following basic set of icons via the `pzsh-icon` component:
 
 <div>
-  {Object.keys(icons).map(icon =>
-    <div style={{display: "flex", alignItems: "center",}} key={icon}>
-      <pzsh-icon name={icon} style={{marginRight: "0.7rem"}} />
+  {Object.keys(icons).map((icon) => (
+    <div style={{ display: "flex", alignItems: "center" }} key={icon}>
+      <pzsh-icon name={icon} style={{ marginRight: "0.7rem" }} />
       <code>{`<pzsh-icon name=\"${icon}\"></pzsh-icon>`}</code>
-    </div>)}
+    </div>
+  ))}
 </div>
 
 You can grab additional icons from the [full list of icons](https://iconscout.com/unicons/explore/line) and use them as SVGs in your project.

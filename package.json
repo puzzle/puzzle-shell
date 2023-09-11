@@ -42,7 +42,8 @@
     "lint:ts": "tsc --noEmit",
     "lint:eslint": "eslint --ext .ts,.html . --ignore-path .gitignore",
     "lint:fix": "eslint --ext .ts,.html . --fix --ignore-path .gitignore",
-    "manifest": "custom-elements-manifest analyze --litelement --globs=\"src/components/*.ts\""
+    "manifest": "custom-elements-manifest analyze --litelement --globs=\"src/components/*.ts\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.8",
@@ -80,9 +81,11 @@
   },
   "prettier": {},
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
+    "**/*.{ts,js}": [
+      "eslint --fix"
+    ],
+    "**/*": [
+      "prettier --write --ignore-unknown"
     ]
   },
   "customElementsManifest": "custom-elements.json",
