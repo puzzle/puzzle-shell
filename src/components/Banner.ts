@@ -37,14 +37,12 @@ export class Banner extends LitElement {
       }
       ::slotted([slot="content"]) {
         flex: auto;
-        overflow: hidden;
         margin: var(--pzsh-spacer) calc(2 * var(--pzsh-spacer));
       }
 
       @media (min-width: ${theme.breakpoint}px) {
         :host {
           position: relative;
-          overflow: hidden;
         }
         ::slotted([slot="tangram"]) {
           display: block;
