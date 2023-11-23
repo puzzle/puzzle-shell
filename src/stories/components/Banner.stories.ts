@@ -1,5 +1,11 @@
 import { html } from "lit";
 import "../../components/Banner";
+import "../../components/Icon";
+import "../../components/Topbar";
+import "../../components/Menu";
+import "../../components/Nav";
+import "../../components/Subnav";
+import "../../components/NavItem";
 import { searchStyles } from "./search";
 
 export default {

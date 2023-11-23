@@ -5,6 +5,7 @@ import { classMap } from "lit/directives/class-map.js";
 import { theme } from "../utils/theme";
 import { isNodeOrChild } from "../utils/dom";
 import { navigateMenuWithKeyboard } from "../utils/menu";
+import "./Icon";
 
 /**
  * Menu dropdown with icon and text, will be rendered as a dropdown

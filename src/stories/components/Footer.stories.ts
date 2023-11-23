@@ -1,5 +1,7 @@
 import { html } from "lit";
 import "../../components/Footer";
+import "../../components/FooterLink";
+import "../../components/Icon";
 
 export default {
   title: "Puzzle Shell/Components/Footer",
