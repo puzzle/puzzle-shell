@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# ?
+
+- Update the dependencies (including upgrade to Lit 3 & Vite 5, using Node 20).
+
 # 3.0.1
 
 - Allow overflowing in `pzsh-banner` to fix cropped dropdowns within the component's content slot.
