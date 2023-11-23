@@ -1,7 +1,16 @@
 # Puzzle Shell Changelog
 
-# ?
+# 4.0.0
 
+- BREAKING CHANGE: Provide JavaScript modules (ES2021) with TypeScript definitions in addition to the pre-bundled version which includes Lit. This is the [recommended way of publishing Web Components](https://lit.dev/docs/tools/publishing/#publishing-modern-javascript) and allows to deduplicate Lit. Unfortunately this change breaks with the existing import paths (see [README.md](./README.md#usage) for more details):
+  - Bundled:
+    - `@puzzleitc/puzzle-shell` → `@puzzleitc/puzzle-shell/bundle.js` <br>
+      or via CDN: `https://unpkg.com/@puzzleitc/puzzle-shell/dist/puzzle-shell.js` → `https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.js`
+    - `@puzzleitc/puzzle-shell/dist/style.css` → `@puzzleitc/puzzle-shell/style.css` <br>
+      or via CDN: `https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css` (no change)
+  - JavaScript modules (new):
+    - `import "@puzzleitc/puzzle-shell"` (all components)
+    - `import "@puzzleitc/puzzle-shell/components/Topbar.js"` (specific components)
 - Update the dependencies (including upgrade to Lit 3 & Vite 5, using Node 20).
 
 # 3.0.1

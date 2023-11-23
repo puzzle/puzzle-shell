@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators/property.js";
 import { theme } from "../utils/theme";
+import "./Icon";
 
 /**
  * Top application bar that contains the logo and optional

@@ -14,3 +14,4 @@ export { Nav } from "./components/Nav";
 export { NavItem } from "./components/NavItem";
 export { Subnav } from "./components/Subnav";
 export { Topbar } from "./components/Topbar";
+import "./utils/theme";

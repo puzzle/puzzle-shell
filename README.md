@@ -16,34 +16,7 @@ Part of this project is the [Puzzle Shell Storybook](https://puzzle.github.io/pu
 
 ## Usage
 
-### Without NPM & Build Step
-
-You can reference the package from a [NPM CDN](https://duckduckgo.com/?q=npm+cdn&ia=web) (or self-serve it) and use it right-away:
-
-```html
-<html>
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css"
-    />
-    <script
-      type="module"
-      src="https://unpkg.com/@puzzleitc/puzzle-shell/dist/puzzle-shell.js"
-    ></script>
-  </head>
-
-  <body>
-    <pzsh-container>
-      <pzsh-topbar></pzsh-topbar>
-      <main></main>
-      <pzsh-footer></pzsh-footer>
-    </pzsh-container>
-  </body>
-</html>
-```
-
-### With NPM & Bundler
+### JavaScript Modules (ESM)
 
 You can install this package with NPM:
 
@@ -63,16 +36,53 @@ Or PNPM:
 pnpm add @puzzleitc/puzzle-shell
 ```
 
-With a bundler like [Vite](https://vitejs.dev/) you can import the package in your main JavaScript file:
+Then, with a bundler like [Vite](https://vitejs.dev/), you can import the package in your main JavaScript file to include all components:
 
 ```javascript
 import "@puzzleitc/puzzle-shell";
+import "@puzzleitc/puzzle-shell/style.css";
 ```
 
-And and import the styles in your CSS file:
+Or you can import specific components:
 
-```css
-@import url("@puzzleitc/puzzle-shell/style.css");
+```javascript
+import "@puzzleitc/puzzle-shell/components/Topbar.js";
+import "@puzzleitc/puzzle-shell/style.css"; // Only once
+```
+
+Either way the components are then ready to use in your markup:
+
+```html
+<pzsh-topbar></pzsh-topbar>
+```
+
+We suggest to include the library this way if possible.
+
+### Bundled Version
+
+Alternatively you can use a pre-bundled version of the Puzzle Shell that includes Lit as a carefree package. You can even reference the package from a [NPM CDN](https://duckduckgo.com/?q=npm+cdn&ia=web) (or self-serve it) and include it as follows:
+
+```html
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.js"
+    ></script>
+  </head>
+
+  <body>
+    <pzsh-container>
+      <pzsh-topbar></pzsh-topbar>
+      <main></main>
+      <pzsh-footer></pzsh-footer>
+    </pzsh-container>
+  </body>
+</html>
 ```
 
 ## Linting etc.
