@@ -1,7 +1,7 @@
 import { html } from "lit";
 import "../../puzzle-shell";
-import { searchStyles } from "../components/search";
 import { theme } from "../../utils/theme";
+import { searchStyles } from "../components/search";
 
 export default {
   title: "Puzzle Shell/Examples/Content app with search",

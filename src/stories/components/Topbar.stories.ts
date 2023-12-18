@@ -1,9 +1,9 @@
 import { html } from "lit";
-import "../../components/Topbar";
+import "../../components/Icon";
 import "../../components/Menu";
 import "../../components/MenuAction";
 import "../../components/MenuDropdown";
-import "../../components/Icon";
+import "../../components/Topbar";
 
 export default {
   title: "Puzzle Shell/Components/Topbar",

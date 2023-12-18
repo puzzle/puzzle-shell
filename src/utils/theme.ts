@@ -1,15 +1,15 @@
-import { css, CSSResult } from "lit";
+import { CSSResult, css } from "lit";
 
 /**
  * Roboto: Regular 400, Regular 400 italic, Medium 500, Medium 500 italic
  * Roboto Mono: Regular 400, Medium 500
  */
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/400-italic.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/500-italic.css";
 import "@fontsource/roboto-mono/400.css";
 import "@fontsource/roboto-mono/500.css";
+import "@fontsource/roboto/400-italic.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500-italic.css";
+import "@fontsource/roboto/500.css";
 
 const DEFAULT_BREAKPOINT = 800;
 export function getBreakpoint(): number {
