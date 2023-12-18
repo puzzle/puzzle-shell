@@ -1,10 +1,10 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators/property.js";
 import { classMap } from "lit/directives/class-map.js";
-import { theme } from "../utils/theme";
 import { isNodeOrChild } from "../utils/dom";
 import { navigateMenuWithKeyboard } from "../utils/menu";
+import { theme } from "../utils/theme";
 import "./Icon";
 
 /**
