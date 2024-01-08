@@ -81,7 +81,7 @@ export const Default = () => html`
       <div slot="content" class="search">
         <div class="search-field">
           <input placeholder="Search..." type="text" />
-          <button><pzsh-icon name="search" /></button>
+          <button aria-label="Search"><pzsh-icon name="search" /></button>
         </div>
       </div>
     </pzsh-banner>

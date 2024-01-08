@@ -40,9 +40,9 @@ export const Default = () => html`
       <div slot="content" class="search">
         <div class="search-field">
           <input placeholder="Search..." type="text" />
-          <button><pzsh-icon name="search" /></button>
+          <button aria-label="Search"><pzsh-icon name="search" /></button>
         </div>
-        <button class="add" aria-label="Add" title="Add">
+        <button class="add" aria-label="Add">
           <pzsh-icon name="plus-circle"></pzsh-icon>
           <span>Add</span>
         </button>
