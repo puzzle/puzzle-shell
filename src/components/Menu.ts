@@ -148,7 +148,7 @@ export class Menu extends LitElement {
     }
 
     // Prevent scroll container (<body> per default) from scrolling
-    // while backdrop is visible; can be configure with the
+    // while backdrop is visible; can be configured with the
     // `scrollContainerSelector` property
     const scrollContainer = document.querySelector<HTMLElement>(
       this.scrollContainerSelector,
