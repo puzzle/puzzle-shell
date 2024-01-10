@@ -1,5 +1,10 @@
 # Puzzle Shell Changelog
 
+# 4.0.1
+
+- Add [accessibility linting plugin](https://open-wc.org/docs/linting/eslint-plugin-lit-a11y/overview/) for lit-html, enable recommended a11y rules check on commit
+- Add [Storybook accessibility addon](https://storybook.js.org/addons/@storybook/addon-a11y)
+
 # 4.0.0
 
 - BREAKING CHANGE: Provide JavaScript modules (ES2021) with TypeScript definitions in addition to the pre-bundled version which includes Lit. This is the [recommended way of publishing Web Components](https://lit.dev/docs/tools/publishing/#publishing-modern-javascript) and allows to deduplicate Lit. Unfortunately this change breaks with the existing import paths (see [README.md](./README.md#usage) for more details):
