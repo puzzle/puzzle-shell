@@ -65,12 +65,8 @@ export class MenuDropdownItem extends LitElement {
     `,
   ];
 
-  connectedCallback() {
-    super.connectedCallback();
-    // Make component focusable
-    if (!this.hasAttribute("tabindex")) {
-      this.setAttribute("tabindex", "0");
-    }
+  focus(options?: FocusOptions) {
+    this.shadowRoot?.querySelector("a")?.focus(options);
   }
 
   render() {

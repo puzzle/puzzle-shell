@@ -1,6 +1,6 @@
 import { LitElement, css, html } from "lit";
+import { state } from "lit/decorators.js";
 import { customElement } from "lit/decorators/custom-element.js";
-import { property } from "lit/decorators/property.js";
 import { classMap } from "lit/directives/class-map.js";
 import { isNodeOrChild } from "../utils/dom";
 import { navigateMenuWithKeyboard } from "../utils/menu";
@@ -17,7 +17,7 @@ import "./Icon";
  */
 @customElement("pzsh-menu-dropdown")
 export class MenuDropdown extends LitElement {
-  @property({ attribute: false })
+  @state()
   open = false;
 
   static styles = [
@@ -119,7 +119,7 @@ export class MenuDropdown extends LitElement {
         !isNodeOrChild(e.target, 'pzsh-menu-dropdown [slot="toggle"]')) ||
         (e instanceof KeyboardEvent &&
           e.type === "keydown" &&
-          e.key === "Escape"))
+          (e.key === "Escape" || e.key === "Tab")))
     ) {
       this.toggleMenu();
     }
@@ -137,7 +137,10 @@ export class MenuDropdown extends LitElement {
     }
   }
 
-  toggleMenu() {
+  toggleMenu(event?: MouseEvent) {
+    if (event) {
+      event.stopPropagation();
+    }
     this.open = !this.open;
   }
 

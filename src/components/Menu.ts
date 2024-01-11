@@ -169,7 +169,7 @@ export class Menu extends LitElement {
       ((e.type === "click" && !isNodeOrChild(e.target, "pzsh-topbar")) ||
         (e.type === "keydown" &&
           e instanceof KeyboardEvent &&
-          e.key === "Escape"))
+          (e.key === "Escape" || e.key === "Tab")))
     ) {
       this.toggleMenu(e);
     }
