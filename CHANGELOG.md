@@ -2,8 +2,10 @@
 
 # 4.0.1
 
-- Add [accessibility linting plugin](https://open-wc.org/docs/linting/eslint-plugin-lit-a11y/overview/) for lit-html, enable recommended a11y rules check on commit
+- Dependency upgrades (patch version)
+- Accessibility improvements
 - Add [Storybook accessibility addon](https://storybook.js.org/addons/@storybook/addon-a11y)
+- Add [accessibility linting plugin](https://open-wc.org/docs/linting/eslint-plugin-lit-a11y/overview/) for lit-html, enable recommended a11y rules check on commit
 
 # 4.0.0
 
