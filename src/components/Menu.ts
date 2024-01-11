@@ -1,4 +1,5 @@
 import { LitElement, css, html } from "lit";
+import { state } from "lit/decorators.js";
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators/property.js";
 import { classMap } from "lit/directives/class-map.js";
@@ -25,7 +26,7 @@ import "./Backdrop";
  */
 @customElement("pzsh-menu")
 export class Menu extends LitElement {
-  @property({ attribute: false })
+  @state()
   open = false;
 
   /**

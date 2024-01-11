@@ -1,4 +1,5 @@
 import { LitElement, css, html } from "lit";
+import { state } from "lit/decorators.js";
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators/property.js";
 import { theme } from "../utils/theme";
@@ -15,10 +16,10 @@ import "./Icon";
  */
 @customElement("pzsh-topbar")
 export class Topbar extends LitElement {
-  @property({ attribute: false })
+  @state()
   menuAvailable = false;
 
-  @property({ attribute: false })
+  @state()
   menuOpen = false;
 
   @property({ type: String })

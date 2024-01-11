@@ -1,6 +1,6 @@
 import { LitElement, css, html } from "lit";
+import { state } from "lit/decorators.js";
 import { customElement } from "lit/decorators/custom-element.js";
-import { property } from "lit/decorators/property.js";
 import { classMap } from "lit/directives/class-map.js";
 import { theme } from "../utils/theme";
 
@@ -11,10 +11,10 @@ import { theme } from "../utils/theme";
  */
 @customElement("pzsh-banner")
 export class Banner extends LitElement {
-  @property({ attribute: false })
+  @state()
   hasNav = false;
 
-  @property({ attribute: false })
+  @state()
   hasSubnav = false;
 
   static styles = [
