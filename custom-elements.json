@@ -628,6 +628,19 @@
               },
               "default": "\"#\"",
               "attribute": "href"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
             }
           ],
           "attributes": [
@@ -768,7 +781,16 @@
             },
             {
               "kind": "method",
-              "name": "toggleMenu"
+              "name": "toggleMenu",
+              "parameters": [
+                {
+                  "name": "event",
+                  "optional": true,
+                  "type": {
+                    "text": "MouseEvent"
+                  }
+                }
+              ]
             }
           ],
           "superclass": {
@@ -821,6 +843,19 @@
               },
               "default": "\"#\"",
               "attribute": "href"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
             }
           ],
           "attributes": [
@@ -934,6 +969,19 @@
               },
               "default": "false",
               "attribute": "active"
+            },
+            {
+              "kind": "method",
+              "name": "focus",
+              "parameters": [
+                {
+                  "name": "options",
+                  "optional": true,
+                  "type": {
+                    "text": "FocusOptions"
+                  }
+                }
+              ]
             }
           ],
           "attributes": [
