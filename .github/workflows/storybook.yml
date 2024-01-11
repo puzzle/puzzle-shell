@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18]
+        node-version: [20]
 
     steps:
       - name: Checkout 🛎️
@@ -30,7 +30,7 @@ jobs:
           npm run build-storybook
 
       - name: Deploy Storybook 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: storybook-static
