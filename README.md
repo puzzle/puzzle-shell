@@ -14,6 +14,8 @@ The Puzzle Shell project strives for the following goals:
 
 Part of this project is the [Puzzle Shell Storybook](https://puzzle.github.io/puzzle-shell) that lists and documents all Puzzle Shell components and contains usage examples.
 
+Check out the [changelog](./CHANGELOG.md) for the latest changes.
+
 ## Usage
 
 ### JavaScript Modules (ESM)
@@ -47,7 +49,9 @@ Or you can import specific components:
 
 ```javascript
 import "@puzzleitc/puzzle-shell/components/Topbar.js";
-import "@puzzleitc/puzzle-shell/style.css"; // Only once
+import "@puzzleitc/puzzle-shell/style.css";
+
+// Only once
 ```
 
 Either way the components are then ready to use in your markup:
