@@ -1,0 +1,67 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Puzzle Shell/Components/Favicon" />
+
+# Favicon
+
+The Favicon and its variations for the [Web Application Manifest](https://developer.mozilla.org/en-US/docs/Web/Manifest) can be found here:
+
+- <a href="/images/favicon.ico" target="_blank">
+    favicon.ico
+  </a>
+- <a href="/images/icon.svg" target="_blank">
+    icon.svg
+  </a>
+- <a href="/images/apple-touch-icon-180x180.png" target="_blank">
+    apple-touch-icon-180x180.png
+  </a>
+- <a href="/images/pwa-64x64.png" target="_blank">
+    pwa-64x64.png
+  </a>
+- <a href="/images/pwa-192x192.png" target="_blank">
+    pwa-192x192.png
+  </a>
+- <a href="/images/pwa-512x512.png" target="_blank">
+    pwa-512x512.png
+  </a>
+- <a href="/images/maskable-icon-512x512.png" target="_blank">
+    maskable-icon-512x512.png
+  </a>
+
+You can add them to your project and reference them in your HTML document within the `<head>`:
+
+```
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/icon.svg" sizes="any" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
+```
+
+...and in your Web Application Manifest file:
+
+```
+{
+  "icons": [
+    {
+      "src": "pwa-64x64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "maskable-icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
+```

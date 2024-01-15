@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 4.1.2
+
+- Add favicon with variations.
+
 # 4.0.1/4.0.2
 
 - Dependency upgrades (patch version)
