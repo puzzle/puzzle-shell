@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 4.1.1
+
+- Avoid exceptions when not running in browser (e.g. in the context of SSR).
+
 # 4.1.0
 
 - Add favicon with variations.

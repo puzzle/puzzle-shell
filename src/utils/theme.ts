@@ -11,10 +11,18 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500-italic.css";
 import "@fontsource/roboto/500.css";
 
+/**
+ * Check if running in browser to avoid exceptions in SSR context.g
+ */
+function inBrowser(): boolean {
+  return typeof window !== "undefined";
+}
+
 const DEFAULT_BREAKPOINT = 800;
 export function getBreakpoint(): number {
   return (
-    ("pzshBreakpoint" in window &&
+    (inBrowser() &&
+      "pzshBreakpoint" in window &&
       typeof window.pzshBreakpoint === "number" &&
       window.pzshBreakpoint) ||
     DEFAULT_BREAKPOINT
@@ -158,6 +166,8 @@ export const theme: CSSResult & {
  * Register CSS in light DOM, e.g. to style slot children
  */
 export function registerLightDomStyles(styles: CSSResult) {
+  if (!inBrowser()) return;
+
   const lightStyle = document.createElement("style");
   lightStyle.innerText = styles.toString();
   document.querySelector("body")?.appendChild(lightStyle);
