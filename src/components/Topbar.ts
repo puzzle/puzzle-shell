@@ -118,6 +118,7 @@ export class Topbar extends LitElement {
         class="menu-button"
         @click=${this.toggleMenu}
         aria-expanded=${this.menuOpen}
+        aria-label="Menu"
       >
         <pzsh-icon name=${icon}></pzsh-icon>
       </button>`;
