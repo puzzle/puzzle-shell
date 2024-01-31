@@ -82,6 +82,7 @@ import{i as u,s as v,x as r}from"./lit-element-cycI6O1e.js";import{t as g}from".
         class="menu-button"
         @click=${this.toggleMenu}
         aria-expanded=${this.menuOpen}
+        aria-label="Menu"
       >
         <pzsh-icon name=${e}></pzsh-icon>
       </button>`}return null}renderLogo(){return this.href?r`<a class="logo-link" href=${this.href}>
