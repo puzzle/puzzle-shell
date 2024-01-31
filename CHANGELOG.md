@@ -1,5 +1,11 @@
 # Puzzle Shell Changelog
 
+# 4.1.2
+
+- Fix minor accessibility issue
+- Lint formating with `prettier --check` instead of `eslint-plugin-prettier`
+- Update dependencies (incl. to Husky 9)
+
 # 4.1.1
 
 - Avoid exceptions when not running in browser (e.g. in the context of SSR).
