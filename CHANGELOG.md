@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# next
+
+- Upgrade to Storybook 8
+
 # 4.1.3
 
 - Update dependencies (incl. Lit 3.1.2)
