@@ -3,6 +3,7 @@
 # next
 
 - Upgrade to Storybook 8
+- Minor dev dependencies updates
 
 # 4.1.3
 
