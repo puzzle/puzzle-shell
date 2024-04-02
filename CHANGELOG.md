@@ -1,6 +1,6 @@
 # Puzzle Shell Changelog
 
-# next
+# 4.2.0
 
 - Upgrade to Storybook 8
 - Minor dev dependencies updates
