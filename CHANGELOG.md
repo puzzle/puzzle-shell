@@ -1,6 +1,6 @@
 # Puzzle Shell Changelog
 
-# ?.?.?
+# 4.2.1
 
 - Update dependencies
 
