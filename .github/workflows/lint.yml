@@ -8,21 +8,22 @@ jobs:
   lint:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [20]
-
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+      - name: Read .nvmrc
+        run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
+        id: nvm
+
+      - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
+        uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.version }}
+          node-version: ${{ steps.nvm.outputs.NODE_VERSION }}
           cache: "npm"
 
-      - name: Lint 🕵️‍♀️
-        run: |
-          npm install
-          npm run lint
+      - name: Install dependencies 🔧
+        run: npm ci
+
+      - name: Lint 🔍
+        run: npm run lint
