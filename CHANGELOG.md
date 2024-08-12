@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+# 4.2.2
+
+- Update dependencies (incl. Lit 3.1.4)
+
 # 4.2.1
 
 - Update dependencies
