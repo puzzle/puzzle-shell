@@ -1,37 +1,42 @@
 # Puzzle Shell Changelog
 
-# 4.2.2
+## 4.2.3
+
+- Update dependencies (incl. Lit 3.2.0 & ESLint v9)
+- Pinned the dependencies to exact versions
+
+## 4.2.2
 
 - Update dependencies (incl. Lit 3.1.4)
 
-# 4.2.1
+## 4.2.1
 
 - Update dependencies
 
-# 4.2.0
+## 4.2.0
 
 - Upgrade to Storybook 8
 - Minor dev dependencies updates
 
-# 4.1.3
+## 4.1.3
 
 - Update dependencies (incl. Lit 3.1.2)
 
-# 4.1.2
+## 4.1.2
 
 - Fix minor accessibility issue
 - Lint formating with `prettier --check` instead of `eslint-plugin-prettier`
 - Update dependencies (incl. to Husky 9)
 
-# 4.1.1
+## 4.1.1
 
 - Avoid exceptions when not running in browser (e.g. in the context of SSR).
 
-# 4.1.0
+## 4.1.0
 
 - Add favicon with variations.
 
-# 4.0.1/4.0.2
+## 4.0.1/4.0.2
 
 - Dependency upgrades (patch version)
 - Accessibility improvements
@@ -40,7 +45,7 @@
 
 Use 4.0.2, which fixes publication error of 4.0.1.
 
-# 4.0.0
+## 4.0.0
 
 - BREAKING CHANGE: Provide JavaScript modules (ES2021) with TypeScript definitions in addition to the pre-bundled version which includes Lit. This is the [recommended way of publishing Web Components](https://lit.dev/docs/tools/publishing/#publishing-modern-javascript) and allows to deduplicate Lit. Unfortunately this change breaks with the existing import paths (see [README.md](./README.md#usage) for more details):
   - Bundled:
@@ -53,11 +58,11 @@ Use 4.0.2, which fixes publication error of 4.0.1.
     - `import "@puzzleitc/puzzle-shell/components/Topbar.js"` (specific components)
 - Update the dependencies (including upgrade to Lit 3 & Vite 5, using Node 20).
 
-# 3.0.1
+## 3.0.1
 
 - Allow overflowing in `pzsh-banner` to fix cropped dropdowns within the component's content slot.
 
-# 3.0.0
+## 3.0.0
 
 - BREAKING CHANGE: Switch to self-hosting of Roboto fonts instead of fetching from Google. This improves privacy and performance but means you now have to include `dist/style.css` in your project for the fonts to be working.
 - Allow mobile/desktop breakpoint to be customized via the global `window.pzshBreakpoint` property.
@@ -66,33 +71,33 @@ Use 4.0.2, which fixes publication error of 4.0.1.
 - Add GitHub Actions Workflow to generate BOM (bill of materials) file and push it to Dependency Track.
 - Add missing logos to logo story
 
-# 2.0.0
+## 2.0.0
 
 - Migrate to Vite setup, upgrade to Storybook 7.3 and update all other dependencies. This eliminates all vulnerabilities reported by `npm audit`.
 - Migrate to TypeScript, include `.d.ts` files in package.
 - BREAKING CHANGE: The main entry file is now `dist/puzzle-shell.js`, previously it was `index.js`.
 
-# 1.0.1
+## 1.0.1
 
 - Fix click/keydown event registering without useCapture
 - Upgrade the dependencies. Unfortunately this does not fix the Storybook/trim Vulnerability reported by NPM Audit, which will not be fixed until Storybook 7.0 (see [#14603](https://github.com/storybookjs/storybook/issues/14603)).
 
-# 1.0.0
+## 1.0.0
 
 - Implement `pzsh-menu`'s backdrop as separate `pzsh-backdrop` component to avoid CSP issues with inline styles.
 - Fix vertical alignment of `pzsh-menu-action` text on mobile
 
-# 1.0.0-beta.3
+## 1.0.0-beta.3
 
 - Add responsive styling of `pzsh-hero` component
 - Add documentation for logos and `pzsh-container` component
 
-# 1.0.0-beta.2
+## 1.0.0-beta.2
 
 - Fix bug with attribute access in constructor of `pzsh-menu-action`, `pzsh-dropdown-item` and `pzsh-nav-item`
 - Build custom-elements.json manifest according 1.0.0 schema specification
 
-# 1.0.0-beta.1
+## 1.0.0-beta.1
 
 - Lighter, white-based styling of mobile menu and add backdrop
 - New order in hamburger menu: nav, actions, items
