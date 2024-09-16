@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@fontsource/roboto": "5.1.0",
-    "@fontsource/roboto-mono": "5.0.20",
+    "@fontsource/roboto-mono": "5.1.0",
     "lit": "3.2.0"
   },
   "devDependencies": {
