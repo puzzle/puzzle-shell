@@ -59,7 +59,7 @@
     "@custom-elements-manifest/analyzer": "0.10.3",
     "@eslint/js": "9.11.1",
     "@storybook/addon-a11y": "8.2.9",
-    "@storybook/addon-essentials": "8.2.9",
+    "@storybook/addon-essentials": "8.3.5",
     "@storybook/addon-links": "8.2.9",
     "@storybook/addon-storysource": "8.2.9",
     "@storybook/blocks": "8.2.9",
