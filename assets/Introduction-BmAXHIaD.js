@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-NgK2j4uL.js";import{u as i}from"./index-DaPMNZq7.js";import{ae as l}from"./index-BKz4Rdw8.js";import"./iframe-BQYn67ey.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-D-8MO0q_.js";import"./index-DxKRhftL.js";import"./index-DrFu-skq.js";function o(e){const n={h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...i(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(l,{title:"Puzzle Shell/Introduction"}),`
+import{ae as t,af as l}from"./index-_bVJ71z9.js";import{u as o}from"./index-CWYTLZ-s.js";import"./iframe-Ce7Za_PL.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-Cpj98o6Y.js";import"./index-D-8MO0q_.js";import"./index-Cef7vbu6.js";import"./index-DrFu-skq.js";function i(e){const n={h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...o(),...e.components};return t.jsxs(t.Fragment,{children:[t.jsx(l,{title:"Puzzle Shell/Introduction"}),`
 `,t.jsx(n.h1,{id:"welcome-to-puzzle-shell",children:"Welcome to Puzzle Shell"}),`
 `,t.jsx(n.p,{children:"This is the kitchen sink for the Puzzle Shell, the standard design for Puzzle tools."}),`
 `,t.jsx(n.h2,{id:"goals",children:"Goals"}),`
@@ -7,4 +7,4 @@ import{j as t}from"./jsx-runtime-NgK2j4uL.js";import{u as i}from"./index-DaPMNZq
 `,t.jsx(n.li,{children:"Integration of internal tools & solutions into the Puzzle identity"}),`
 `,t.jsx(n.li,{children:"Uniform and consistent presentation with recognizability across tools & solutions"}),`
 `,t.jsx(n.li,{children:"Providing a flexible construction kit without rigid specifications"}),`
-`]})]})}function x(e={}){const{wrapper:n}={...i(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o(e)}export{x as default};
+`]})]})}function p(e={}){const{wrapper:n}={...o(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(i,{...e})}):i(e)}export{p as default};
