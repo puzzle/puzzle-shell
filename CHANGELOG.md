@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+## 4.2.4
+
+Update dependencies (incl. Lit 3.2.1)
+
 ## 4.2.3
 
 - Update dependencies (incl. Lit 3.2.0 & ESLint v9)
