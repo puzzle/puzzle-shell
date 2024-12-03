@@ -62,7 +62,7 @@
     "@storybook/addon-essentials": "8.4.2",
     "@storybook/addon-links": "8.3.6",
     "@storybook/addon-storysource": "8.4.2",
-    "@storybook/blocks": "8.3.6",
+    "@storybook/blocks": "8.4.6",
     "@storybook/web-components": "8.4.2",
     "@storybook/web-components-vite": "8.4.2",
     "@trivago/prettier-plugin-sort-imports": "4.3.0",
