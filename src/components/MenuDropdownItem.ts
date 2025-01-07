@@ -28,7 +28,8 @@ export class MenuDropdownItem extends LitElement {
           var(--pzsh-menu-item-padding-horizontal)
           var(--pzsh-menu-item-padding-vertical)
           calc(
-            var(--pzsh-icon-size) + var(--pzsh-spacer) / 2 +var(--pzsh-menu-item-padding-horizontal)
+            var(--pzsh-icon-size) + var(--pzsh-spacer) /
+              2 +var(--pzsh-menu-item-padding-horizontal)
           );
         color: var(--pzsh-menu-fg);
         background-color: var(--pzsh-menu-bg-alt);
