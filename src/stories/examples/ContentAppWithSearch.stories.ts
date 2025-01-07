@@ -47,7 +47,9 @@ export const Default = () => html`
     @media (min-width: ${theme.breakpoint}px) {
       .app {
         display: grid;
-        grid-template-columns: 1fr 10rem minmax(0, var(--pzsh-breakpoint)) 10rem 1fr;
+        grid-template-columns:
+          1fr 10rem minmax(0, var(--pzsh-breakpoint))
+          10rem 1fr;
         background-color: var(--pzsh-color-gray-1);
       }
       pzsh-menu {
