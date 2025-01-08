@@ -1,8 +1,12 @@
 # Puzzle Shell Changelog
 
+## 5.0.0
+
+- BREAKING CHANGE: Change the default layout of the footer slots to vertical
+
 ## 4.2.4
 
-Update dependencies (incl. Lit 3.2.1)
+- Update dependencies (incl. Lit 3.2.1)
 
 ## 4.2.3
 

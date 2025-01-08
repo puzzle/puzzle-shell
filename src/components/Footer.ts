@@ -10,15 +10,23 @@ export class Footer extends LitElement {
   static styles = [
     theme,
     css`
-      :host(pzsh-footer) {
+      :host {
         padding: calc(var(--pzsh-spacer)) calc(6 * var(--pzsh-spacer));
         background-color: var(--pzsh-footer-bg);
 
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column;
+        align-items: start;
 
         border-top: 2px solid var(--pzsh-footer-border);
+      }
+
+      .named-slots {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
       }
 
       ::slotted(*) {
@@ -30,11 +38,12 @@ export class Footer extends LitElement {
         padding-bottom: var(--pzsh-spacer);
 
         display: flex;
+        flex-direction: column;
         flex: 1;
       }
 
       ::slotted([slot="start"]) {
-        align-items: center;
+        align-items: start;
         justify-content: flex-start;
       }
 
@@ -44,30 +53,24 @@ export class Footer extends LitElement {
       }
 
       ::slotted([slot="end"]) {
-        align-items: center;
+        align-items: end;
         justify-content: flex-end;
       }
 
       @media (max-width: ${theme.breakpoint}px) {
-        :host(pzsh-footer) {
+        :host {
           padding: calc(var(--pzsh-spacer)) calc(3 * var(--pzsh-spacer));
+        }
 
-          display: flex;
+        .named-slots {
           flex-direction: column;
-
-          row-gap: var(--pzsh-spacer);
+          row-gap: calc(3 * var(--pzsh-spacer));
         }
 
-        ::slotted([slot="start"]) {
-          order: 2;
-        }
-
-        ::slotted([slot="center"]) {
-          order: 1;
-        }
-
+        ::slotted([slot="start"]),
+        ::slotted([slot="center"]),
         ::slotted([slot="end"]) {
-          order: 3;
+          align-items: start;
         }
       }
     `,
@@ -75,9 +78,11 @@ export class Footer extends LitElement {
 
   render() {
     return html`
-      <slot name="start"></slot>
-      <slot name="center"></slot>
-      <slot name="end"></slot>
+      <div class="named-slots">
+        <slot name="start"></slot>
+        <slot name="center"></slot>
+        <slot name="end"></slot>
+      </div>
       <slot></slot>
     `;
   }
