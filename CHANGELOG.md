@@ -3,6 +3,7 @@
 ## 5.0.0
 
 - BREAKING CHANGE: Change the default layout of the footer slots to vertical
+- Indent subnav items on mobile
 
 ## 4.2.4
 

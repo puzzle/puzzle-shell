@@ -17,6 +17,10 @@ export class Subnav extends LitElement {
         flex-direction: column;
       }
 
+      ::slotted(pzsh-nav-item) {
+        padding-left: calc(4 * var(--pzsh-spacer));
+      }
+
       @media (min-width: ${theme.breakpoint}px) {
         :host {
           width: 100%;
@@ -28,6 +32,7 @@ export class Subnav extends LitElement {
         ::slotted(pzsh-nav-item) {
           --pzsh-nav-fg: var(--pzsh-subnav-fg);
           --pzsh-nav-active: var(--pzsh-subnav-active);
+          padding-left: 0;
         }
       }
     `,
