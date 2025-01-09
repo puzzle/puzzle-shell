@@ -24,14 +24,18 @@ export class NavItem extends LitElement {
     css`
       a {
         display: block;
-        margin-top: var(--pzsh-menu-item-gap);
         padding: var(--pzsh-menu-item-padding-vertical)
           var(--pzsh-menu-item-padding-horizontal);
         color: var(--pzsh-menu-fg);
-        background-color: var(--pzsh-menu-bg-alt);
         text-decoration: none;
         white-space: nowrap;
       }
+
+      :host {
+        margin: calc(0.5 * var(--pzsh-menu-item-gap)) 0;
+        background-color: var(--pzsh-menu-bg-alt);
+      }
+
       :host(:focus) a,
       a:hover,
       a:active,
@@ -42,6 +46,8 @@ export class NavItem extends LitElement {
       @media (min-width: ${theme.breakpoint}px) {
         :host {
           line-height: var(--pzsh-nav-line-height);
+          margin: 0;
+          background-color: var(--pzsh-menu-bg);
         }
         a {
           margin: 0;
