@@ -58,7 +58,7 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.10.4",
     "@eslint/js": "9.18.0",
-    "@storybook/addon-a11y": "8.4.7",
+    "@storybook/addon-a11y": "8.5.1",
     "@storybook/addon-essentials": "8.4.7",
     "@storybook/addon-links": "8.4.7",
     "@storybook/addon-storysource": "8.4.7",
