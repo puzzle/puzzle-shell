@@ -2,8 +2,11 @@
 
 ## 5.0.0
 
-- BREAKING CHANGE: Change the default layout of the footer slots to vertical
+- BREAKING CHANGE: Change the default layout of the footer slots to vertical since this scales better for many elements.
+  - If you've previously styled them to flow vertically, you can now remove those custom styles.
+  - If you've previously styled them to flow horizontally, we suggest to use the new default flow. If this doesn't work for you, add custom styles for a horizontal flow.
 - Indent subnav items on mobile
+- Update dev dependencies (incl. Node 22)
 
 ## 4.2.4
 
