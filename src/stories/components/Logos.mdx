@@ -15,14 +15,34 @@ The logos of the applications or sites that use the Puzzle Shell should have a c
 
 - There are two different colors that can be used for the application name, depending on the character of the application:
 
+<style>
+  {`
+    .logo-color-value p {
+      margin-top: 0;
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+    .logo-color-attributes p {
+      margin-top: 0;
+      font-size: 1.75rem;
+      line-height: 1.25;
+    }
+  `}
+</style>
+
 <div style={{display: "flex", justifyContent: "space-around"}}>
-  <div style={{backgroundColor: "#69b978", color: "#fff", width: "200px", height: "200px", borderRadius: "50%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
-    <div style={{fontSize: "1.25rem", fontWeight: "bold", marginBottom: "1rem"}}>
-      \#69b978<br />
-      var(--pzsh-green)
+  <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
+    Color:
+    <div class="logo-color-value">
+      var(--pzsh-green)<br />
+      \#69b978
     </div>
 
-    <div style={{fontSize: "1.25rem"}}>
+    <div style={{backgroundColor: "var(--pzsh-green)", width: "100px", height: "100px", borderRadius: "50%" }}></div>
+
+    Application character:
+    <div class="logo-color-attributes">
       Growing<br />
       Creating<br />
       Content
@@ -30,13 +50,17 @@ The logos of the applications or sites that use the Puzzle Shell should have a c
 
   </div>
 
-  <div style={{backgroundColor: "#3fa8e0", color: "#fff", width: "200px", height: "200px", borderRadius: "50%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
-    <div style={{fontSize: "1.25rem", fontWeight: "bold", marginBottom: "1rem"}}>
-      \#3fa8e0<br />
-      var(--pzsh-blue)
+  <div style={{display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", textAlign: "center"}}>
+    Color:
+    <div class="logo-color-value">
+      var(--pzsh-blue)<br />
+      \#3fa8e0
     </div>
 
-    <div style={{fontSize: "1.25rem"}}>
+    <div style={{backgroundColor: "var(--pzsh-blue)", width: "100px", height: "100px", borderRadius: "50%"}}></div>
+
+    Application character:
+    <div class="logo-color-attributes">
       Stability<br />
       Organizing<br />
       Tool
@@ -51,7 +75,7 @@ Contact us in the [#project-puzzle-shell](https://chat.puzzle.ch/channel/project
 
 ## Existing Logos
 
-<div style={{backgroundColor: "#1e5a96", padding: "3rem", display: "flex", flexDirection: "column", gap: "3rem"}}>
+<div style={{backgroundColor: "var(--pzsh-topbar-bg)", padding: "3rem", display: "flex", flexDirection: "column", gap: "3rem"}}>
   <h4 style={{display: "none"}}>Cryptopus</h4>
 
   <svg width="214" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
