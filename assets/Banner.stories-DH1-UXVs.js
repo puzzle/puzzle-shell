@@ -1,4 +1,4 @@
-import{k as s}from"./lit-element-CxgFg0AR.js";import"./Banner-sFshYwat.js";import"./Icon-BcsnBkvZ.js";import"./Topbar-t32WVr5W.js";import"./Subnav-DRTmGHt3.js";import{s as i}from"./search-3ycP4twF.js";import"./custom-element-BTbnI5vI.js";import"./class-map-BlpslTfp.js";import"./theme-gcVGoz6T.js";import"./property-t_taj8Q_.js";const y={title:"Puzzle Shell/Components/Banner",parameters:{layout:"fullscreen"}},e=()=>s`
+import{k as s}from"./lit-element-CxgFg0AR.js";import"./Banner-sFshYwat.js";import"./Icon-BcsnBkvZ.js";import"./Topbar-t32WVr5W.js";import"./Subnav-BLrrL3nD.js";import{s as i}from"./search-3ycP4twF.js";import"./custom-element-BTbnI5vI.js";import"./class-map-BlpslTfp.js";import"./theme-gcVGoz6T.js";import"./property-t_taj8Q_.js";const y={title:"Puzzle Shell/Components/Banner",parameters:{layout:"fullscreen"}},e=()=>s`
   ${i}
   <pzsh-banner>
     <!-- prettier-ignore -->

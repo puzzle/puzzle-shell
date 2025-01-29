@@ -1,4 +1,4 @@
-import{k as l}from"./lit-element-CxgFg0AR.js";import{t as n}from"./theme-gcVGoz6T.js";import"./Topbar-t32WVr5W.js";import"./Banner-sFshYwat.js";import"./MenuDropdownItem-C397g8uy.js";import"./FooterLink-D9sxmgpL.js";import"./Hero-BuFb4xrs.js";import"./Icon-BcsnBkvZ.js";import"./MenuDropdown-DyR_z-OG.js";import"./Subnav-DRTmGHt3.js";import"./custom-element-BTbnI5vI.js";import"./property-t_taj8Q_.js";import"./class-map-BlpslTfp.js";const M={title:"Puzzle Shell/Examples/Web app with navigation",parameters:{layout:"fullscreen"}},C=()=>l`
+import{k as l}from"./lit-element-CxgFg0AR.js";import{t as n}from"./theme-gcVGoz6T.js";import"./Topbar-t32WVr5W.js";import"./Banner-sFshYwat.js";import"./MenuDropdownItem-C397g8uy.js";import"./FooterLink-D9sxmgpL.js";import"./Hero-BuFb4xrs.js";import"./Icon-BcsnBkvZ.js";import"./MenuDropdown-DyR_z-OG.js";import"./Subnav-BLrrL3nD.js";import"./custom-element-BTbnI5vI.js";import"./property-t_taj8Q_.js";import"./class-map-BlpslTfp.js";const M={title:"Puzzle Shell/Examples/Web app with navigation",parameters:{layout:"fullscreen"}},C=()=>l`
   <style>
     body {
       font-family: var(--pzsh-font-family);

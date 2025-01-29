@@ -1,4 +1,4 @@
-import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./custom-element-BTbnI5vI.js";import{t as i}from"./theme-gcVGoz6T.js";import{n as m}from"./property-t_taj8Q_.js";import{R as g}from"./class-map-BlpslTfp.js";var b=Object.defineProperty,z=Object.getOwnPropertyDescriptor,_=(n,a,r,t)=>{for(var e=t>1?void 0:t?z(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&b(a,r,e),e};let v=class extends h{render(){return d`
+import{i as c,h as d,k as h}from"./lit-element-CxgFg0AR.js";import{t as f}from"./custom-element-BTbnI5vI.js";import{t as i}from"./theme-gcVGoz6T.js";import{n as m}from"./property-t_taj8Q_.js";import{R as g}from"./class-map-BlpslTfp.js";var b=Object.defineProperty,z=Object.getOwnPropertyDescriptor,_=(n,a,r,t)=>{for(var e=t>1?void 0:t?z(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&b(a,r,e),e};let v=class extends d{render(){return h`
       <nav>
         <slot></slot>
       </nav>
@@ -16,7 +16,7 @@ import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./cust
           background-color: transparent;
         }
       }
-    `];v=_([f("pzsh-nav")],v);var w=Object.defineProperty,x=Object.getOwnPropertyDescriptor,u=(n,a,r,t)=>{for(var e=t>1?void 0:t?x(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&w(a,r,e),e};let p=class extends h{constructor(){super(...arguments),this.href="#",this.active=!1}focus(n){var a,r;(r=(a=this.shadowRoot)==null?void 0:a.querySelector("a"))==null||r.focus(n)}render(){return d`<a
+    `];v=_([f("pzsh-nav")],v);var w=Object.defineProperty,x=Object.getOwnPropertyDescriptor,u=(n,a,r,t)=>{for(var e=t>1?void 0:t?x(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&w(a,r,e),e};let p=class extends d{constructor(){super(...arguments),this.href="#",this.active=!1}focus(n){var a,r;(r=(a=this.shadowRoot)==null?void 0:a.querySelector("a"))==null||r.focus(n)}render(){return h`<a
       class=${g({active:this.active})}
       href="${this.href}"
       role="menuitem"
@@ -49,7 +49,7 @@ import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./cust
         :host {
           line-height: var(--pzsh-nav-line-height);
           margin: 0;
-          background-color: var(--pzsh-menu-bg);
+          background-color: transparent;
         }
         a {
           margin: 0;
@@ -77,7 +77,7 @@ import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./cust
           border-color: var(--pzsh-nav-active);
         }
       }
-    `];u([m({type:String})],p.prototype,"href",2);u([m({type:Boolean})],p.prototype,"active",2);p=u([f("pzsh-nav-item")],p);var O=Object.defineProperty,P=Object.getOwnPropertyDescriptor,y=(n,a,r,t)=>{for(var e=t>1?void 0:t?P(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&O(a,r,e),e};let l=class extends h{render(){return d` <slot></slot> `}};l.styles=[i,c`
+    `];u([m({type:String})],p.prototype,"href",2);u([m({type:Boolean})],p.prototype,"active",2);p=u([f("pzsh-nav-item")],p);var O=Object.defineProperty,P=Object.getOwnPropertyDescriptor,y=(n,a,r,t)=>{for(var e=t>1?void 0:t?P(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&O(a,r,e),e};let l=class extends d{render(){return h` <slot></slot> `}};l.styles=[i,c`
       :host {
         display: flex;
         flex-direction: column;

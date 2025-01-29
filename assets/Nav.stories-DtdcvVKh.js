@@ -1,4 +1,4 @@
-import{k as v}from"./lit-element-CxgFg0AR.js";import"./Subnav-DRTmGHt3.js";import"./custom-element-BTbnI5vI.js";import"./theme-gcVGoz6T.js";import"./property-t_taj8Q_.js";import"./class-map-BlpslTfp.js";const g={title:"Puzzle Shell/Components/Nav",parameters:{layout:"fullscreen"}},e=()=>v`
+import{k as v}from"./lit-element-CxgFg0AR.js";import"./Subnav-BLrrL3nD.js";import"./custom-element-BTbnI5vI.js";import"./theme-gcVGoz6T.js";import"./property-t_taj8Q_.js";import"./class-map-BlpslTfp.js";const g={title:"Puzzle Shell/Components/Nav",parameters:{layout:"fullscreen"}},e=()=>v`
   <pzsh-nav>
     <pzsh-nav-item active>Time Tracking</pzsh-nav-item>
     <pzsh-nav-item>Planning</pzsh-nav-item>
