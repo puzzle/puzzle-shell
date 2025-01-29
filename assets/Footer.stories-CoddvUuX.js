@@ -1,4 +1,4 @@
-import{k as C}from"./lit-element-CxgFg0AR.js";import"./FooterLink-DB6slGeA.js";import"./Icon-4SjO7Wym.js";import"./custom-element-BTbnI5vI.js";import"./theme-EnFTGyLY.js";import"./property-t_taj8Q_.js";const G={title:"Puzzle Shell/Components/Footer",parameters:{layout:"fullscreen"}},H=()=>C`
+import{k as C}from"./lit-element-CxgFg0AR.js";import"./FooterLink-D9sxmgpL.js";import"./Icon-BcsnBkvZ.js";import"./custom-element-BTbnI5vI.js";import"./theme-gcVGoz6T.js";import"./property-t_taj8Q_.js";const G={title:"Puzzle Shell/Components/Footer",parameters:{layout:"fullscreen"}},H=()=>C`
   <pzsh-footer>
     <div slot="start">
       <pzsh-footer-link>Version 3.6</pzsh-footer-link>

@@ -1,4 +1,4 @@
-import{k as c}from"./lit-element-CxgFg0AR.js";import"./Hero-FxUS1C3h.js";import"./custom-element-BTbnI5vI.js";import"./theme-EnFTGyLY.js";const L={title:"Puzzle Shell/Components/Hero",parameters:{layout:"fullscreen"}},l=()=>c`
+import{k as c}from"./lit-element-CxgFg0AR.js";import"./Hero-BuFb4xrs.js";import"./custom-element-BTbnI5vI.js";import"./theme-gcVGoz6T.js";const L={title:"Puzzle Shell/Components/Hero",parameters:{layout:"fullscreen"}},l=()=>c`
   <pzsh-hero>
     <h1 slot="title">Puzzle Cryptopus</h1>
     <h2 slot="slogan">The place for passwords</h2>

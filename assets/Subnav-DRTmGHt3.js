@@ -1,4 +1,4 @@
-import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./custom-element-BTbnI5vI.js";import{t as i}from"./theme-EnFTGyLY.js";import{n as m}from"./property-t_taj8Q_.js";import{R as g}from"./class-map-BlpslTfp.js";var b=Object.defineProperty,z=Object.getOwnPropertyDescriptor,_=(n,a,r,t)=>{for(var e=t>1?void 0:t?z(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&b(a,r,e),e};let v=class extends h{render(){return d`
+import{i as c,h,k as d}from"./lit-element-CxgFg0AR.js";import{t as f}from"./custom-element-BTbnI5vI.js";import{t as i}from"./theme-gcVGoz6T.js";import{n as m}from"./property-t_taj8Q_.js";import{R as g}from"./class-map-BlpslTfp.js";var b=Object.defineProperty,z=Object.getOwnPropertyDescriptor,_=(n,a,r,t)=>{for(var e=t>1?void 0:t?z(a,r):a,o=n.length-1,s;o>=0;o--)(s=n[o])&&(e=(t?s(a,r,e):s(e))||e);return t&&e&&b(a,r,e),e};let v=class extends h{render(){return d`
       <nav>
         <slot></slot>
       </nav>

@@ -18,7 +18,7 @@ import{i as o}from"./lit-element-CxgFg0AR.js";function s(){return typeof window<
   --pzsh-color-brand-8: #61b44b;
 
   --pzsh-color-brand-alt-1: #dcedf9;
-  --pzsh-color-brand-alt-2: #1c2948;
+  --pzsh-color-brand-alt-2: #1b2d53;
   --pzsh-color-brand-alt-3: #3fa8e0; /* Logo color */
   --pzsh-color-brand-alt-4: #69b978; /* Logo color */
 
@@ -26,7 +26,7 @@ import{i as o}from"./lit-element-CxgFg0AR.js";function s(){return typeof window<
   --pzsh-blue: var(--pzsh-color-brand-alt-3);
 
   /* Component colors */
-  --pzsh-topbar-bg: var(--pzsh-color-brand-1);
+  --pzsh-topbar-bg: var(--pzsh-color-brand-alt-2);
   --pzsh-topbar-bg-alt: var(--pzsh-color-brand-2);
   --pzsh-topbar-fg: var(--pzsh-color-white);
   --pzsh-menu-bg: var(--pzsh-color-white);

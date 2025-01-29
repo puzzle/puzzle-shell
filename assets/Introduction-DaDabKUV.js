@@ -1,4 +1,4 @@
-import{j as n,M as l}from"./index-BFDIWwKo.js";import{useMDXComponents as o}from"./index-CsXts4de.js";import"./iframe-CI1Be8lC.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Cu4lwwaE.js";import"./index-7SSfYZ8z.js";import"./index-ogSvIofg.js";function i(e){const t={h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...o(),...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(l,{title:"Puzzle Shell/Introduction"}),`
+import{j as n,M as l}from"./index-DCyTJH4r.js";import{useMDXComponents as o}from"./index-BoesoxYG.js";import"./iframe-j_wIpzeP.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Cu4lwwaE.js";import"./index-7SSfYZ8z.js";import"./index-ogSvIofg.js";function i(e){const t={h1:"h1",h2:"h2",li:"li",p:"p",ul:"ul",...o(),...e.components};return n.jsxs(n.Fragment,{children:[n.jsx(l,{title:"Puzzle Shell/Introduction"}),`
 `,n.jsx(t.h1,{id:"welcome-to-puzzle-shell",children:"Welcome to Puzzle Shell"}),`
 `,n.jsx(t.p,{children:"This is the kitchen sink for the Puzzle Shell, the standard design for Puzzle tools."}),`
 `,n.jsx(t.h2,{id:"goals",children:"Goals"}),`

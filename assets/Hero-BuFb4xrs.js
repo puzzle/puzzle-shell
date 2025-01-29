@@ -1,4 +1,4 @@
-import{i as n,h as p,k as m}from"./lit-element-CxgFg0AR.js";import{t as c}from"./custom-element-BTbnI5vI.js";import{t as h}from"./theme-EnFTGyLY.js";var g=Object.defineProperty,v=Object.getOwnPropertyDescriptor,d=(i,e,o,a)=>{for(var t=a>1?void 0:a?v(e,o):e,r=i.length-1,s;r>=0;r--)(s=i[r])&&(t=(a?s(e,o,t):s(t))||t);return a&&t&&g(e,o,t),t};let l=class extends p{render(){return m`
+import{i as n,h as p,k as m}from"./lit-element-CxgFg0AR.js";import{t as c}from"./custom-element-BTbnI5vI.js";import{t as h}from"./theme-gcVGoz6T.js";var g=Object.defineProperty,v=Object.getOwnPropertyDescriptor,d=(i,e,o,a)=>{for(var t=a>1?void 0:a?v(e,o):e,r=i.length-1,s;r>=0;r--)(s=i[r])&&(t=(a?s(e,o,t):s(t))||t);return a&&t&&g(e,o,t),t};let l=class extends p{render(){return m`
       <div class="text">
         <slot name="title"></slot>
         <slot name="slogan"></slot>
