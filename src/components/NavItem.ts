@@ -47,7 +47,7 @@ export class NavItem extends LitElement {
         :host {
           line-height: var(--pzsh-nav-line-height);
           margin: 0;
-          background-color: var(--pzsh-menu-bg);
+          background-color: transparent;
         }
         a {
           margin: 0;
