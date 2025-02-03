@@ -1,4 +1,4 @@
-import{j as n,M as s}from"./index-D1kb5ZhC.js";import{useMDXComponents as r}from"./index-DSHs2D_M.js";import"./iframe-nJi7vxYq.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Cu4lwwaE.js";import"./index-7SSfYZ8z.js";import"./index-ogSvIofg.js";function a(i){const e={a:"a",code:"code",h1:"h1",p:"p",pre:"pre",...r(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(s,{title:"Puzzle Shell/Components/Favicon"}),`
+import{j as n,M as s}from"./index-ziMyBn8C.js";import{useMDXComponents as r}from"./index-DfO6702g.js";import"./iframe-BLSBvMT0.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Cu4lwwaE.js";import"./index-7SSfYZ8z.js";import"./index-ogSvIofg.js";function a(i){const e={a:"a",code:"code",h1:"h1",p:"p",pre:"pre",...r(),...i.components};return n.jsxs(n.Fragment,{children:[n.jsx(s,{title:"Puzzle Shell/Components/Favicon"}),`
 `,n.jsx(e.h1,{id:"favicon",children:"Favicon"}),`
 `,n.jsxs(e.p,{children:["The Favicon and its variations for the ",n.jsx(e.a,{href:"https://developer.mozilla.org/en-US/docs/Web/Manifest",rel:"nofollow",children:"Web Application Manifest"})," can be found here:"]}),`
 `,`
