@@ -60,7 +60,7 @@
     "@eslint/js": "9.20.0",
     "@storybook/addon-a11y": "8.5.3",
     "@storybook/addon-essentials": "8.5.3",
-    "@storybook/addon-links": "8.5.3",
+    "@storybook/addon-links": "8.5.6",
     "@storybook/addon-storysource": "8.5.3",
     "@storybook/blocks": "8.5.3",
     "@storybook/web-components": "8.5.3",
