@@ -1,4 +1,4 @@
-import{j as n,M as s}from"./index-O6jRd0hJ.js";import{useMDXComponents as r}from"./index-B_rl6i1B.js";import"./iframe-DM8IunEN.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-Cu4lwwaE.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(t){const e={code:"code",h1:"h1",p:"p",pre:"pre",...r(),...t.components};return n.jsxs(n.Fragment,{children:[n.jsx(s,{title:"Puzzle Shell/Components/Container"}),`
+import{j as n,M as r}from"./index-BrzIlG83.js";import{useMDXComponents as s}from"./index-AALKc9FF.js";import"./iframe-BJ36OMIB.js";import"./_commonjsHelpers-CqkleIqs.js";import"./index-CfOrKyLd.js";import"./index-DrFu-skq.js";function o(t){const e={code:"code",h1:"h1",p:"p",pre:"pre",...s(),...t.components};return n.jsxs(n.Fragment,{children:[n.jsx(r,{title:"Puzzle Shell/Components/Container"}),`
 `,n.jsx(e.h1,{id:"container",children:"Container"}),`
 `,n.jsxs(e.p,{children:["The ",n.jsx(e.code,{children:"pzsh-container"})," component is the top-level component that implements the page layout. It contains all other Puzzle Shell components as well as the application's or site's content."]}),`
 `,n.jsx(e.p,{children:"Example usage:"}),`
@@ -9,4 +9,4 @@ import{j as n,M as s}from"./index-O6jRd0hJ.js";import{useMDXComponents as r}from
   <main>The content</main>
   <pzsh-footer>...</pzsh-footer>
 <pzsh-container>
-`})})]})}function d(t={}){const{wrapper:e}={...r(),...t.components};return e?n.jsx(e,{...t,children:n.jsx(o,{...t})}):o(t)}export{d as default};
+`})})]})}function m(t={}){const{wrapper:e}={...s(),...t.components};return e?n.jsx(e,{...t,children:n.jsx(o,{...t})}):o(t)}export{m as default};
