@@ -28,16 +28,12 @@ Then, with a bundler like [Vite](https://vitejs.dev/), you can import the packag
 
 ```javascript
 import "@puzzleitc/puzzle-shell";
-import "@puzzleitc/puzzle-shell/style.css";
 ```
 
-Or you can import specific components:
+Or you can import specific components (only once):
 
 ```javascript
 import "@puzzleitc/puzzle-shell/components/Topbar.js";
-import "@puzzleitc/puzzle-shell/style.css";
-
-// Only once
 ```
 
 Either way the components are then ready to use in your markup:
@@ -55,7 +51,7 @@ Alternatively you can use a pre-bundled version of the Puzzle Shell that include
   <head>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css"
+      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.css"
     />
     <script
       type="module"

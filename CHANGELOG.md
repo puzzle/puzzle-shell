@@ -64,8 +64,8 @@ Use 4.0.2, which fixes publication error of 4.0.1.
   - Bundled:
     - `@puzzleitc/puzzle-shell` → `@puzzleitc/puzzle-shell/bundle.js` <br>
       or via CDN: `https://unpkg.com/@puzzleitc/puzzle-shell/dist/puzzle-shell.js` → `https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.js`
-    - `@puzzleitc/puzzle-shell/dist/style.css` → `@puzzleitc/puzzle-shell/style.css` <br>
-      or via CDN: `https://unpkg.com/@puzzleitc/puzzle-shell/dist/style.css` (no change)
+    - `@puzzleitc/puzzle-shell/dist/style.css` → `@puzzleitc/puzzle-shell/dist/bundle.css` <br>
+      or via CDN: `https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.css` (no change)
   - JavaScript modules (new):
     - `import "@puzzleitc/puzzle-shell"` (all components)
     - `import "@puzzleitc/puzzle-shell/components/Topbar.js"` (specific components)
