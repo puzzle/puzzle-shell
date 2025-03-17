@@ -1,4 +1,4 @@
-import{i as n,h as p,k as g}from"./lit-element-BxU7hSqt.js";import{t as m}from"./custom-element-BhZVzxrc.js";import{t as i}from"./theme-DlZ-5foP.js";var c=Object.getOwnPropertyDescriptor,v=(o,r,h,s)=>{for(var t=s>1?void 0:s?c(r,h):r,a=o.length-1,l;a>=0;a--)(l=o[a])&&(t=l(t)||t);return t};let e=class extends p{render(){return g`
+import{i as p,h,k as m}from"./lit-element-BxU7hSqt.js";import{t as g}from"./custom-element-BhZVzxrc.js";import{t as n}from"./theme-DlZ-5foP.js";var c=Object.getOwnPropertyDescriptor,v=(o,r,l,s)=>{for(var t=s>1?void 0:s?c(r,l):r,e=o.length-1,i;e>=0;e--)(i=o[e])&&(t=i(t)||t);return t};let a=class extends h{render(){return m`
       <div class="text">
         <slot name="title"></slot>
         <slot name="slogan"></slot>
@@ -6,7 +6,7 @@ import{i as n,h as p,k as g}from"./lit-element-BxU7hSqt.js";import{t as m}from".
       <div class="logo">
         <slot name="logo"></slot>
       </div>
-    `}};e.styles=[i,n`
+    `}};a.styles=[n,p`
       :host {
         height: var(--pzsh-hero-height);
         padding: 0 var(--pzsh-page-padding-horizontal-mobile);
@@ -32,23 +32,27 @@ import{i as n,h as p,k as g}from"./lit-element-BxU7hSqt.js";import{t as m}from".
         max-height: var(--pzsh-hero-height);
       }
 
+      /**
+       * When styling the slotted elements in the light DOM, make sure to
+       * enforce these styles with !important to override any potential
+       * light DOM styles.
+       */
       ::slotted([slot="title"]),
       ::slotted([slot="slogan"]) {
-        font-family: var(--pzsh-font-family);
-        font-weight: normal;
-        line-height: 1;
+        font-family: var(--pzsh-font-family) !important;
+        font-weight: normal !important;
+        line-height: 1 !important;
       }
-
       ::slotted([slot="title"]) {
-        margin: 0;
-        font-size: 32px;
-        color: var(--pzsh-color-brand-alt-2);
+        margin: 0 !important;
+        font-size: 32px !important;
+        color: var(--pzsh-color-brand-alt-2) !important;
       }
       ::slotted([slot="slogan"]) {
-        margin-top: var(--pzsh-spacer);
-        margin-bottom: 0;
-        font-size: 18px;
-        color: var(--pzsh-color-brand-alt-3);
+        margin-top: var(--pzsh-spacer) !important;
+        margin-bottom: 0 !important;
+        font-size: 18px !important;
+        color: var(--pzsh-color-brand-alt-3) !important;
       }
 
       @media (min-width: 390px) {
@@ -62,9 +66,9 @@ import{i as n,h as p,k as g}from"./lit-element-BxU7hSqt.js";import{t as m}from".
         }
       }
 
-      @media (min-width: ${i.breakpoint}px) {
+      @media (min-width: ${n.breakpoint}px) {
         :host {
           gap: calc(5 * var(--pzsh-spacer));
         }
       }
-    `];e=v([m("pzsh-hero")],e);
+    `];a=v([g("pzsh-hero")],a);
