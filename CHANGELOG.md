@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+## 5.0.1
+
+- Enforce `pzsh-hero` styling of slotted elements to override potential light DOM styles. This is the case if your CSS defines styles for headings, which will then be rendered differently than defined by the Puzzle Shell.
+
 ## 5.0.0
 
 - BREAKING CHANGE: Change the default layout of the footer slots to vertical since this scales better for many elements.
