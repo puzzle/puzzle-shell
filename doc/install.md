@@ -51,11 +51,11 @@ Alternatively you can use a pre-bundled version of the Puzzle Shell that include
   <head>
     <link
       rel="stylesheet"
-      href="https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.css"
+      href="https://cdn.jsdelivr.net/npm/@puzzleitc/puzzle-shell@latest/dist/bundle.css"
     />
     <script
       type="module"
-      src="https://unpkg.com/@puzzleitc/puzzle-shell/dist/bundle.js"
+      src="https://cdn.jsdelivr.net/npm/@puzzleitc/puzzle-shell@latest/dist/bundle.js"
     ></script>
   </head>
 
