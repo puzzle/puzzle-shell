@@ -57,7 +57,7 @@
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.10.4",
-    "@eslint/js": "9.23.0",
+    "@eslint/js": "9.24.0",
     "@storybook/addon-a11y": "8.6.12",
     "@storybook/addon-essentials": "8.6.12",
     "@storybook/addon-links": "8.6.12",
@@ -74,7 +74,7 @@
     "prettier": "3.5.3",
     "storybook": "8.6.12",
     "typescript": "5.8.3",
-    "typescript-eslint": "8.28.0",
+    "typescript-eslint": "8.29.0",
     "vite": "6.2.5"
   },
   "lint-staged": {
