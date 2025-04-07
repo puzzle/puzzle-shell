@@ -63,7 +63,7 @@
     "@storybook/addon-links": "8.6.11",
     "@storybook/addon-storysource": "8.6.11",
     "@storybook/blocks": "8.6.11",
-    "@storybook/web-components": "8.6.11",
+    "@storybook/web-components": "8.6.12",
     "@storybook/web-components-vite": "8.6.11",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "eslint-config-prettier": "10.1.1",
