@@ -62,10 +62,36 @@ export class MenuAction extends LitElement {
     this.shadowRoot?.querySelector("a")?.focus(options);
   }
 
+  updated() {
+    this.applyHostAttributes();
+  }
+
   render() {
     return html`<a href="${this.href}" role="menuitem">
       <slot></slot>
     </a>`;
+  }
+
+  /**
+   * Copy attributes on the host element to the link element, such
+   * that applications can use additional link attributes.
+   *
+   * Notice that, apart from the `href` attribute, these attributes
+   * are only applied initially (resp. if the compoenent rerenders,
+   * which is not the case if a property changes). So it is perfect
+   * for "static" attributes that never change, but it won't work for
+   * "dynamic" attributes that can change.
+   */
+  private applyHostAttributes() {
+    const link = this.shadowRoot?.querySelector("a");
+    if (!link) return;
+
+    const attributes = Array.from(this.attributes).filter(
+      ({ name }) => name !== "href",
+    );
+    attributes.forEach(({ name, value }) => {
+      link.setAttribute(name, value);
+    });
   }
 }
 

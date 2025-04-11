@@ -33,7 +33,10 @@ export const WithMenuActions = () => html`
   </pzsh-topbar>
   <pzsh-menu>
     <div slot="actions">
-      <pzsh-menu-action href="#">
+      <pzsh-menu-action
+        href="#"
+        data-some-attribute="This attribute should be copied on to the <a> element"
+      >
         <pzsh-icon name="sliders-v-alt"></pzsh-icon>
         Administration
       </pzsh-menu-action>
@@ -47,7 +50,10 @@ export const WithMenuActions = () => html`
           Max Mustermann
         </div>
         <div slot="items">
-          <pzsh-menu-dropdown-item href="#">
+          <pzsh-menu-dropdown-item
+            href="#"
+            data-some-attribute="This attribute should be copied on to the <a> element"
+          >
             <pzsh-icon name="setting"></pzsh-icon>
             Account Settings
           </pzsh-menu-dropdown-item>
