@@ -1,6 +1,5 @@
 import { LitElement, css, html } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
-import { property } from "lit/decorators/property.js";
 import { theme } from "../utils/theme";
 
 /**
@@ -11,9 +10,6 @@ import { theme } from "../utils/theme";
  */
 @customElement("pzsh-menu-action")
 export class MenuAction extends LitElement {
-  @property({ type: String })
-  href = "#";
-
   static styles = [
     theme,
     css`
@@ -62,8 +58,15 @@ export class MenuAction extends LitElement {
     this.shadowRoot?.querySelector("a")?.focus(options);
   }
 
+  updated() {
+    const link = this.shadowRoot?.querySelector("a");
+    Array.from(this.attributes).forEach((attr) => {
+      link?.setAttribute(attr.name, attr.value);
+    });
+  }
+
   render() {
-    return html`<a href="${this.href}" role="menuitem">
+    return html`<a role="menuitem">
       <slot></slot>
     </a>`;
   }
