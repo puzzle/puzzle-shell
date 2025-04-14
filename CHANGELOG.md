@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+## ?.?.?
+
+- Update dependencies (incl. Lit 3.3.0)
+
 ## 5.0.1
 
 - Enforce `pzsh-hero` styling of slotted elements to override potential light DOM styles. This is the case if your CSS defines styles for headings, which will then be rendered differently than defined by the Puzzle Shell.
