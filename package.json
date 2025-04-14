@@ -53,7 +53,7 @@
   "dependencies": {
     "@fontsource/roboto": "5.2.5",
     "@fontsource/roboto-mono": "5.2.5",
-    "lit": "3.2.1"
+    "lit": "3.3.0"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.10.4",
