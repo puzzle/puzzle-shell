@@ -1,4 +1,4 @@
-import{i as d,a as m,x as v}from"./lit-element-JDTHnSco.js";import{t as c}from"./custom-element-BhZVzxrc.js";import{t as p}from"./theme-Raj2EPBn.js";import{n as f}from"./property-DflLml2K.js";var z=Object.getOwnPropertyDescriptor,g=(o,r,a,s)=>{for(var e=s>1?void 0:s?z(r,a):r,t=o.length-1,n;t>=0;t--)(n=o[t])&&(e=n(e)||e);return e};let l=class extends m{render(){return v` <slot></slot> `}};l.styles=[p,d`
+import{i as c,a as d,x as u}from"./lit-element-JDTHnSco.js";import{t as m}from"./custom-element-BhZVzxrc.js";import{t as i}from"./theme-Raj2EPBn.js";import{n as f}from"./property-DflLml2K.js";var z=Object.getOwnPropertyDescriptor,g=(o,t,s,r)=>{for(var e=r>1?void 0:r?z(t,s):t,a=o.length-1,n;a>=0;a--)(n=o[a])&&(e=n(e)||e);return e};let l=class extends d{render(){return u` <slot></slot> `}};l.styles=[i,c`
       :host {
         display: flex;
         flex-direction: column;
@@ -15,16 +15,16 @@ import{i as d,a as m,x as v}from"./lit-element-JDTHnSco.js";import{t as c}from".
       ::slotted(pzsh-footer) {
         flex: none;
       }
-    `];l=g([c("pzsh-container")],l);var w=Object.getOwnPropertyDescriptor,b=(o,r,a,s)=>{for(var e=s>1?void 0:s?w(r,a):r,t=o.length-1,n;t>=0;t--)(n=o[t])&&(e=n(e)||e);return e};let h=class extends m{};h.styles=[p,d`
-      @media (max-width: ${p.breakpoint-1}px) {
+    `];l=g([m("pzsh-container")],l);var b=Object.getOwnPropertyDescriptor,w=(o,t,s,r)=>{for(var e=r>1?void 0:r?b(t,s):t,a=o.length-1,n;a>=0;a--)(n=o[a])&&(e=n(e)||e);return e};let h=class extends d{};h.styles=[i,c`
+      @media (max-width: ${i.breakpoint-1}px) {
         :host {
           margin: calc(3 * var(--pzsh-spacer)) 0;
           border-top: 1px solid var(--pzsh-menu-divider);
         }
       }
-    `];h=b([c("pzsh-menu-divider")],h);var x=Object.defineProperty,_=Object.getOwnPropertyDescriptor,u=(o,r,a,s)=>{for(var e=s>1?void 0:s?_(r,a):r,t=o.length-1,n;t>=0;t--)(n=o[t])&&(e=(s?n(r,a,e):n(e))||e);return s&&e&&x(r,a,e),e};let i=class extends m{constructor(){super(...arguments),this.href="#"}focus(o){var r,a;(a=(r=this.shadowRoot)==null?void 0:r.querySelector("a"))==null||a.focus(o)}render(){return v`<a href="${this.href}" role="menuitem">
+    `];h=w([m("pzsh-menu-divider")],h);var y=Object.defineProperty,x=Object.getOwnPropertyDescriptor,v=(o,t,s,r)=>{for(var e=r>1?void 0:r?x(t,s):t,a=o.length-1,n;a>=0;a--)(n=o[a])&&(e=(r?n(t,s,e):n(e))||e);return r&&e&&y(t,s,e),e};let p=class extends d{constructor(){super(...arguments),this.href="#"}focus(o){var t,s;(s=(t=this.shadowRoot)==null?void 0:t.querySelector("a"))==null||s.focus(o)}updated(){this.applyHostAttributes()}render(){return u`<a href="${this.href}" role="menuitem">
       <slot></slot>
-    </a>`}};i.styles=[p,d`
+    </a>`}applyHostAttributes(){var s;const o=(s=this.shadowRoot)==null?void 0:s.querySelector("a");if(!o)return;Array.from(this.attributes).filter(({name:r})=>r!=="href").forEach(({name:r,value:e})=>{o.setAttribute(r,e)})}};p.styles=[i,c`
       :host {
         display: block;
       }
@@ -56,7 +56,7 @@ import{i as d,a as m,x as v}from"./lit-element-JDTHnSco.js";import{t as c}from".
         margin-right: calc(var(--pzsh-spacer) / 2);
       }
 
-      @media (min-width: ${p.breakpoint}px) {
+      @media (min-width: ${i.breakpoint}px) {
         a {
           margin: 0;
           padding: var(--pzsh-menu-item-padding-vertical)
@@ -72,4 +72,4 @@ import{i as d,a as m,x as v}from"./lit-element-JDTHnSco.js";import{t as c}from".
           background-color: var(--pzsh-menu-dropdown-item-bg-alt);
         }
       }
-    `];u([f({type:String})],i.prototype,"href",2);i=u([c("pzsh-menu-dropdown-item")],i);
+    `];v([f({type:String})],p.prototype,"href",2);p=v([m("pzsh-menu-dropdown-item")],p);

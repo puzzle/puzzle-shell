@@ -1,6 +1,6 @@
-import{i as d,a as c,x as h}from"./lit-element-JDTHnSco.js";import{t as g}from"./custom-element-BhZVzxrc.js";import{n as v}from"./property-DflLml2K.js";import{t as i}from"./theme-Raj2EPBn.js";import{r as f,i as b,n as z}from"./Topbar-DT8X_O30.js";import{e as y}from"./class-map-Cy6jXCQq.js";import"./Icon-T9ulKohZ.js";var w=Object.defineProperty,x=Object.getOwnPropertyDescriptor,m=(e,o,n,r)=>{for(var t=r>1?void 0:r?x(o,n):o,a=e.length-1,s;a>=0;a--)(s=e[a])&&(t=(r?s(o,n,t):s(t))||t);return r&&t&&w(o,n,t),t};let p=class extends c{constructor(){super(...arguments),this.href="#"}focus(e){var o,n;(n=(o=this.shadowRoot)==null?void 0:o.querySelector("a"))==null||n.focus(e)}render(){return h`<a href="${this.href}" role="menuitem">
+import{i as d,a as c,x as h}from"./lit-element-JDTHnSco.js";import{t as u}from"./custom-element-BhZVzxrc.js";import{n as v}from"./property-DflLml2K.js";import{t as i}from"./theme-Raj2EPBn.js";import{r as f,i as b,n as y}from"./Topbar-DT8X_O30.js";import{e as z}from"./class-map-Cy6jXCQq.js";import"./Icon-T9ulKohZ.js";var w=Object.defineProperty,x=Object.getOwnPropertyDescriptor,m=(e,o,n,r)=>{for(var t=r>1?void 0:r?x(o,n):o,a=e.length-1,s;a>=0;a--)(s=e[a])&&(t=(r?s(o,n,t):s(t))||t);return r&&t&&w(o,n,t),t};let p=class extends c{constructor(){super(...arguments),this.href="#"}focus(e){var o,n;(n=(o=this.shadowRoot)==null?void 0:o.querySelector("a"))==null||n.focus(e)}updated(){this.applyHostAttributes()}render(){return h`<a href="${this.href}" role="menuitem">
       <slot></slot>
-    </a>`}};p.styles=[i,d`
+    </a>`}applyHostAttributes(){var n;const e=(n=this.shadowRoot)==null?void 0:n.querySelector("a");if(!e)return;Array.from(this.attributes).filter(({name:r})=>r!=="href").forEach(({name:r,value:t})=>{e.setAttribute(r,t)})}};p.styles=[i,d`
       a {
         display: flex;
         align-items: center;
@@ -39,7 +39,7 @@ import{i as d,a as c,x as h}from"./lit-element-JDTHnSco.js";import{t as g}from".
           text-decoration: underline;
         }
       }
-    `];m([v({type:String})],p.prototype,"href",2);p=m([g("pzsh-menu-action")],p);var E=Object.defineProperty,k=Object.getOwnPropertyDescriptor,u=(e,o,n,r)=>{for(var t=r>1?void 0:r?k(o,n):o,a=e.length-1,s;a>=0;a--)(s=e[a])&&(t=(r?s(o,n,t):s(t))||t);return r&&t&&E(o,n,t),t};let l=class extends c{constructor(){super(),this.open=!1,this.handleEvent=this.handleEvent.bind(this)}connectedCallback(){super.connectedCallback(),document.addEventListener("click",this.handleEvent),document.addEventListener("keydown",this.handleEvent)}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("click",this.handleEvent),document.removeEventListener("keydown",this.handleEvent)}handleEvent(e){this.handleMenuClose(e),this.handleMenuNavigation(e)}handleMenuClose(e){this.open&&(e.type==="click"&&!b(e.target,'pzsh-menu-dropdown [slot="toggle"]')||e instanceof KeyboardEvent&&e.type==="keydown"&&(e.key==="Escape"||e.key==="Tab"))&&this.toggleMenu()}handleMenuNavigation(e){this.open&&z(()=>{var o;return Array.from(((o=this.querySelector("[slot='items']"))==null?void 0:o.children)||[])},e)}toggleMenu(e){e&&e.stopPropagation(),this.open=!this.open}render(){const e=this.open?"angle-up":"angle-down";return h`
+    `];m([v({type:String})],p.prototype,"href",2);p=m([u("pzsh-menu-action")],p);var E=Object.defineProperty,k=Object.getOwnPropertyDescriptor,g=(e,o,n,r)=>{for(var t=r>1?void 0:r?k(o,n):o,a=e.length-1,s;a>=0;a--)(s=e[a])&&(t=(r?s(o,n,t):s(t))||t);return r&&t&&E(o,n,t),t};let l=class extends c{constructor(){super(),this.open=!1,this.handleEvent=this.handleEvent.bind(this)}connectedCallback(){super.connectedCallback(),document.addEventListener("click",this.handleEvent),document.addEventListener("keydown",this.handleEvent)}disconnectedCallback(){super.disconnectedCallback(),document.removeEventListener("click",this.handleEvent),document.removeEventListener("keydown",this.handleEvent)}handleEvent(e){this.handleMenuClose(e),this.handleMenuNavigation(e)}handleMenuClose(e){this.open&&(e.type==="click"&&!b(e.target,'pzsh-menu-dropdown [slot="toggle"]')||e instanceof KeyboardEvent&&e.type==="keydown"&&(e.key==="Escape"||e.key==="Tab"))&&this.toggleMenu()}handleMenuNavigation(e){this.open&&y(()=>{var o;return Array.from(((o=this.querySelector("[slot='items']"))==null?void 0:o.children)||[])},e)}toggleMenu(e){e&&e.stopPropagation(),this.open=!this.open}render(){const e=this.open?"angle-up":"angle-down";return h`
       <button
         type="button"
         class="toggle"
@@ -50,7 +50,7 @@ import{i as d,a as c,x as h}from"./lit-element-JDTHnSco.js";import{t as g}from".
         <pzsh-icon class="toggle-angle" name=${e}></pzsh-icon>
       </button>
       <div
-        class=${y({"dropdown-menu":!0,open:this.open})}
+        class=${z({"dropdown-menu":!0,open:this.open})}
         role="menu"
       >
         <slot name="items"></slot>
@@ -120,4 +120,4 @@ import{i as d,a as c,x as h}from"./lit-element-JDTHnSco.js";import{t as g}from".
           display: block;
         }
       }
-    `];u([f()],l.prototype,"open",2);l=u([g("pzsh-menu-dropdown")],l);
+    `];g([f()],l.prototype,"open",2);l=g([u("pzsh-menu-dropdown")],l);
