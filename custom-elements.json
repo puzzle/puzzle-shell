@@ -641,6 +641,12 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "method",
+              "name": "applyHostAttributes",
+              "privacy": "private",
+              "description": "Copy attributes on the host element to the link element, such\nthat applications can use additional link attributes.\n\nNotice that, apart from the `href` attribute, these attributes\nare only applied initially (resp. if the compoenent rerenders,\nwhich is not the case if a property changes). So it is perfect\nfor \"static\" attributes that never change, but it won't work for\n\"dynamic\" attributes that can change."
             }
           ],
           "attributes": [
@@ -856,6 +862,12 @@
                   }
                 }
               ]
+            },
+            {
+              "kind": "method",
+              "name": "applyHostAttributes",
+              "privacy": "private",
+              "description": "Copy attributes on the host element to the link element, such\nthat applications can use additional link attributes.\n\nNotice that, apart from the `href` attribute, these attributes\nare only applied initially (resp. if the compoenent rerenders,\nwhich is not the case if a property changes). So it is perfect\nfor \"static\" attributes that never change, but it won't work for\n\"dynamic\" attributes that can change."
             }
           ],
           "attributes": [
