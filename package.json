@@ -51,7 +51,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@fontsource/roboto": "5.2.5",
+    "@fontsource/roboto": "5.2.6",
     "@fontsource/roboto-mono": "5.2.5",
     "lit": "3.3.0"
   },
