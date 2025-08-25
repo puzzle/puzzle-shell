@@ -67,7 +67,7 @@
     "@storybook/web-components-vite": "8.6.12",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
     "eslint-config-prettier": "10.1.5",
-    "eslint-plugin-lit-a11y": "4.1.4",
+    "eslint-plugin-lit-a11y": "5.1.1",
     "globals": "16.1.0",
     "husky": "9.1.7",
     "lint-staged": "16.0.0",
