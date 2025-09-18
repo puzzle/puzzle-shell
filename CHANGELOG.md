@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+## 5.1.1
+
+- Upgrade dependencies (incl. Lit 3.3.1 & Storybook 9)
+
 ## 5.1.0
 
 - Attributes on `pzsh-menu-action` and `pzsh-menu-dropdown-item` will be copied on to the `<a>` element such that application can add additional attributes (such as data attributes etc.) to the link.
