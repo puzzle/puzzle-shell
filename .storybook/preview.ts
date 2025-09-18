@@ -1,4 +1,4 @@
-import type { Preview } from "@storybook/web-components";
+import type { Preview } from "@storybook/web-components-vite";
 
 const preview: Preview = {
   parameters: {
@@ -7,6 +7,10 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/i,
       },
+    },
+
+    docs: {
+      codePanel: true,
     },
   },
 };
