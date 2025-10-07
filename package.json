@@ -58,7 +58,7 @@
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "0.10.6",
     "@eslint/js": "9.35.0",
-    "@storybook/addon-a11y": "9.1.6",
+    "@storybook/addon-a11y": "9.1.10",
     "@storybook/addon-links": "9.1.6",
     "@storybook/web-components-vite": "9.1.6",
     "@trivago/prettier-plugin-sort-imports": "5.2.2",
