@@ -10,11 +10,12 @@ export default defineConfig({
       fileName: "bundle",
       formats: ["es"],
     },
-    rollupOptions: {
-      // Don't externalize Lit as we want to publish the web
-      // components as a standalone package, including Lit
-      // external: /^lit/
-    },
   },
-  plugins: [],
+  plugins: [
+    // Don't externalize Lit as we want to publish the web components
+    // as a standalone package, including Lit
+    // esmExternalRequirePlugin({
+    //   external: [/^lit/],
+    // }),
+  ],
 });
