@@ -1,0 +1,1 @@
+import{c as e,g as t}from"./theming-Bmc4K8i6.js";e();export{t as color};
