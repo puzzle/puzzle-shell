@@ -1,5 +1,9 @@
 # Puzzle Shell Changelog
 
+## 5.1.3
+
+- Upgrade dependencies (incl. Lit 3.3.3, ESLint 10 & TypeScript 6)
+
 ## 5.1.2
 
 - Upgrade dependencies (incl. Lit 3.3.2, Storybook 10, Vite 8 & Node 24)
