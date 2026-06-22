@@ -70,11 +70,11 @@
     "eslint-plugin-storybook": "10.4.6",
     "globals": "17.6.0",
     "husky": "9.1.7",
-    "lint-staged": "17.0.7",
+    "lint-staged": "17.0.8",
     "prettier": "3.8.4",
     "storybook": "10.4.6",
     "typescript": "6.0.3",
-    "typescript-eslint": "8.61.0",
+    "typescript-eslint": "8.61.1",
     "vite": "8.0.16"
   },
   "lint-staged": {
