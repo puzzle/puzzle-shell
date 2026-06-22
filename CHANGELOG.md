@@ -1,5 +1,11 @@
 # Puzzle Shell Changelog
 
+## Unreleased
+
+- Migrate to PNPM
+- Generate SBOM with PNPM
+- Upgrade dependencies
+
 ## 5.1.3
 
 - Upgrade dependencies (incl. Lit 3.3.3, ESLint 10 & TypeScript 6)
