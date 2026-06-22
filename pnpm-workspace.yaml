@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+  rs-module-lexer: true
+
+minimumReleaseAge: 1440

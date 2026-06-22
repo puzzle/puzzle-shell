@@ -4,13 +4,26 @@
 
 ## Setup
 
-Checkout the project and install its dependencies:
+1. Checkout the project:
 
-```
+```bash
 git clone git@github.com:puzzle/puzzle-shell.git
 cd puzzle-shell
-nvm use
-npm install
+```
+
+2. Use [mise](https://mise.jdx.dev/) or [nvm](https://github.com/nvm-sh/nvm) (with `nvm use`) to install/activate the project's Node.js version.
+
+3. Install Corepack and activate PNPM:
+
+```bash
+npm install --global corepack@latest
+corepack enable pnpm
+```
+
+4. Install the dependencies:
+
+```bash
+pnpm install
 ```
 
 ## Tryout Components with Storybook
@@ -18,13 +31,13 @@ npm install
 To run a local instance of Storybook, run:
 
 ```bash
-npm run storybook
+pnpm storybook
 ```
 
 To build a production version of Storybook, run:
 
 ```bash
-npm run build-storybook
+pnpm build-storybook
 ```
 
 ## Linting etc.
@@ -32,27 +45,27 @@ npm run build-storybook
 To scan the project for linting or type errors, run:
 
 ```bash
-npm run lint
+pnpm lint
 ```
 
 To automatically fix many linting errors & reformat code using Prettier, run:
 
 ```bash
-npm run lint:fix
+pnpm lint:fix
 ```
 
 To automatically generate the `custom-elements.json` manifest using the [web-component-analyzer](https://github.com/runem/web-component-analyzer), run:
 
 ```bash
-npm run manifest
+pnpm manifest
 ```
 
 ## Publishing
 
 To publish a new package version, do the following:
 
-- Build the library with `npm run build`
-- Execute `npm run manifest` to make sure the `custom-elements.json` manifest is up-to-date
+- Build the library with `pnpm build`
+- Execute `pnpm manifest` to make sure the `custom-elements.json` manifest is up-to-date
 - Update the `CHANGELOG.md`
-- Bump the version with [npm version](https://docs.npmjs.com/cli/v7/commands/npm-version) (updates `package.json` and creates Git tag)
-- Execute `npm publish` to upload the new package version
+- Bump the version with [pnpm version](https://pnpm.io/cli/version) (updates `package.json` and creates Git tag)
+- Execute `pnpm publish` to upload the new package version
