@@ -11,3 +11,9 @@ updates:
       interval: "weekly"
     cooldown:
       default-days: 1
+    groups:
+      storybook:
+        patterns:
+          - "@storybook/*"
+          - "storybook"
+          - "eslint-plugin-storybook"
