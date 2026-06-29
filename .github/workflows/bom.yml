@@ -28,7 +28,7 @@ jobs:
           cache: "pnpm"
 
       - name: Generate BOM
-        run: pnpm sbom --sbom-format cyclonedx --sbom-type application --sbom-spec-version 1.6 > bom.json
+        run: pnpm sbom --sbom-format cyclonedx --sbom-type library --sbom-spec-version 1.6 > bom.json
 
       - name: Push BOM to Dependency Track
         env:
