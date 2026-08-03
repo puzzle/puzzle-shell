@@ -52,7 +52,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "@fontsource/roboto": "5.2.10",
+    "@fontsource/roboto": "5.3.0",
     "@fontsource/roboto-mono": "5.2.9",
     "lit": "3.3.3"
   },
