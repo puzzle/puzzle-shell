@@ -70,7 +70,7 @@
     "eslint-plugin-storybook": "10.6.7",
     "globals": "17.14.0",
     "husky": "9.1.7",
-    "lint-staged": "17.6.0",
+    "lint-staged": "17.6.2",
     "prettier": "3.10.1",
     "storybook": "10.6.7",
     "typescript": "6.0.3",
